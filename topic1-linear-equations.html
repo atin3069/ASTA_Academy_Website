@@ -442,6 +442,31 @@
   }
   .practice-loading { text-align: center; color: var(--text-muted); padding: 30px; font-size: 14px; }
 
+
+  /* VIDEO */
+  .video-section { margin-bottom: 36px; }
+  .video-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 600; color: var(--navy);
+    margin-bottom: 8px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+  .video-intro {
+    font-size: 15px; color: var(--text-muted);
+    margin-bottom: 18px; max-width: 640px; line-height: 1.6;
+  }
+  .video-wrapper {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    overflow: hidden; border-radius: 12px;
+    background: #000;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.15);
+  }
+  .video-wrapper iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+  }
+
 </style>
 </head>
 <body>
@@ -471,105 +496,29 @@
   </div>
 </nav>
 
-<div class="breadcrumb">
-  <a href="index.html">Home</a> &nbsp;›&nbsp;
-  <a href="sat-math.html">SAT Math Prep</a> &nbsp;›&nbsp;
-  Linear Equations
-</div>
-
 <div class="container">
 
   <div class="lesson-header">
     <div class="domain-tag">Heart of Algebra</div>
     <h1>Linear Equations</h1>
-    <p class="meta">Written by <strong>Dr. Ashu Jain</strong> &nbsp;·&nbsp; IIT Graduate &nbsp;·&nbsp; ~8 min read</p>
+    <p class="meta">By <strong>Dr. Ashu Jain</strong> &nbsp;·&nbsp; Retired IIT Professor</p>
   </div>
 
-  <div class="stats-row">
-    <div class="stat-card">
-      <div class="num">~10%</div>
-      <div class="lbl">of SAT math questions</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">3</div>
-      <div class="lbl">worked examples</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">#1</div>
-      <div class="lbl">most tested topic</div>
-    </div>
-  </div>
-
-  <section>
-    <h2>The key idea</h2>
-    <p>A linear equation has one unknown raised to the first power. Your only job is to isolate the variable — get it alone on one side of the equation. Do this step by step, never skipping steps under time pressure. That's where careless errors happen, even for strong students.</p>
-    <p>The SAT rarely makes the equation itself hard. What it does is hide what you're solving for — it might ask for <code>2x + 3</code> instead of <code>x</code>. Stay alert to exactly what the question asks.</p>
-  </section>
-
-  <section>
-    <h2>Worked examples</h2>
-
-    <div class="example">
-      <div class="example-header">
-        <span class="example-num">Example 1</span>
-        <span>Straightforward solve</span>
-      </div>
-      <div class="example-body">
-        <div class="problem-box">If 4x − 5 = 19, what is the value of x?</div>
-        <ul class="steps">
-          <li><span class="step-num">1</span><span>Add 5 to both sides: &nbsp;<code>4x = 19 + 5 = 24</code></span></li>
-          <li><span class="step-num">2</span><span>Divide both sides by 4: &nbsp;<code>x = 24 ÷ 4</code></span></li>
-        </ul>
-        <div class="answer-line">Answer: x = 6</div>
-      </div>
-    </div>
-
-    <div class="example">
-      <div class="example-header">
-        <span class="example-num">Example 2</span>
-        <span>The SAT's favorite shortcut trap</span>
-      </div>
-      <div class="example-body">
-        <div class="problem-box">If 3x + 7 = 22, what is the value of 6x + 14?</div>
-        <ul class="steps">
-          <li><span class="step-num">1</span><span>Notice: <code>6x + 14</code> is exactly <code>2(3x + 7)</code></span></li>
-          <li><span class="step-num">2</span><span>So the answer is simply <code>2 × 22 = 44</code> — no need to solve for x at all.</span></li>
-        </ul>
-        <div class="answer-line">Answer: 44 (in one step)</div>
-        <div class="pro-tip" style="margin-top:14px;">
-          <strong>Dr. Jain's tip</strong>
-          The SAT rewards pattern recognition. Before solving for x, glance at what you're asked for — it's often a multiple of the original expression.
-        </div>
-      </div>
-    </div>
-
-    <div class="example">
-      <div class="example-header">
-        <span class="example-num">Example 3</span>
-        <span>Word problem setup</span>
-      </div>
-      <div class="example-body">
-        <div class="problem-box">A phone plan charges a $20 flat fee plus $0.05 per text. A student's bill is $27.50. How many texts did they send?</div>
-        <ul class="steps">
-          <li><span class="step-num">1</span><span>Write the equation: &nbsp;<code>20 + 0.05t = 27.50</code></span></li>
-          <li><span class="step-num">2</span><span>Subtract 20: &nbsp;<code>0.05t = 7.50</code></span></li>
-          <li><span class="step-num">3</span><span>Divide by 0.05: &nbsp;<code>t = 150</code></span></li>
-        </ul>
-        <div class="answer-line">Answer: 150 texts</div>
-      </div>
+  <section class="video-section">
+    <h2>Substitution vs Elimination</h2>
+    <p class="video-intro">Watch Dr. Jain explain when to use substitution versus elimination — the two key methods for solving linear systems.</p>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/gDYNla_sSC4"
+        title="Substitution vs Elimination — Dr. Ashu Jain"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
 
-  <section>
-    <h2>Common trap to avoid</h2>
-    <div class="trap-box">
-      <strong>⚠ &nbsp;Don't stop after finding x</strong>
-      When the question asks for an expression like <code>2x + 3</code> rather than x itself, most students find x and move on — forgetting to substitute back. Re-read the final question before writing your answer. This mistake alone costs thousands of students points every year.
-    </div>
-  </section>
-
-  
-  <section>
+<section>
     <div class="practice-wrapper">
       <div class="practice-header">
         <h2>Practice Questions</h2>
@@ -600,136 +549,14 @@
     </div>
   </section>
 
-  <script>
-    let questions = [];
-    let currentQ = 0;
-    let score = 0;
-    let answered = false;
-
-    async function loadQuestions() {
-      try {
-        const res = await fetch('questions.json');
-        const data = await res.json();
-        // Pull all "Algebra" domain questions related to linear equations
-        const algebra = (data.domains || []).find(d => d.domain === 'Algebra');
-        if (algebra) {
-          questions = algebra.questions.filter(q =>
-            q.skill && q.skill.toLowerCase().includes('linear')
-          );
-        }
-        if (questions.length === 0) {
-          document.getElementById('practice-loading').textContent = 'No questions found for this topic yet.';
-          return;
-        }
-        document.getElementById('practice-loading').style.display = 'none';
-        document.getElementById('question-card').style.display = 'block';
-        document.getElementById('total-q').textContent = questions.length;
-        showQuestion();
-      } catch (e) {
-        document.getElementById('practice-loading').textContent = 'Could not load questions. Make sure questions.json is in the same folder.';
-      }
-    }
-
-    function showQuestion() {
-      const q = questions[currentQ];
-      answered = false;
-      document.getElementById('q-num').textContent = `Question ${currentQ + 1} of ${questions.length} · ${q.skill} · ${q.difficulty}`;
-      document.getElementById('q-text').textContent = q.question;
-      document.getElementById('progress-text').textContent = `${currentQ + 1} of ${questions.length}`;
-      document.getElementById('progress-fill').style.width = `${((currentQ) / questions.length) * 100}%`;
-
-      const grid = document.getElementById('choices-grid');
-      grid.innerHTML = '';
-      const letters = ['A', 'B', 'C', 'D'];
-      letters.forEach(letter => {
-        if (q.choices[letter] === undefined) return;
-        const btn = document.createElement('button');
-        btn.className = 'choice-btn';
-        btn.dataset.letter = letter;
-        btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
-        btn.onclick = () => selectAnswer(letter);
-        grid.appendChild(btn);
-      });
-
-      document.getElementById('feedback').classList.remove('show');
-      document.getElementById('next-btn').classList.remove('show');
-    }
-
-    function selectAnswer(chosen) {
-      if (answered) return;
-      answered = true;
-      const q = questions[currentQ];
-
-      document.querySelectorAll('.choice-btn').forEach(btn => {
-        btn.disabled = true;
-        const letter = btn.dataset.letter;
-        if (letter === q.answer) btn.classList.add('correct');
-        else if (letter === chosen) btn.classList.add('incorrect');
-      });
-
-      const feedback = document.getElementById('feedback');
-      if (chosen === q.answer) {
-        score++;
-        feedback.className = 'feedback correct show';
-        document.getElementById('feedback-title').textContent = '✓ Correct!';
-      } else {
-        feedback.className = 'feedback incorrect show';
-        document.getElementById('feedback-title').textContent = `✗ Not quite — correct answer is ${q.answer}`;
-      }
-      document.getElementById('feedback-text').textContent = q.explanation;
-
-      const nextBtn = document.getElementById('next-btn');
-      nextBtn.textContent = currentQ === questions.length - 1 ? 'See results →' : 'Next question →';
-      nextBtn.classList.add('show');
-    }
-
-    function nextQuestion() {
-      currentQ++;
-      if (currentQ >= questions.length) showResults();
-      else showQuestion();
-    }
-
-    function showResults() {
-      document.getElementById('question-card').style.display = 'none';
-      document.getElementById('results-card').classList.add('show');
-      document.getElementById('final-score').textContent = score;
-      document.getElementById('progress-fill').style.width = '100%';
-      document.getElementById('progress-text').textContent = `${questions.length} of ${questions.length}`;
-
-      const pct = (score / questions.length) * 100;
-      let msg = '';
-      if (pct === 100) msg = 'Perfect score! You\'ve mastered this topic.';
-      else if (pct >= 80) msg = 'Excellent work! You\'re close to mastery.';
-      else if (pct >= 60) msg = 'Good effort. Review the explanations and try again.';
-      else msg = 'Keep practicing — review the lesson above and try again.';
-      document.getElementById('results-message').textContent = msg;
-    }
-
-    function restartQuiz() {
-      currentQ = 0;
-      score = 0;
-      document.getElementById('results-card').classList.remove('show');
-      document.getElementById('question-card').style.display = 'block';
-      showQuestion();
-    }
-
-    loadQuestions();
-  </script>
-
-  <a href="topic2-systems-of-equations.html" class="next-topic">
-    <div>
-      <div class="label">Next topic</div>
-      <div class="title">Systems of Linear Equations →</div>
-    </div>
-    <span class="next-arrow">›</span>
-  </a>
-
   <div class="cta-section">
-    <h3>Want to go deeper?</h3>
+    <h3>Want personalized help?</h3>
     <p>Dr. Jain works through harder problems live — tailored to exactly where you're stuck.</p>
     <a class="cta-btn" href="https://calendly.com/ashu3069usa" target="_blank">Book a free 15-min session</a>
     <p class="cta-sub">No commitment. Just focused help.</p>
   </div>
+
+</div>
 
 </div>
 

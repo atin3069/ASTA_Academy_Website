@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAT Math Prep — ASTA Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a3a5c;
+    --navy-light: #2563a8;
+    --gold: #FFD700;
+    --gold-soft: #FFF3B0;
+    --cream: #FAFAF7;
+    --text: #1C1C1E;
+    --text-muted: #6B6B6E;
+    --border: #E8E8E4;
+    --blue-soft: #EBF3FF;
+    --success: #0F6E56;
+    --success-soft: #E1F5EE;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.active { color: var(--gold); font-weight: 500; }
+  .nav-book {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 500 !important;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    padding: 56px 40px 48px;
+    text-align: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,215,0,0.15);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 99px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,215,0,0.3);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .hero p {
+    font-size: 15.5px;
+    color: rgba(255,255,255,0.65);
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .hero-stat .lbl {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* SECTION HEADER */
+  .section-header {
+    padding: 40px 0 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .section-header span {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* DOMAIN LABEL */
+  .domain-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .domain-label:first-of-type { margin-top: 0; }
+
+  /* TOPIC CARDS */
+  .topic-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .topic-card:hover {
+    border-color: var(--navy-light);
+    box-shadow: 0 2px 12px rgba(26,58,92,0.08);
+  }
+  .topic-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: var(--blue-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .topic-info { flex: 1; }
+  .topic-info h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+  .topic-info p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .topic-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .freq-badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: var(--success-soft);
+    color: var(--success);
+  }
+  .topic-arrow {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* COMING SOON CARD */
+  .topic-card.coming-soon {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+  .coming-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: var(--cream);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  /* DR JAIN CARD */
+  .jain-card {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .jain-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255,215,0,0.2);
+    border: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .jain-text { flex: 1; }
+  .jain-text h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .jain-text p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+  .jain-btn {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 500;
+    font-size: 13.5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+  }
+  .jain-btn:hover { opacity: 0.9; }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 20px 60px; }
+    nav { padding: 0 20px; }
+    .hero { padding: 40px 20px 36px; }
+    .hero h1 { font-size: 28px; }
+    .hero-stats { gap: 24px; }
+    .nav-links { display: none; }
+    .topic-card { flex-wrap: wrap; }
+    .jain-card { flex-direction: column; text-align: center; }
+    .section-header { flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">★ ASTA <span>Academy</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#why">Why ASTA</a>
+    <a href="sat-math.html" class="active">SAT Math Prep</a>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Free resource</div>
+  <h1>SAT Math Prep</h1>
+  <p>Clear, focused lessons on every topic the SAT tests — written by Dr. Ashu Jain, IIT graduate and expert math tutor.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">10</div>
+      <div class="lbl">core topics</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">3+</div>
+      <div class="lbl">worked examples each</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">100%</div>
+      <div class="lbl">free, no login</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-header">
+    <h2>All topics</h2>
+    <span>Ordered by SAT frequency</span>
+  </div>
+
+  <div class="domain-label">Heart of Algebra</div>
+
+  <a href="topic1-linear-equations.html" class="topic-card">
+    <div class="topic-icon">📐</div>
+    <div class="topic-info">
+      <h3>Linear equations</h3>
+      <p>Solving, word problems, and the shortcut tricks the SAT loves</p>
+    </div>
+    <div class="topic-meta">
+      <span class="freq-badge">~10% of test</span>
+      <span class="topic-arrow">›</span>
+    </div>
+  </a>
+
+  <a href="topic2-systems-of-equations.html" class="topic-card">
+    <div class="topic-icon">⚖️</div>
+    <div class="topic-info">
+      <h3>Systems of linear equations</h3>
+      <p>Elimination, substitution, and the no-solution / infinite-solution cases</p>
+    </div>
+    <div class="topic-meta">
+      <span class="freq-badge">~8% of test</span>
+      <span class="topic-arrow">›</span>
+    </div>
+  </a>
+
+  <div class="domain-label">Advanced Math</div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">🔢</div>
+    <div class="topic-info">
+      <h3>Quadratic equations & functions</h3>
+      <p>Factoring, the quadratic formula, and parabolas</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">🔣</div>
+    <div class="topic-info">
+      <h3>Equivalent expressions</h3>
+      <p>Simplifying, factoring, and rewriting algebraic forms</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">📈</div>
+    <div class="topic-info">
+      <h3>Nonlinear functions</h3>
+      <p>Exponential growth, decay, and interpreting graphs</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="domain-label">Problem Solving & Data Analysis</div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">📊</div>
+    <div class="topic-info">
+      <h3>Ratios, rates & proportions</h3>
+      <p>Unit conversions, scaling, and percent problems</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">💯</div>
+    <div class="topic-info">
+      <h3>Percentages</h3>
+      <p>Percent change, markups, and multi-step percent problems</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">📉</div>
+    <div class="topic-info">
+      <h3>Scatterplots & lines of best fit</h3>
+      <p>Interpreting graphs, correlation, and trend lines</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">📋</div>
+    <div class="topic-info">
+      <h3>Statistics</h3>
+      <p>Mean, median, spread, and interpreting data sets</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="domain-label">Additional Topics in Math</div>
+
+  <div class="topic-card coming-soon">
+    <div class="topic-icon">📏</div>
+    <div class="topic-info">
+      <h3>Right triangles & trigonometry</h3>
+      <p>Pythagorean theorem, SOH-CAH-TOA, and special triangles</p>
+    </div>
+    <div class="topic-meta">
+      <span class="coming-badge">Coming soon</span>
+    </div>
+  </div>
+
+  <div class="jain-card">
+    <div class="jain-avatar">AJ</div>
+    <div class="jain-text">
+      <h3>Want personalized help from Dr. Jain?</h3>
+      <p>These lessons cover the concepts — but 1-on-1 tutoring is where real score jumps happen. Book a free 15-minute session and see the difference.</p>
+    </div>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="jain-btn">Book a free session</a>
+  </div>
+
+</div>
+
+</body>
+</html>

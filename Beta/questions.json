@@ -1,0 +1,54 @@
+{
+  "linear-equations": [
+    {
+      "question": "If 3x + 7 = 22, what is the value of 6x + 14?",
+      "choices": ["15", "22", "30", "44"],
+      "correct": 3,
+      "explanation": "Notice that 6x + 14 is exactly 2 × (3x + 7). So the answer is 2 × 22 = 44. No need to solve for x at all — this is the SAT's favorite shortcut!"
+    },
+    {
+      "question": "If 5(x − 3) = 2x + 9, what is the value of x?",
+      "choices": ["4", "6", "8", "12"],
+      "correct": 2,
+      "explanation": "Expand: 5x − 15 = 2x + 9. Subtract 2x: 3x − 15 = 9. Add 15: 3x = 24. Divide by 3: x = 8."
+    },
+    {
+      "question": "A taxi charges a $4 base fee plus $2.50 per mile. If a ride costs $19, how many miles was it?",
+      "choices": ["5 miles", "6 miles", "7 miles", "8 miles"],
+      "correct": 1,
+      "explanation": "Set up the equation: 4 + 2.50m = 19. Subtract 4: 2.50m = 15. Divide by 2.50: m = 6 miles."
+    },
+    {
+      "question": "If 2(x + 4) = 18, what is the value of x − 1?",
+      "choices": ["4", "5", "8", "9"],
+      "correct": 0,
+      "explanation": "Solve for x first: 2x + 8 = 18, so 2x = 10, x = 5. Then x − 1 = 5 − 1 = 4. Watch out — the SAT often asks for an expression, not just x!"
+    },
+    {
+      "question": "If 7x − 3 = 4x + 12, what is the value of x?",
+      "choices": ["3", "5", "9", "15"],
+      "correct": 1,
+      "explanation": "Subtract 4x from both sides: 3x − 3 = 12. Add 3: 3x = 15. Divide by 3: x = 5."
+    }
+  ],
+  "systems-of-equations": [
+    {
+      "question": "If x + y = 10 and x − y = 4, what is the value of x?",
+      "choices": ["3", "5", "7", "8"],
+      "correct": 2,
+      "explanation": "Add the two equations: 2x = 14, so x = 7. Then y = 3. Adding equations to eliminate y is faster than substitution here."
+    },
+    {
+      "question": "How many solutions does this system have?  3x + 2y = 6  and  6x + 4y = 12",
+      "choices": ["No solution", "Exactly one", "Exactly two", "Infinitely many"],
+      "correct": 3,
+      "explanation": "The second equation is exactly 2 times the first equation — they describe the same line. So infinitely many solutions exist on that line."
+    },
+    {
+      "question": "If 2x + 3y = 13 and x = y + 1, what is the value of y?",
+      "choices": ["1", "2.2", "3", "4"],
+      "correct": 1,
+      "explanation": "Substitute x = y + 1 into the first equation: 2(y+1) + 3y = 13. Simplify: 2y + 2 + 3y = 13, so 5y = 11, y = 2.2."
+    }
+  ]
+}

@@ -560,5 +560,120 @@
 
 </div>
 
+<script>
+    let questions = [];
+    let currentQ = 0;
+    let score = 0;
+    let answered = false;
+
+    async function loadQuestions() {
+      try {
+        const res = await fetch('questions.json');
+        const data = await res.json();
+        const algebra = (data.domains || []).find(d => d.domain === 'Algebra');
+        if (algebra) {
+          questions = algebra.questions.filter(q =>
+            q.skill && q.skill.toLowerCase().includes('linear')
+          );
+        }
+        if (questions.length === 0) {
+          document.getElementById('practice-loading').textContent = 'No questions found for this topic yet.';
+          return;
+        }
+        document.getElementById('practice-loading').style.display = 'none';
+        document.getElementById('question-card').style.display = 'block';
+        document.getElementById('total-q').textContent = questions.length;
+        showQuestion();
+      } catch (e) {
+        document.getElementById('practice-loading').textContent = 'Could not load questions. Make sure questions.json is in the same folder.';
+      }
+    }
+
+    function showQuestion() {
+      const q = questions[currentQ];
+      answered = false;
+      document.getElementById('q-num').textContent = `Question ${currentQ + 1} of ${questions.length} · ${q.skill} · ${q.difficulty}`;
+      document.getElementById('q-text').textContent = q.question;
+      document.getElementById('progress-text').textContent = `${currentQ + 1} of ${questions.length}`;
+      document.getElementById('progress-fill').style.width = `${((currentQ) / questions.length) * 100}%`;
+
+      const grid = document.getElementById('choices-grid');
+      grid.innerHTML = '';
+      const letters = ['A', 'B', 'C', 'D'];
+      letters.forEach(letter => {
+        if (q.choices[letter] === undefined) return;
+        const btn = document.createElement('button');
+        btn.className = 'choice-btn';
+        btn.dataset.letter = letter;
+        btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
+        btn.onclick = () => selectAnswer(letter);
+        grid.appendChild(btn);
+      });
+
+      document.getElementById('feedback').classList.remove('show');
+      document.getElementById('next-btn').classList.remove('show');
+    }
+
+    function selectAnswer(chosen) {
+      if (answered) return;
+      answered = true;
+      const q = questions[currentQ];
+
+      document.querySelectorAll('.choice-btn').forEach(btn => {
+        btn.disabled = true;
+        const letter = btn.dataset.letter;
+        if (letter === q.answer) btn.classList.add('correct');
+        else if (letter === chosen) btn.classList.add('incorrect');
+      });
+
+      const feedback = document.getElementById('feedback');
+      if (chosen === q.answer) {
+        score++;
+        feedback.className = 'feedback correct show';
+        document.getElementById('feedback-title').textContent = '✓ Correct!';
+      } else {
+        feedback.className = 'feedback incorrect show';
+        document.getElementById('feedback-title').textContent = `✗ Not quite — correct answer is ${q.answer}`;
+      }
+      document.getElementById('feedback-text').textContent = q.explanation;
+
+      const nextBtn = document.getElementById('next-btn');
+      nextBtn.textContent = currentQ === questions.length - 1 ? 'See results →' : 'Next question →';
+      nextBtn.classList.add('show');
+    }
+
+    function nextQuestion() {
+      currentQ++;
+      if (currentQ >= questions.length) showResults();
+      else showQuestion();
+    }
+
+    function showResults() {
+      document.getElementById('question-card').style.display = 'none';
+      document.getElementById('results-card').classList.add('show');
+      document.getElementById('final-score').textContent = score;
+      document.getElementById('progress-fill').style.width = '100%';
+      document.getElementById('progress-text').textContent = `${questions.length} of ${questions.length}`;
+
+      const pct = (score / questions.length) * 100;
+      let msg = '';
+      if (pct === 100) msg = "Perfect score! You've mastered this topic.";
+      else if (pct >= 80) msg = "Excellent work! You're close to mastery.";
+      else if (pct >= 60) msg = "Good effort. Review the explanations and try again.";
+      else msg = "Keep practicing — try again.";
+      document.getElementById('results-message').textContent = msg;
+    }
+
+    function restartQuiz() {
+      currentQ = 0;
+      score = 0;
+      document.getElementById('results-card').classList.remove('show');
+      document.getElementById('question-card').style.display = 'block';
+      showQuestion();
+    }
+
+    loadQuestions();
+  </script>
+
 </body>
 </html>

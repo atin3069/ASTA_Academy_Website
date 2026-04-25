@@ -466,6 +466,7 @@
     <a href="index.html">Home</a>
     <a href="index.html#why">Why ASTA</a>
     <a href="sat-math.html" class="active">SAT Math Prep</a>
+    <a href="question-bank.html">Question Bank</a>
     <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
   </div>
 </nav>
@@ -609,7 +610,17 @@
       try {
         const res = await fetch('questions.json');
         const data = await res.json();
-        questions = data['linear-equations'] || [];
+        // Pull all "Algebra" domain questions related to linear equations
+        const algebra = (data.domains || []).find(d => d.domain === 'Algebra');
+        if (algebra) {
+          questions = algebra.questions.filter(q =>
+            q.skill && q.skill.toLowerCase().includes('linear')
+          );
+        }
+        if (questions.length === 0) {
+          document.getElementById('practice-loading').textContent = 'No questions found for this topic yet.';
+          return;
+        }
         document.getElementById('practice-loading').style.display = 'none';
         document.getElementById('question-card').style.display = 'block';
         document.getElementById('total-q').textContent = questions.length;
@@ -622,7 +633,7 @@
     function showQuestion() {
       const q = questions[currentQ];
       answered = false;
-      document.getElementById('q-num').textContent = `Question ${currentQ + 1} of ${questions.length}`;
+      document.getElementById('q-num').textContent = `Question ${currentQ + 1} of ${questions.length} · ${q.skill} · ${q.difficulty}`;
       document.getElementById('q-text').textContent = q.question;
       document.getElementById('progress-text').textContent = `${currentQ + 1} of ${questions.length}`;
       document.getElementById('progress-fill').style.width = `${((currentQ) / questions.length) * 100}%`;
@@ -630,11 +641,13 @@
       const grid = document.getElementById('choices-grid');
       grid.innerHTML = '';
       const letters = ['A', 'B', 'C', 'D'];
-      q.choices.forEach((choice, i) => {
+      letters.forEach(letter => {
+        if (q.choices[letter] === undefined) return;
         const btn = document.createElement('button');
         btn.className = 'choice-btn';
-        btn.innerHTML = `<span class="choice-letter">${letters[i]}</span><span>${choice}</span>`;
-        btn.onclick = () => selectAnswer(i);
+        btn.dataset.letter = letter;
+        btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
+        btn.onclick = () => selectAnswer(letter);
         grid.appendChild(btn);
       });
 
@@ -642,31 +655,28 @@
       document.getElementById('next-btn').classList.remove('show');
     }
 
-    function selectAnswer(idx) {
+    function selectAnswer(chosen) {
       if (answered) return;
       answered = true;
       const q = questions[currentQ];
-      const buttons = document.querySelectorAll('.choice-btn');
 
-      buttons.forEach((btn, i) => {
+      document.querySelectorAll('.choice-btn').forEach(btn => {
         btn.disabled = true;
-        if (i === q.correct) btn.classList.add('correct');
-        else if (i === idx) btn.classList.add('incorrect');
+        const letter = btn.dataset.letter;
+        if (letter === q.answer) btn.classList.add('correct');
+        else if (letter === chosen) btn.classList.add('incorrect');
       });
 
       const feedback = document.getElementById('feedback');
-      const feedbackTitle = document.getElementById('feedback-title');
-      const feedbackText = document.getElementById('feedback-text');
-
-      if (idx === q.correct) {
+      if (chosen === q.answer) {
         score++;
         feedback.className = 'feedback correct show';
-        feedbackTitle.textContent = '✓ Correct!';
+        document.getElementById('feedback-title').textContent = '✓ Correct!';
       } else {
         feedback.className = 'feedback incorrect show';
-        feedbackTitle.textContent = '✗ Not quite';
+        document.getElementById('feedback-title').textContent = `✗ Not quite — correct answer is ${q.answer}`;
       }
-      feedbackText.textContent = q.explanation;
+      document.getElementById('feedback-text').textContent = q.explanation;
 
       const nextBtn = document.getElementById('next-btn');
       nextBtn.textContent = currentQ === questions.length - 1 ? 'See results →' : 'Next question →';
@@ -675,11 +685,8 @@
 
     function nextQuestion() {
       currentQ++;
-      if (currentQ >= questions.length) {
-        showResults();
-      } else {
-        showQuestion();
-      }
+      if (currentQ >= questions.length) showResults();
+      else showQuestion();
     }
 
     function showResults() {

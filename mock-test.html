@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free SAT Math Mock Test — ASTA Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a3a5c;
+    --navy-light: #2563a8;
+    --gold: #FFD700;
+    --gold-soft: #FFF3B0;
+    --cream: #FAFAF7;
+    --text: #1C1C1E;
+    --text-muted: #6B6B6E;
+    --border: #E8E8E4;
+    --blue-soft: #EBF3FF;
+    --success: #0F6E56;
+    --success-soft: #E1F5EE;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+  /* NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 3px 20px rgba(12,68,124,0.35);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-name { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+  .nav-logo-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 3px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.active { color: #FFD700; }
+  .nav-book { background: #EF9F27 !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; }
+  .nav-book:hover { background: #BA7517 !important; color: #fff !important; }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    padding: 70px 40px 64px;
+    text-align: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,215,0,0.15);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 99px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,215,0,0.3);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.75);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+  .hero-features {
+    display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+    margin: 28px auto 0; max-width: 700px;
+  }
+  .feature-pill {
+    display: flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.85); font-size: 14px;
+  }
+  .feature-pill svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* CONTAINER */
+  .container { max-width: 880px; margin: 0 auto; padding: 60px 40px; }
+
+  /* HOW IT WORKS */
+  .section-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--navy-light); margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; color: var(--navy);
+    font-weight: 600; margin-bottom: 36px;
+  }
+
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .step-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px;
+  }
+  .step-num {
+    width: 36px; height: 36px;
+    background: var(--navy); color: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .step-card h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .step-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* TEST DETAILS */
+  .details-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 14px; padding: 32px; margin-top: 50px;
+  }
+  .details-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
+  .detail-item h4 {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .detail-item p { font-size: 16px; color: var(--navy); font-weight: 500; }
+
+  .domain-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 20px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .domain-tag {
+    background: var(--blue-soft); color: var(--navy);
+    font-size: 12px; font-weight: 500;
+    padding: 5px 12px; border-radius: 99px;
+  }
+
+  /* CTA */
+  .cta-card {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 14px; padding: 40px;
+    text-align: center; margin-top: 40px;
+    color: #fff;
+  }
+  .cta-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .cta-card p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+  .start-btn {
+    display: inline-block;
+    background: var(--gold); color: var(--navy);
+    font-weight: 700; font-size: 16px;
+    padding: 14px 38px; border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 14px rgba(255,215,0,0.3);
+  }
+  .start-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,215,0,0.4); }
+  .cta-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 14px; }
+
+  /* DR JAIN */
+  .jain-section {
+    text-align: center; margin-top: 60px;
+    padding-top: 40px; border-top: 1px solid var(--border);
+  }
+  .jain-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; color: var(--navy);
+    font-weight: 600; margin-bottom: 8px;
+  }
+  .jain-section p {
+    color: var(--text-muted); max-width: 540px;
+    margin: 0 auto; font-size: 15px;
+  }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: var(--gold-soft);
+    border: 1px solid #F5D700;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 36px;
+    font-size: 13.5px;
+    color: #6B5A00;
+    line-height: 1.6;
+  }
+  .disclaimer strong { display: block; margin-bottom: 4px; color: #4A3D00; }
+
+  @media (max-width: 720px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 16px; }
+    .nav-links a:not(.nav-book) { display: none; }
+    .hero { padding: 50px 20px; }
+    .hero h1 { font-size: 32px; }
+    .container { padding: 40px 20px; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .details-grid { grid-template-columns: 1fr 1fr; }
+    .cta-card { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="12" width="40" height="28" rx="3" fill="#185FA5"/>
+      <rect x="22" y="12" width="20" height="28" fill="#0C447C"/>
+      <line x1="22" y1="12" x2="22" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+      <polygon points="22,1 24.8,8.5 33,8.5 26.5,13.5 29,21 22,16.5 15,21 17.5,13.5 11,8.5 19.2,8.5" fill="#EF9F27"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">ASTA Academy</span>
+      <span class="nav-logo-sub">Math &amp; Science Tutoring</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="sat-math.html">SAT Math Prep</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a href="mock-test.html" class="active">Mock Test</a>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Free Diagnostic Test</div>
+  <h1>Find out exactly where your student stands on <em>SAT Math</em></h1>
+  <p>A full-length, adaptive Digital SAT Math mock test — completely free. Get a personalized diagnostic report from Dr. Ashu Jain showing strengths, weaknesses, and the topics most likely to boost the score.</p>
+  <div class="hero-features">
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      70 minutes
+    </div>
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      44 adaptive questions
+    </div>
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Personal report
+    </div>
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      100% free
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-label">How it works</div>
+  <h2 class="section-title">Three simple steps</h2>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Take the test</h3>
+      <p>22 questions in Module 1 (35 min). Your performance determines whether you see an Easy or Hard Module 2 — just like the real Digital SAT.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>Get your score</h3>
+      <p>Estimated SAT Math score range based on weighted-difficulty analysis. Honest numbers, not inflated promises.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>Receive your report</h3>
+      <p>Dr. Jain personally reviews your results and emails a diagnostic report with the top 3 topics to focus on for the biggest score gains.</p>
+    </div>
+  </div>
+
+  <div class="details-card">
+    <div class="section-label">Test details</div>
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); font-weight: 600;">SAT Math Mock Test 1</h3>
+    <div class="details-grid">
+      <div class="detail-item">
+        <h4>Format</h4>
+        <p>Adaptive 2-module</p>
+      </div>
+      <div class="detail-item">
+        <h4>Total time</h4>
+        <p>70 minutes</p>
+      </div>
+      <div class="detail-item">
+        <h4>Score range</h4>
+        <p>200–800</p>
+      </div>
+    </div>
+    <div class="domain-tags">
+      <div class="domain-tag">Algebra</div>
+      <div class="domain-tag">Advanced Math</div>
+      <div class="domain-tag">Problem-Solving &amp; Data Analysis</div>
+      <div class="domain-tag">Geometry &amp; Trigonometry</div>
+    </div>
+  </div>
+
+  <div class="cta-card">
+    <h3>Ready to start?</h3>
+    <p>Set aside 70 minutes — find a quiet spot, grab scratch paper, and begin.</p>
+    <a class="start-btn" href="mock-test-runner.html">Start Mock Test 1 →</a>
+    <p class="cta-sub">No login. No payment. Just you and the test.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Honest disclaimer</strong>
+    Your estimated score range is based on ASTA Academy's weighted-correct-answer model — not the College Board's official IRT calibration. Results are approximate. For your most accurate score prediction, take an official Bluebook practice test from the College Board.
+  </div>
+
+  <div class="jain-section">
+    <h3>About Dr. Ashu Jain</h3>
+    <p>Retired professor from the Indian Institute of Technology (IIT). Decades of teaching mathematics to top students. Now bringing professor-level expertise to high schoolers preparing for the SAT.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

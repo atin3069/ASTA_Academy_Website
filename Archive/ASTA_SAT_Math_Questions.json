@@ -1,0 +1,420 @@
+{
+  "title": "ASTA Academy - Digital SAT Math Practice Set (Sample)",
+  "description": "Sample practice set of 25 original Digital SAT-style math questions across all four content domains.",
+  "version": "1.0",
+  "total_questions": 25,
+  "domains": [
+    {
+      "domain": "Algebra",
+      "description": "Linear equations, linear functions, systems of linear equations, and linear inequalities.",
+      "questions": [
+        {
+          "id": "ALG-001",
+          "domain": "Algebra",
+          "skill": "Linear equations in one variable",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 3(x − 4) = 2x + 5, what is the value of x?",
+          "choices": {
+            "A": "−17",
+            "B": "−7",
+            "C": "7",
+            "D": "17"
+          },
+          "answer": "D",
+          "explanation": "Distribute the 3 on the left: 3x − 12 = 2x + 5. Subtract 2x from both sides: x − 12 = 5. Add 12 to both sides: x = 17. The answer is D."
+        },
+        {
+          "id": "ALG-002",
+          "domain": "Algebra",
+          "skill": "Linear functions",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "The function f is defined by f(x) = 5x − 8. What is the value of f(6)?",
+          "choices": {
+            "A": "2",
+            "B": "11",
+            "C": "22",
+            "D": "30"
+          },
+          "answer": "C",
+          "explanation": "Substitute 6 for x: f(6) = 5(6) − 8 = 30 − 8 = 22. The answer is C."
+        },
+        {
+          "id": "ALG-003",
+          "domain": "Algebra",
+          "skill": "Systems of two linear equations",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 2x + 3y = 19 and x − y = 2, what is the value of x + y?",
+          "choices": {
+            "A": "5",
+            "B": "7",
+            "C": "8",
+            "D": "9"
+          },
+          "answer": "C",
+          "explanation": "From the second equation, x = y + 2. Substitute into the first: 2(y + 2) + 3y = 19, which gives 5y + 4 = 19, so 5y = 15 and y = 3. Then x = 5. Therefore x + y = 5 + 3 = 8. The answer is C."
+        },
+        {
+          "id": "ALG-004",
+          "domain": "Algebra",
+          "skill": "Linear inequalities",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which of the following values of x satisfies the inequality −2x + 7 ≥ 3?",
+          "choices": {
+            "A": "x = 3",
+            "B": "x = 2.5",
+            "C": "x = 2",
+            "D": "x = 5"
+          },
+          "answer": "C",
+          "explanation": "Solve: −2x + 7 ≥ 3 → −2x ≥ −4 → x ≤ 2 (flip inequality when dividing by a negative). Only x = 2 satisfies x ≤ 2. The answer is C."
+        },
+        {
+          "id": "ALG-005",
+          "domain": "Algebra",
+          "skill": "Linear equations in two variables",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A line in the xy-plane passes through the points (2, 5) and (6, 13). What is the slope of the line?",
+          "choices": {
+            "A": "1/2",
+            "B": "2",
+            "C": "4",
+            "D": "8"
+          },
+          "answer": "B",
+          "explanation": "Slope = (y₂ − y₁) / (x₂ − x₁) = (13 − 5) / (6 − 2) = 8/4 = 2. The answer is B."
+        },
+        {
+          "id": "ALG-006",
+          "domain": "Algebra",
+          "skill": "Linear word problems",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "A gym charges a one-time membership fee of $40 plus $25 per month. If Jordan paid a total of $290, for how many months was Jordan a member?",
+          "answer": "10",
+          "explanation": "Set up the equation: 40 + 25m = 290, where m is the number of months. Subtract 40: 25m = 250. Divide by 25: m = 10. Jordan was a member for 10 months."
+        },
+        {
+          "id": "ALG-007",
+          "domain": "Algebra",
+          "skill": "Systems of linear equations (no solution / infinite)",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "The system of equations 4x + ky = 10 and 8x + 6y = 20 has infinitely many solutions. What is the value of k?",
+          "choices": {
+            "A": "1.5",
+            "B": "2",
+            "C": "3",
+            "D": "6"
+          },
+          "answer": "C",
+          "explanation": "For infinitely many solutions, one equation must be a multiple of the other. The second equation is twice the first if 8x = 2(4x) ✓ and 20 = 2(10) ✓, so we need 6y = 2(ky), meaning 6 = 2k, so k = 3. The answer is C."
+        }
+      ]
+    },
+    {
+      "domain": "Advanced Math",
+      "description": "Equivalent expressions, nonlinear equations in one variable, systems of nonlinear equations, and nonlinear functions.",
+      "questions": [
+        {
+          "id": "ADV-001",
+          "domain": "Advanced Math",
+          "skill": "Equivalent expressions",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Which expression is equivalent to (2x + 3)(x − 5)?",
+          "choices": {
+            "A": "2x² − 7x − 15",
+            "B": "2x² + 7x − 15",
+            "C": "2x² − 13x − 15",
+            "D": "2x² − 7x + 15"
+          },
+          "answer": "A",
+          "explanation": "FOIL: (2x)(x) + (2x)(−5) + (3)(x) + (3)(−5) = 2x² − 10x + 3x − 15 = 2x² − 7x − 15. The answer is A."
+        },
+        {
+          "id": "ADV-002",
+          "domain": "Advanced Math",
+          "skill": "Quadratic equations",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What are the solutions to the equation x² − 6x + 8 = 0?",
+          "choices": {
+            "A": "x = −2 and x = −4",
+            "B": "x = 2 and x = 4",
+            "C": "x = 1 and x = 8",
+            "D": "x = −1 and x = −8"
+          },
+          "answer": "B",
+          "explanation": "Factor: x² − 6x + 8 = (x − 2)(x − 4) = 0. So x − 2 = 0 or x − 4 = 0, giving x = 2 or x = 4. The answer is B."
+        },
+        {
+          "id": "ADV-003",
+          "domain": "Advanced Math",
+          "skill": "Exponential functions",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A bacterial population doubles every 3 hours. If the initial population is 500, which function P(t) gives the population after t hours?",
+          "choices": {
+            "A": "P(t) = 500 · 2^(3t)",
+            "B": "P(t) = 500 · 2^(t/3)",
+            "C": "P(t) = 500 + 2t/3",
+            "D": "P(t) = 500 · 3^(t/2)"
+          },
+          "answer": "B",
+          "explanation": "Doubling every 3 hours means the exponent of 2 should equal 1 when t = 3. The form P(t) = 500 · 2^(t/3) gives P(3) = 500 · 2 = 1000 ✓. The answer is B."
+        },
+        {
+          "id": "ADV-004",
+          "domain": "Advanced Math",
+          "skill": "Quadratic functions and vertex",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "The function f is defined by f(x) = (x − 4)² − 9. What is the minimum value of f(x)?",
+          "choices": {
+            "A": "−9",
+            "B": "−4",
+            "C": "4",
+            "D": "9"
+          },
+          "answer": "A",
+          "explanation": "The function is in vertex form f(x) = (x − h)² + k, where the vertex is at (h, k) = (4, −9). Since the coefficient of the squared term is positive, the parabola opens upward, so the vertex is the minimum. The minimum value is −9. The answer is A."
+        },
+        {
+          "id": "ADV-005",
+          "domain": "Advanced Math",
+          "skill": "Radical and rational equations",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "If √(3x − 2) = x − 2, what is the value of x?",
+          "choices": {
+            "A": "1",
+            "B": "3",
+            "C": "6",
+            "D": "Both 1 and 6"
+          },
+          "answer": "C",
+          "explanation": "Square both sides: 3x − 2 = (x − 2)² = x² − 4x + 4. Rearrange: x² − 7x + 6 = 0. Factor: (x − 1)(x − 6) = 0, so x = 1 or x = 6. Always check radical equations for extraneous solutions. For x = 1: √(3·1 − 2) = √1 = 1, but x − 2 = −1, so 1 ≠ −1 (extraneous). For x = 6: √(3·6 − 2) = √16 = 4, and x − 2 = 4 ✓. The only valid solution is x = 6. The answer is C."
+        },
+        {
+          "id": "ADV-006",
+          "domain": "Advanced Math",
+          "skill": "Polynomial factors and zeros",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "The polynomial p(x) = x³ − 4x² + x + 6 has (x + 1) as a factor. What are all the zeros of p(x)?",
+          "choices": {
+            "A": "−1, 2, 3",
+            "B": "−1, −2, 3",
+            "C": "1, 2, 3",
+            "D": "−1, 2, −3"
+          },
+          "answer": "A",
+          "explanation": "Since (x + 1) is a factor, divide p(x) by (x + 1) using synthetic or polynomial division. The result is x² − 5x + 6, which factors as (x − 2)(x − 3). So p(x) = (x + 1)(x − 2)(x − 3), giving zeros at x = −1, 2, and 3. The answer is A."
+        }
+      ]
+    },
+    {
+      "domain": "Problem-Solving and Data Analysis",
+      "description": "Ratios, rates, proportional relationships, percentages, units, statistics, and probability.",
+      "questions": [
+        {
+          "id": "PSD-001",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Percentages",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "A jacket originally priced at $80 is on sale for 25% off. What is the sale price?",
+          "choices": {
+            "A": "$20",
+            "B": "$55",
+            "C": "$60",
+            "D": "$65"
+          },
+          "answer": "C",
+          "explanation": "25% of $80 = 0.25 × 80 = $20 discount. Sale price = $80 − $20 = $60. The answer is C."
+        },
+        {
+          "id": "PSD-002",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Ratios and proportions",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "The ratio of red marbles to blue marbles in a jar is 3:5. If there are 24 red marbles, how many blue marbles are there?",
+          "choices": {
+            "A": "15",
+            "B": "32",
+            "C": "40",
+            "D": "45"
+          },
+          "answer": "C",
+          "explanation": "Set up the proportion: 3/5 = 24/x. Cross-multiply: 3x = 120, so x = 40. The answer is C."
+        },
+        {
+          "id": "PSD-003",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Unit rates",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A car travels 252 miles on 9 gallons of gasoline. At this rate, how many gallons are needed to travel 420 miles?",
+          "choices": {
+            "A": "12",
+            "B": "14",
+            "C": "15",
+            "D": "16"
+          },
+          "answer": "C",
+          "explanation": "Miles per gallon: 252 ÷ 9 = 28 mpg. Gallons needed for 420 miles: 420 ÷ 28 = 15. The answer is C."
+        },
+        {
+          "id": "PSD-004",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Percentage change",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "The population of a town grew from 12,500 to 14,000 over one year. What was the approximate percent increase?",
+          "choices": {
+            "A": "10%",
+            "B": "12%",
+            "C": "15%",
+            "D": "20%"
+          },
+          "answer": "B",
+          "explanation": "Increase = 14,000 − 12,500 = 1,500. Percent increase = (1,500 / 12,500) × 100 = 12%. The answer is B."
+        },
+        {
+          "id": "PSD-005",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Mean, median, range",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "The data set {4, 7, 9, 12, 8, 10} has mean m. If a new value of 14 is added to the data set, what happens to the mean?",
+          "choices": {
+            "A": "It decreases",
+            "B": "It stays the same",
+            "C": "It increases",
+            "D": "Cannot be determined"
+          },
+          "answer": "C",
+          "explanation": "Original mean = (4+7+9+12+8+10)/6 = 50/6 ≈ 8.33. New mean = 64/7 ≈ 9.14. Since the new value (14) is greater than the original mean, adding it increases the mean. The answer is C."
+        },
+        {
+          "id": "PSD-006",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Probability",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A bag contains 4 red, 6 blue, and 10 green marbles. If one marble is drawn at random, what is the probability that it is NOT green?",
+          "choices": {
+            "A": "1/4",
+            "B": "1/2",
+            "C": "2/5",
+            "D": "3/5"
+          },
+          "answer": "B",
+          "explanation": "Total marbles = 4 + 6 + 10 = 20. Non-green = 4 + 6 = 10. Probability = 10/20 = 1/2. The answer is B."
+        },
+        {
+          "id": "PSD-007",
+          "domain": "Problem-Solving and Data Analysis",
+          "skill": "Two-way tables",
+          "difficulty": "Hard",
+          "type": "spr",
+          "question": "A survey of 200 students asked whether they prefer math or science. 70% of the students were freshmen, and 40% of freshmen preferred math. How many freshmen preferred math?",
+          "answer": "56",
+          "explanation": "Number of freshmen = 70% of 200 = 140. Freshmen who prefer math = 40% of 140 = 0.4 × 140 = 56."
+        }
+      ]
+    },
+    {
+      "domain": "Geometry and Trigonometry",
+      "description": "Area, volume, lines, angles, triangles, right triangles, trigonometric ratios, and circles.",
+      "questions": [
+        {
+          "id": "GEO-001",
+          "domain": "Geometry and Trigonometry",
+          "skill": "Area and perimeter",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "A rectangle has a length of 12 cm and a width of 5 cm. What is the area of the rectangle, in square centimeters?",
+          "choices": {
+            "A": "17",
+            "B": "34",
+            "C": "60",
+            "D": "120"
+          },
+          "answer": "C",
+          "explanation": "Area of rectangle = length × width = 12 × 5 = 60 square cm. The answer is C."
+        },
+        {
+          "id": "GEO-002",
+          "domain": "Geometry and Trigonometry",
+          "skill": "Pythagorean theorem",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "In a right triangle, the two legs measure 6 and 8. What is the length of the hypotenuse?",
+          "choices": {
+            "A": "10",
+            "B": "12",
+            "C": "14",
+            "D": "√14"
+          },
+          "answer": "A",
+          "explanation": "By the Pythagorean theorem: c² = 6² + 8² = 36 + 64 = 100, so c = 10. The answer is A."
+        },
+        {
+          "id": "GEO-003",
+          "domain": "Geometry and Trigonometry",
+          "skill": "Circles",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A circle has a radius of 7. What is the area of the circle?",
+          "choices": {
+            "A": "14π",
+            "B": "28π",
+            "C": "49π",
+            "D": "98π"
+          },
+          "answer": "C",
+          "explanation": "Area of circle = πr² = π(7)² = 49π. The answer is C."
+        },
+        {
+          "id": "GEO-004",
+          "domain": "Geometry and Trigonometry",
+          "skill": "Volume",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A cylinder has a radius of 3 inches and a height of 10 inches. What is the volume, in cubic inches?",
+          "choices": {
+            "A": "30π",
+            "B": "60π",
+            "C": "90π",
+            "D": "100π"
+          },
+          "answer": "C",
+          "explanation": "Volume of cylinder = πr²h = π(3)²(10) = 90π. The answer is C."
+        },
+        {
+          "id": "GEO-005",
+          "domain": "Geometry and Trigonometry",
+          "skill": "Right triangle trigonometry",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "In a right triangle, sin(θ) = 3/5, where θ is one of the acute angles. What is the value of cos(θ)?",
+          "choices": {
+            "A": "3/4",
+            "B": "4/5",
+            "C": "5/4",
+            "D": "5/3"
+          },
+          "answer": "B",
+          "explanation": "If sin(θ) = opposite/hypotenuse = 3/5, then opposite = 3 and hypotenuse = 5. By Pythagorean theorem: adjacent² = 5² − 3² = 25 − 9 = 16, so adjacent = 4. Therefore cos(θ) = adjacent/hypotenuse = 4/5. The answer is B."
+        }
+      ]
+    }
+  ]
+}

@@ -464,7 +464,7 @@
     <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width: 0%;"></div></div>
 
     <div class="question-card">
-      <div class="q-meta">
+      <div class="q-meta" style="display:none;">
         <span id="q-id">Q1</span>
         <span class="difficulty" id="q-difficulty">Easy</span>
       </div>
@@ -561,6 +561,7 @@
         <input type="hidden" name="domain_breakdown" id="hidden-domain-breakdown">
         <input type="hidden" name="missed_skills" id="hidden-missed-skills">
         <input type="hidden" name="time_used_minutes" id="hidden-time-used">
+        <input type="hidden" name="detailed_answers" id="hidden-detailed-answers">
 
         <button type="submit" class="submit-btn">View My Diagnostic Report →</button>
         <p class="privacy-note">We'll only use your email to send your report and follow up. No spam, ever.</p>
@@ -603,6 +604,10 @@
       <h3>Want Dr. Jain to walk through this with your student?</h3>
       <p>Book a free 30-minute consultation. We'll review the missed questions live and build a focused study plan together.</p>
       <a href="https://calendly.com/ashu3069usa" target="_blank" class="cta-btn">Book Free Consultation →</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px;">
+      <a href="index.html" style="color: var(--navy-light); text-decoration: none; font-size: 14px; font-weight: 500;">← Back to ASTA Academy home</a>
     </div>
 
     <div class="disclaimer">
@@ -922,6 +927,43 @@
       missedSummary += `${i+1}. ${m.skill} (${m.domain}) - missed ${m.count} | `;
     });
     document.getElementById('hidden-missed-skills').value = missedSummary;
+
+    // ====== Build detailed answer log for email ======
+    let detailed = '';
+
+    function buildModuleLog(label, questions) {
+      let log = `\n═══════════════════════════════════════\n${label}\n═══════════════════════════════════════\n`;
+      questions.forEach((q, i) => {
+        const userAns = (answers[q.id] || '').toString().trim();
+        const correctAns = q.answer.toString().trim();
+        const isCorrect = userAns.toLowerCase() === correctAns.toLowerCase();
+        const status = userAns === '' ? '— (skipped)' : (isCorrect ? '✓ CORRECT' : '✗ INCORRECT');
+
+        log += `\nQ${i+1} [${q.id}] ${q.difficulty} · ${q.domain}`;
+        if (q.skill) log += ` · ${q.skill}`;
+        log += `\n"${q.question}"\n`;
+
+        if (q.choices) {
+          // Show their choice text
+          const userChoiceText = q.choices[userAns] || '(no answer)';
+          const correctChoiceText = q.choices[correctAns] || correctAns;
+          log += `Their answer: ${userAns ? userAns + ' (' + userChoiceText + ')' : '(skipped)'}  ${status}\n`;
+          if (!isCorrect) log += `Correct answer: ${correctAns} (${correctChoiceText})\n`;
+        } else {
+          // SPR
+          log += `Their answer: ${userAns || '(skipped)'}  ${status}\n`;
+          if (!isCorrect) log += `Correct answer: ${correctAns}\n`;
+        }
+      });
+      return log;
+    }
+
+    detailed += buildModuleLog('MODULE 1 — DETAILED ANSWERS', testData.module_1.questions);
+    const m2QData = m2Variant === 'hard' ? testData.hard_module_2.questions : testData.easy_module_2.questions;
+    detailed += buildModuleLog(`MODULE 2 (${m2Variant.toUpperCase()}) — DETAILED ANSWERS`, m2QData);
+
+    document.getElementById('hidden-detailed-answers').value = detailed;
+    // ====== End detailed answer log ======
 
     showScreen('screen-score');
   }

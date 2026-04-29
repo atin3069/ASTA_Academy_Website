@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mock Test in Progress — ASTA Academy</title>
+<title>Mock Test [DEBUG MODE] — ASTA Academy</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -462,9 +462,33 @@
     body.mobile-blocked .mobile-block { display: flex !important; }
   }
 
+
+  /* DEBUG MODE BANNER */
+  .debug-banner {
+    background: #B82929; color: #fff;
+    padding: 8px 24px; text-align: center;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.05em;
+    position: sticky; top: 0; z-index: 200;
+  }
+  .debug-banner span {
+    background: #FFD700; color: #B82929;
+    padding: 2px 8px; border-radius: 4px;
+    margin-right: 8px; font-weight: 700;
+  }
+  .debug-answer {
+    margin-top: 14px; padding: 12px 16px;
+    background: #FFF3B0; border: 1px dashed #B82929;
+    border-radius: 8px;
+    font-size: 13px; color: #6B5A00;
+  }
+  .debug-answer strong { color: #B82929; }
+
 </style>
 </head>
 <body>
+
+<div class="debug-banner"><span>DEBUG MODE</span> Answers visible — for testing only. Do NOT share this URL with students.</div>
 
 <!-- MOBILE BLOCK SCREEN (shown only on small screens) -->
 <div class="mobile-block">
@@ -786,6 +810,10 @@
     document.getElementById('progress-fill').style.width =
       ((currentQuestionIdx + 1) / currentModuleQuestions.length * 100) + '%';
 
+    // === DEBUG MODE: also show the q-meta (id, difficulty) so we can see them ===
+    const qMeta = document.querySelector('.q-meta');
+    if (qMeta) qMeta.style.display = '';
+
     const answerArea = document.getElementById('answer-area');
     answerArea.innerHTML = '';
 
@@ -817,6 +845,21 @@
       hint.textContent = 'Enter a number. No units, no commas.';
       answerArea.appendChild(hint);
     }
+
+    // === DEBUG: Show the correct answer ===
+    const debugDiv = document.createElement('div');
+    debugDiv.className = 'debug-answer';
+    let answerDisplay = q.answer;
+    if (q.choices && q.choices[q.answer]) {
+      answerDisplay = q.answer + ' (' + q.choices[q.answer] + ')';
+    }
+    debugDiv.innerHTML = '<strong>🐞 DEBUG — Correct answer:</strong> ' + answerDisplay +
+      '<br><strong>Difficulty:</strong> ' + q.difficulty +
+      ' · <strong>Domain:</strong> ' + q.domain +
+      ' · <strong>ID:</strong> ' + q.id +
+      (q.skill ? ' · <strong>Skill:</strong> ' + q.skill : '') +
+      (q.explanation ? '<br><strong>Explanation:</strong> ' + q.explanation : '');
+    answerArea.appendChild(debugDiv);
 
     document.getElementById('prev-btn').disabled = currentQuestionIdx === 0;
     const nextBtn = document.getElementById('next-btn');

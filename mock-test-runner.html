@@ -707,15 +707,49 @@
 
   // ============ INIT ============
   async function init() {
+    let errorDetails = [];
     try {
-      const [td, sd] = await Promise.all([
-        fetch('mock-test-1.json').then(r => r.json()),
-        fetch('scoring-spec.json').then(r => r.json())
-      ]);
-      testData = td;
-      scoringSpec = sd;
+      const r1 = await fetch('mock-test-1.json');
+      if (!r1.ok) {
+        errorDetails.push('mock-test-1.json: HTTP ' + r1.status);
+      } else {
+        try {
+          testData = await r1.json();
+        } catch (e) {
+          errorDetails.push('mock-test-1.json parse error: ' + e.message);
+        }
+      }
     } catch (e) {
-      alert('Could not load test data. Make sure mock-test-1.json and scoring-spec.json are in the same folder.');
+      errorDetails.push('mock-test-1.json fetch error: ' + e.message);
+    }
+
+    try {
+      const r2 = await fetch('scoring-spec.json');
+      if (!r2.ok) {
+        errorDetails.push('scoring-spec.json: HTTP ' + r2.status);
+      } else {
+        try {
+          scoringSpec = await r2.json();
+        } catch (e) {
+          errorDetails.push('scoring-spec.json parse error: ' + e.message);
+        }
+      }
+    } catch (e) {
+      errorDetails.push('scoring-spec.json fetch error: ' + e.message);
+    }
+
+    // Validate structure
+    if (testData && !testData.module_1) errorDetails.push('mock-test-1.json missing "module_1" key');
+    if (testData && !testData.easy_module_2) errorDetails.push('mock-test-1.json missing "easy_module_2" key');
+    if (testData && !testData.hard_module_2) errorDetails.push('mock-test-1.json missing "hard_module_2" key');
+    if (scoringSpec && !scoringSpec.final_scoring) errorDetails.push('scoring-spec.json missing "final_scoring" key');
+    if (scoringSpec && scoringSpec.final_scoring && !scoringSpec.final_scoring.easy_module_2_score_table) errorDetails.push('scoring-spec.json missing "easy_module_2_score_table"');
+
+    if (errorDetails.length > 0) {
+      alert('Test load failed:\n\n' + errorDetails.join('\n'));
+      console.error('Test load errors:', errorDetails);
+    } else {
+      console.log('✓ Test data loaded successfully');
     }
   }
   init();

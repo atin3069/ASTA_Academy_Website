@@ -24,12 +24,20 @@
         "difficulty": "adaptive",
         "variants": {
           "easy_module_2": {
-            "difficulty_distribution": {"Easy": 12, "Medium": 8, "Hard": 2},
+            "difficulty_distribution": {
+              "Easy": 12,
+              "Medium": 8,
+              "Hard": 2
+            },
             "max_score_cap": 600,
             "description": "Lower-difficulty questions; score range typically 200-600."
           },
           "hard_module_2": {
-            "difficulty_distribution": {"Easy": 4, "Medium": 9, "Hard": 9},
+            "difficulty_distribution": {
+              "Easy": 4,
+              "Medium": 9,
+              "Hard": 9
+            },
             "max_score_cap": 800,
             "description": "Higher-difficulty questions; score range typically 500-800."
           }
@@ -38,10 +46,22 @@
     ],
     "domain_blueprint_per_module": {
       "comment": "Number of questions from each domain in each 22-question module.",
-      "Algebra": {"min": 7, "max": 8},
-      "Advanced Math": {"min": 7, "max": 8},
-      "Problem-Solving and Data Analysis": {"min": 3, "max": 4},
-      "Geometry and Trigonometry": {"min": 3, "max": 4}
+      "Algebra": {
+        "min": 7,
+        "max": 8
+      },
+      "Advanced Math": {
+        "min": 7,
+        "max": 8
+      },
+      "Problem-Solving and Data Analysis": {
+        "min": 3,
+        "max": 4
+      },
+      "Geometry and Trigonometry": {
+        "min": 3,
+        "max": 4
+      }
     }
   },
   "module_1_scoring": {
@@ -64,34 +84,160 @@
     "method": "lookup_table",
     "explanation": "Final scaled score (200-800) is determined by combining Module 1 weighted score and Module 2 weighted score, then applying a calibration table.",
     "easy_module_2_score_table": {
-      "comment": "Map (M1 weighted score, M2 weighted score) → estimated SAT Math score. Easy M2 caps at 600.",
+      "comment": "Map (M1 weighted score, M2 weighted score) \u2192 estimated SAT Math score. Easy M2 caps at 600.",
       "rows": [
-        {"m1_score_min": 0, "m1_score_max": 4, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 220},
-        {"m1_score_min": 0, "m1_score_max": 4, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 280},
-        {"m1_score_min": 0, "m1_score_max": 4, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 340},
-        {"m1_score_min": 5, "m1_score_max": 9, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 320},
-        {"m1_score_min": 5, "m1_score_max": 9, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 400},
-        {"m1_score_min": 5, "m1_score_max": 9, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 470},
-        {"m1_score_min": 10, "m1_score_max": 13, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 410},
-        {"m1_score_min": 10, "m1_score_max": 13, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 490},
-        {"m1_score_min": 10, "m1_score_max": 13, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 560},
-        {"m1_score_min": 14, "m1_score_max": 17, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 470},
-        {"m1_score_min": 14, "m1_score_max": 17, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 540},
-        {"m1_score_min": 14, "m1_score_max": 17, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 600}
+        {
+          "m1_score_min": 0,
+          "m1_score_max": 4.999,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 220
+        },
+        {
+          "m1_score_min": 0,
+          "m1_score_max": 4.999,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 280
+        },
+        {
+          "m1_score_min": 0,
+          "m1_score_max": 4.999,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 340
+        },
+        {
+          "m1_score_min": 5,
+          "m1_score_max": 9.999,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 320
+        },
+        {
+          "m1_score_min": 5,
+          "m1_score_max": 9.999,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 400
+        },
+        {
+          "m1_score_min": 5,
+          "m1_score_max": 9.999,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 470
+        },
+        {
+          "m1_score_min": 10,
+          "m1_score_max": 13.999,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 410
+        },
+        {
+          "m1_score_min": 10,
+          "m1_score_max": 13.999,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 490
+        },
+        {
+          "m1_score_min": 10,
+          "m1_score_max": 13.999,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 560
+        },
+        {
+          "m1_score_min": 14,
+          "m1_score_max": 99,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 470
+        },
+        {
+          "m1_score_min": 14,
+          "m1_score_max": 99,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 540
+        },
+        {
+          "m1_score_min": 14,
+          "m1_score_max": 99,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 600
+        }
       ]
     },
     "hard_module_2_score_table": {
-      "comment": "Map (M1 weighted score, M2 weighted score) → estimated SAT Math score. Hard M2 enables scores up to 800.",
+      "comment": "Map (M1 weighted score, M2 weighted score) \u2192 estimated SAT Math score. Hard M2 enables scores up to 800.",
       "rows": [
-        {"m1_score_min": 18, "m1_score_max": 21, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 510},
-        {"m1_score_min": 18, "m1_score_max": 21, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 590},
-        {"m1_score_min": 18, "m1_score_max": 21, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 660},
-        {"m1_score_min": 22, "m1_score_max": 25, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 560},
-        {"m1_score_min": 22, "m1_score_max": 25, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 640},
-        {"m1_score_min": 22, "m1_score_max": 25, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 720},
-        {"m1_score_min": 26, "m1_score_max": 31, "m2_score_min": 0, "m2_score_max": 10, "estimated_score": 610},
-        {"m1_score_min": 26, "m1_score_max": 31, "m2_score_min": 11, "m2_score_max": 20, "estimated_score": 700},
-        {"m1_score_min": 26, "m1_score_max": 31, "m2_score_min": 21, "m2_score_max": 31, "estimated_score": 780}
+        {
+          "m1_score_min": 18,
+          "m1_score_max": 21.999,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 510
+        },
+        {
+          "m1_score_min": 18,
+          "m1_score_max": 21.999,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 590
+        },
+        {
+          "m1_score_min": 18,
+          "m1_score_max": 21.999,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 660
+        },
+        {
+          "m1_score_min": 22,
+          "m1_score_max": 25.999,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 560
+        },
+        {
+          "m1_score_min": 22,
+          "m1_score_max": 25.999,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 640
+        },
+        {
+          "m1_score_min": 22,
+          "m1_score_max": 25.999,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 720
+        },
+        {
+          "m1_score_min": 26,
+          "m1_score_max": 99,
+          "m2_score_min": 0,
+          "m2_score_max": 10.999,
+          "estimated_score": 610
+        },
+        {
+          "m1_score_min": 26,
+          "m1_score_max": 99,
+          "m2_score_min": 11,
+          "m2_score_max": 20.999,
+          "estimated_score": 700
+        },
+        {
+          "m1_score_min": 26,
+          "m1_score_max": 99,
+          "m2_score_min": 21,
+          "m2_score_max": 99,
+          "estimated_score": 780
+        }
       ]
     },
     "score_range_output": {
@@ -104,7 +250,12 @@
     "sections": [
       {
         "section": "header",
-        "fields": ["student_name", "test_id", "date_completed", "time_spent_minutes"]
+        "fields": [
+          "student_name",
+          "test_id",
+          "date_completed",
+          "time_spent_minutes"
+        ]
       },
       {
         "section": "overall_performance",
@@ -162,15 +313,39 @@
     ]
   },
   "performance_level_thresholds": {
-    "Strong": {"min_percent_correct": 85, "description": "Mastery achieved. Maintain with periodic review."},
-    "On-Track": {"min_percent_correct": 65, "max_percent_correct": 84, "description": "Solid foundation. Focus on harder questions in this area."},
-    "Needs-Work": {"min_percent_correct": 40, "max_percent_correct": 64, "description": "Foundational gaps. Prioritize practice in this area."},
-    "Critical-Gap": {"max_percent_correct": 39, "description": "Significant weakness. Full review of subtopic recommended."}
+    "Strong": {
+      "min_percent_correct": 85,
+      "description": "Mastery achieved. Maintain with periodic review."
+    },
+    "On-Track": {
+      "min_percent_correct": 65,
+      "max_percent_correct": 84,
+      "description": "Solid foundation. Focus on harder questions in this area."
+    },
+    "Needs-Work": {
+      "min_percent_correct": 40,
+      "max_percent_correct": 64,
+      "description": "Foundational gaps. Prioritize practice in this area."
+    },
+    "Critical-Gap": {
+      "max_percent_correct": 39,
+      "description": "Significant weakness. Full review of subtopic recommended."
+    }
   },
   "pacing_thresholds": {
-    "Too-Fast": {"max_seconds_per_question": 60, "interpretation": "May be rushing. Re-check work for careless errors."},
-    "On-Pace": {"min_seconds_per_question": 60, "max_seconds_per_question": 110, "interpretation": "Healthy pacing for accuracy."},
-    "Too-Slow": {"min_seconds_per_question": 110, "interpretation": "Risk of running out of time. Practice timed drills."}
+    "Too-Fast": {
+      "max_seconds_per_question": 60,
+      "interpretation": "May be rushing. Re-check work for careless errors."
+    },
+    "On-Pace": {
+      "min_seconds_per_question": 60,
+      "max_seconds_per_question": 110,
+      "interpretation": "Healthy pacing for accuracy."
+    },
+    "Too-Slow": {
+      "min_seconds_per_question": 110,
+      "interpretation": "Risk of running out of time. Practice timed drills."
+    }
   },
   "implementation_notes": {
     "calibration_disclaimer": "Score estimates are based on weighted-correct-answer modeling, not the College Board's Item Response Theory (IRT) calibration. ASTA Academy should label all score predictions as 'estimated' or 'approximate' and recommend that students take official Bluebook practice tests for their most accurate score predictions.",

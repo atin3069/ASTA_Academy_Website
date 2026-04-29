@@ -813,6 +813,55 @@
     }
   }
 
+  // Smart answer matching - handles SPR equivalents like 550 = 550.0 = 550.00, 1/2 = 0.5, etc.
+  function isAnswerCorrect(userAns, correctAns, question) {
+    if (!userAns) return false;
+
+    // For multiple choice, simple letter comparison (case-insensitive)
+    if (question.choices) {
+      return userAns.toLowerCase() === correctAns.toLowerCase();
+    }
+
+    // For SPR: try numeric equivalence first
+    const userNum = parseAnswerToNumber(userAns);
+    const correctNum = parseAnswerToNumber(correctAns);
+
+    if (userNum !== null && correctNum !== null) {
+      // Both are numbers - compare with tolerance for floating point
+      return Math.abs(userNum - correctNum) < 0.0001;
+    }
+
+    // Fallback: case-insensitive string match
+    return userAns.toLowerCase() === correctAns.toLowerCase();
+  }
+
+  // Parse "550", "550.0", "1/2", "0.5", "-3.5" into a number. Returns null if not parseable.
+  function parseAnswerToNumber(str) {
+    if (str === null || str === undefined) return null;
+    const cleaned = str.toString().trim().replace(/\s+/g, '');
+    if (cleaned === '') return null;
+
+    // Handle fractions like "1/2" or "-3/4"
+    const fractionMatch = cleaned.match(/^(-?\d+(?:\.\d+)?)\/(-?\d+(?:\.\d+)?)$/);
+    if (fractionMatch) {
+      const num = parseFloat(fractionMatch[1]);
+      const den = parseFloat(fractionMatch[2]);
+      if (den !== 0 && !isNaN(num) && !isNaN(den)) {
+        return num / den;
+      }
+      return null;
+    }
+
+    // Handle plain numbers (including decimals, negatives, leading + sign)
+    const numMatch = cleaned.match(/^[+-]?\d+(?:\.\d+)?$/);
+    if (numMatch) {
+      const n = parseFloat(cleaned);
+      return isNaN(n) ? null : n;
+    }
+
+    return null;
+  }
+
   function scoreModule(questions) {
     let correct = 0;
     let weighted = 0;
@@ -820,9 +869,9 @@
     const missedQuestions = [];
 
     questions.forEach(q => {
-      const userAns = (answers[q.id] || '').toString().trim().toLowerCase();
-      const correctAns = q.answer.toString().trim().toLowerCase();
-      const isCorrect = userAns === correctAns;
+      const userAnsRaw = (answers[q.id] || '').toString().trim();
+      const correctAnsRaw = q.answer.toString().trim();
+      const isCorrect = isAnswerCorrect(userAnsRaw, correctAnsRaw, q);
 
       if (!domainStats[q.domain]) domainStats[q.domain] = { correct: 0, total: 0, missedSkills: {} };
       domainStats[q.domain].total++;
@@ -936,7 +985,7 @@
       questions.forEach((q, i) => {
         const userAns = (answers[q.id] || '').toString().trim();
         const correctAns = q.answer.toString().trim();
-        const isCorrect = userAns.toLowerCase() === correctAns.toLowerCase();
+        const isCorrect = isAnswerCorrect(userAns, correctAns, q);
         const status = userAns === '' ? '— (skipped)' : (isCorrect ? '✓ CORRECT' : '✗ INCORRECT');
 
         log += `\nQ${i+1} [${q.id}] ${q.difficulty} · ${q.domain}`;

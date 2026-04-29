@@ -213,6 +213,71 @@
     .details-grid { grid-template-columns: 1fr 1fr; }
     .cta-card { padding: 28px 20px; }
   }
+
+  /* HAMBURGER MENU (mobile) */
+  .hamburger {
+    display: none;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    padding: 9px 11px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .hamburger:hover { background: rgba(255,255,255,0.2); }
+  .hamburger svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
+    z-index: 999;
+    padding: 90px 32px 40px;
+    overflow-y: auto;
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: #FFD700; }
+  .mobile-menu a.book {
+    background: #EF9F27; color: #412402;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .mobile-menu-close {
+    position: absolute;
+    top: 22px; right: 22px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    padding: 9px 11px;
+    border-radius: 8px;
+  }
+  .mobile-menu-close svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none !important; }
+    .nav-cta { display: none !important; }
+    .nav-book { display: none !important; }
+    .hamburger { display: flex !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -238,7 +303,23 @@
     <a href="mock-test.html" class="active">Mock Test</a>
     <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
   </div>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+    <a href="index.html">Home</a>
+    <a href="sat-math.html">SAT Math Prep</a>
+    <a href="video-lessons.html">Video Lessons</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a href="mock-test.html">Mock Test</a>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Book a session</a>
+</div>
+
 
 <div class="hero">
   <div class="hero-tag">Free Diagnostic Test</div>

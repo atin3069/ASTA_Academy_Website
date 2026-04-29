@@ -1,6 +1,6 @@
 {
   "spec_name": "ASTA Academy SAT Math Mock Test - Scoring & Routing Specification",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Complete specification for implementing adaptive 2-module mock tests with scoring and diagnostic reporting on the ASTA Academy platform.",
   "test_structure": {
     "total_questions": 44,
@@ -77,13 +77,13 @@
   "routing_logic": {
     "rule": "If Module 1 weighted score >= routing_threshold, route to Hard Module 2. Otherwise, route to Easy Module 2.",
     "routing_threshold": 18.0,
-    "routing_threshold_explanation": "Approximately 58% of max weighted score. This corresponds to a student correctly answering roughly 13-14 out of 22 questions with appropriate difficulty mix.",
-    "implementation_pseudocode": "if (module_1_weighted_score >= 18.0) { route('hard_module_2'); } else { route('easy_module_2'); }"
+    "routing_threshold_explanation": "Approximately 58% of max weighted score. This corresponds to a student correctly answering roughly 13-14 out of 22 questions with appropriate difficulty mix."
   },
   "final_scoring": {
     "method": "lookup_table",
     "explanation": "Final scaled score (200-800) is determined by combining Module 1 weighted score and Module 2 weighted score, then applying a calibration table.",
     "easy_module_2_score_table": {
+<<<<<<< HEAD
       "comment": "Map (M1 weighted score, M2 weighted score) \u2192 estimated SAT Math score. Easy M2 caps at 600.",
       "rows": [
         {
@@ -238,6 +238,36 @@
           "m2_score_max": 99,
           "estimated_score": 780
         }
+=======
+      "comment": "Map (M1 weighted score, M2 weighted score) → estimated SAT Math score. Easy M2 caps at 600. Max bounds set to 99 to catch overflow.",
+      "rows": [
+        {"m1_score_min": 0, "m1_score_max": 4.9, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 220},
+        {"m1_score_min": 0, "m1_score_max": 4.9, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 280},
+        {"m1_score_min": 0, "m1_score_max": 4.9, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 340},
+        {"m1_score_min": 5, "m1_score_max": 9.9, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 320},
+        {"m1_score_min": 5, "m1_score_max": 9.9, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 400},
+        {"m1_score_min": 5, "m1_score_max": 9.9, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 470},
+        {"m1_score_min": 10, "m1_score_max": 13.9, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 410},
+        {"m1_score_min": 10, "m1_score_max": 13.9, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 490},
+        {"m1_score_min": 10, "m1_score_max": 13.9, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 560},
+        {"m1_score_min": 14, "m1_score_max": 17.9, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 470},
+        {"m1_score_min": 14, "m1_score_max": 17.9, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 540},
+        {"m1_score_min": 14, "m1_score_max": 17.9, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 600}
+      ]
+    },
+    "hard_module_2_score_table": {
+      "comment": "Map (M1 weighted score, M2 weighted score) → estimated SAT Math score. Hard M2 enables scores up to 800. Max bounds set to 99 to catch overflow.",
+      "rows": [
+        {"m1_score_min": 18, "m1_score_max": 21.9, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 510},
+        {"m1_score_min": 18, "m1_score_max": 21.9, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 590},
+        {"m1_score_min": 18, "m1_score_max": 21.9, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 660},
+        {"m1_score_min": 22, "m1_score_max": 25.9, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 560},
+        {"m1_score_min": 22, "m1_score_max": 25.9, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 640},
+        {"m1_score_min": 22, "m1_score_max": 25.9, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 720},
+        {"m1_score_min": 26, "m1_score_max": 99, "m2_score_min": 0, "m2_score_max": 10.9, "estimated_score": 610},
+        {"m1_score_min": 26, "m1_score_max": 99, "m2_score_min": 11, "m2_score_max": 20.9, "estimated_score": 700},
+        {"m1_score_min": 26, "m1_score_max": 99, "m2_score_min": 21, "m2_score_max": 99, "estimated_score": 780}
+>>>>>>> c52667a174b9664ec12a96c0295123b49d76663f
       ]
     },
     "score_range_output": {
@@ -286,7 +316,6 @@
       },
       {
         "section": "skill_level_breakdown",
-        "comment": "For each subtopic the student missed questions in, show the skill and link to relevant practice bank questions.",
         "fields_per_skill": [
           "domain",
           "subtopic",
@@ -307,7 +336,6 @@
       },
       {
         "section": "recommendations",
-        "comment": "Auto-generated based on performance pattern. Top 3 weakest skills with direct links to practice content.",
         "format": "ranked_list_of_3_to_5_recommendations"
       }
     ]
@@ -333,6 +361,7 @@
     }
   },
   "pacing_thresholds": {
+<<<<<<< HEAD
     "Too-Fast": {
       "max_seconds_per_question": 60,
       "interpretation": "May be rushing. Re-check work for careless errors."
@@ -360,5 +389,10 @@
       "Generate diagnostic report using the structure above",
       "Link recommended practice questions back to the practice bank by skill_tag and question_id"
     ]
+=======
+    "Too-Fast": {"max_seconds_per_question": 60, "interpretation": "May be rushing. Re-check work for careless errors."},
+    "On-Pace": {"min_seconds_per_question": 60, "max_seconds_per_question": 110, "interpretation": "Healthy pacing for accuracy."},
+    "Too-Slow": {"min_seconds_per_question": 110, "interpretation": "Risk of running out of time. Practice timed drills."}
+>>>>>>> c52667a174b9664ec12a96c0295123b49d76663f
   }
 }

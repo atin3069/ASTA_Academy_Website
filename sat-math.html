@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAT Math Prep — ASTA Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<title>SAT Math Prep — Mini Courses by Dr. Ashu Jain</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #1a3a5c;
@@ -17,318 +17,204 @@
     --border: #E8E8E4;
     --blue-soft: #EBF3FF;
     --success: #0F6E56;
-    --success-soft: #E1F5EE;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+  a { text-decoration: none; color: inherit; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  
-  /* NAV - ASTA Academy consistent */
+  /* NAV */
   nav {
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.2rem 2.5rem;
     background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 3px 20px rgba(12,68,124,0.35);
-    height: auto;
   }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
   .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-  .nav-logo-name { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; font-family: 'DM Sans', sans-serif; }
-  .nav-logo-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 3px; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
+  .nav-logo-name { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+  .nav-logo-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 3px; text-transform: uppercase; }
   .nav-links { display: flex; align-items: center; gap: 28px; }
-  .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: #fff; }
   .nav-links a.active { color: #FFD700; }
-  .nav-book { background: #EF9F27 !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; transition: background 0.2s, transform 0.15s !important; }
-  .nav-book:hover { background: #BA7517 !important; color: #fff !important; transform: translateY(-1px) !important; }
-
+  .nav-book { background: #EF9F27 !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; }
 
   /* HERO */
   .hero {
     background: var(--navy);
-    padding: 56px 40px 48px;
+    padding: 64px 40px 56px;
     text-align: center;
   }
   .hero-tag {
-    display: inline-block;
-    background: rgba(255,215,0,0.15);
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 14px;
-    border-radius: 99px;
-    margin-bottom: 18px;
+    display: inline-block; background: rgba(255,215,0,0.15); color: var(--gold);
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 99px; margin-bottom: 18px;
     border: 1px solid rgba(255,215,0,0.3);
   }
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.2;
-    margin-bottom: 14px;
+    font-size: 44px; color: #fff; font-weight: 600;
+    line-height: 1.2; margin-bottom: 14px;
   }
-  .hero p {
-    font-size: 15.5px;
-    color: rgba(255,255,255,0.65);
-    max-width: 520px;
-    margin: 0 auto 28px;
-    line-height: 1.7;
-  }
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 32px;
-    padding-top: 28px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  .hero-stat .num {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    color: var(--gold);
-    font-weight: 600;
-  }
-  .hero-stat .lbl {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    margin-top: 2px;
-  }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto; }
 
   /* CONTAINER */
-  .container {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 40px 80px;
+  .container { max-width: 980px; margin: 0 auto; padding: 60px 40px; }
+  .section-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--navy-light); margin-bottom: 8px;
   }
-
-  /* SECTION HEADER */
-  .section-header {
-    padding: 40px 0 20px;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-  }
-  .section-header h2 {
+  .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--navy);
+    font-size: 30px; color: var(--navy);
+    font-weight: 600; margin-bottom: 8px;
   }
-  .section-header span {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
+  .section-desc { color: var(--text-muted); margin-bottom: 36px; max-width: 580px; }
 
-  /* DOMAIN LABEL */
-  .domain-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin: 28px 0 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-  .domain-label:first-of-type { margin-top: 0; }
-
-  /* TOPIC CARDS */
-  .topic-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .topic-card:hover {
-    border-color: var(--navy-light);
-    box-shadow: 0 2px 12px rgba(26,58,92,0.08);
-  }
-  .topic-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    background: var(--blue-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-  }
-  .topic-info { flex: 1; }
-  .topic-info h3 {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--navy);
-    margin-bottom: 3px;
-  }
-  .topic-info p {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.5;
-  }
-  .topic-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-  .freq-badge {
-    font-size: 11px;
-    font-weight: 500;
-    padding: 3px 10px;
-    border-radius: 99px;
-    background: var(--success-soft);
-    color: var(--success);
-  }
-  .topic-arrow {
-    color: var(--text-muted);
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  /* DR JAIN CARD */
-  .jain-card {
-    background: var(--navy);
-    border-radius: 14px;
-    padding: 28px 32px;
-    display: flex;
-    align-items: center;
+  /* COURSE GRID */
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 24px;
-    margin-top: 48px;
   }
-  .jain-avatar {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: rgba(255,215,0,0.2);
-    border: 2px solid var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    color: var(--gold);
-    flex-shrink: 0;
+
+  .course-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
   }
-  .jain-text { flex: 1; }
-  .jain-text h3 {
-    font-size: 15px;
-    font-weight: 500;
+  .course-card:hover {
+    box-shadow: 0 8px 32px rgba(26,58,92,0.12);
+    transform: translateY(-4px);
+  }
+
+  .course-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
     color: #fff;
+    padding: 28px;
+  }
+  .course-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px; color: rgba(255,255,255,0.7);
+    letter-spacing: 0.1em; text-transform: uppercase;
     margin-bottom: 4px;
   }
-  .jain-text p {
+  .course-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 600;
+    color: #fff; line-height: 1.2;
+  }
+
+  .course-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+  .course-body p {
+    font-size: 14.5px; color: var(--text);
+    line-height: 1.65; margin-bottom: 18px;
+  }
+
+  .course-stats {
+    display: flex; gap: 18px;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 18px;
     font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.5;
   }
-  .jain-btn {
-    background: var(--gold);
-    color: var(--navy);
-    font-weight: 500;
-    font-size: 13.5px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: opacity 0.15s;
-  }
-  .jain-btn:hover { opacity: 0.9; }
+  .stat-item { display: flex; align-items: center; gap: 6px; color: var(--text-muted); }
+  .stat-item svg { width: 16px; height: 16px; stroke: var(--navy-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .stat-item strong { color: var(--navy); font-weight: 600; }
 
-  @media (max-width: 600px) {
-    .container { padding: 0 20px 60px; }
-    nav { padding: 0 20px; }
-    .hero { padding: 40px 20px 36px; }
-    .hero h1 { font-size: 28px; }
-    .hero-stats { gap: 24px; }
-    .nav-links { display: none; }
-    .topic-card { flex-wrap: wrap; }
-    .jain-card { flex-direction: column; text-align: center; }
-    .section-header { flex-direction: column; gap: 4px; }
+  .topics-list {
+    list-style: none; padding: 0; margin: 0 0 22px;
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .topics-list li {
+    background: var(--blue-soft); color: var(--navy);
+    font-size: 12px; font-weight: 500;
+    padding: 4px 11px; border-radius: 99px;
   }
 
-  /* HAMBURGER MENU (mobile) */
+  .course-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--gold); color: var(--navy);
+    font-weight: 700; font-size: 14px;
+    padding: 12px 22px; border-radius: 10px;
+    align-self: flex-start; margin-top: auto;
+  }
+
+  /* INSTRUCTOR */
+  .instructor-section {
+    margin-top: 60px; padding: 36px;
+    background: #fff; border-radius: 16px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  .instructor-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; color: var(--navy);
+    font-weight: 600; margin-bottom: 8px;
+  }
+  .instructor-section p {
+    color: var(--text-muted); max-width: 560px;
+    margin: 0 auto 18px; font-size: 15px;
+  }
+  .book-btn {
+    display: inline-block;
+    background: var(--gold); color: var(--navy);
+    padding: 12px 28px; border-radius: 10px;
+    font-weight: 700; font-size: 14px;
+  }
+
+  /* HAMBURGER */
   .hamburger {
     display: none;
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    cursor: pointer;
-    padding: 9px 11px;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
+    color: #fff; cursor: pointer;
+    padding: 9px 11px; border-radius: 8px;
+    align-items: center; justify-content: center;
   }
-  .hamburger:hover { background: rgba(255,255,255,0.2); }
   .hamburger svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; }
   .mobile-menu {
     display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
-    z-index: 999;
-    padding: 90px 32px 40px;
-    overflow-y: auto;
+    z-index: 999; padding: 90px 32px 40px; overflow-y: auto;
   }
   .mobile-menu.open { display: block; }
   .mobile-menu a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-    transition: color 0.2s;
+    display: block; color: #fff; font-size: 20px; font-weight: 500;
+    padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.15);
   }
-  .mobile-menu a:hover { color: #FFD700; }
   .mobile-menu a.book {
     background: #EF9F27; color: #412402;
-    border: none;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-top: 24px;
-    font-weight: 700;
-    text-align: center;
+    border: none; border-radius: 10px;
+    padding: 16px 20px; margin-top: 24px;
+    font-weight: 700; text-align: center;
   }
   .mobile-menu-close {
-    position: absolute;
-    top: 22px; right: 22px;
+    position: absolute; top: 22px; right: 22px;
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    cursor: pointer;
-    padding: 9px 11px;
-    border-radius: 8px;
+    color: #fff; cursor: pointer;
+    padding: 9px 11px; border-radius: 8px;
   }
   .mobile-menu-close svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; }
 
   @media (max-width: 720px) {
+    nav { padding: 1rem 1.25rem; }
     .nav-links { display: none !important; }
-    .nav-cta { display: none !important; }
-    .nav-book { display: none !important; }
     .hamburger { display: flex !important; }
+    .hero { padding: 44px 20px; }
+    .hero h1 { font-size: 30px; }
+    .container { padding: 40px 20px; }
+    .course-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 24px; }
   }
-
 </style>
 </head>
 <body>
@@ -339,9 +225,6 @@
       <rect x="2" y="12" width="40" height="28" rx="3" fill="#185FA5"/>
       <rect x="22" y="12" width="20" height="28" fill="#0C447C"/>
       <line x1="22" y1="12" x2="22" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-      <line x1="7" y1="20" x2="18" y2="20" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-linecap="round"/>
-      <line x1="7" y1="25" x2="18" y2="25" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-linecap="round"/>
-      <line x1="7" y1="30" x2="18" y2="30" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-linecap="round"/>
       <polygon points="22,1 24.8,8.5 33,8.5 26.5,13.5 29,21 22,16.5 15,21 17.5,13.5 11,8.5 19.2,8.5" fill="#EF9F27"/>
     </svg>
     <div class="nav-logo-text">
@@ -351,9 +234,7 @@
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="index.html#why">Why ASTA</a>
     <a href="sat-math.html" class="active">SAT Math Prep</a>
-    <a href="video-lessons.html">Video Lessons</a>
     <a href="question-bank.html">Question Bank</a>
     <a href="mock-test.html">Mock Test</a>
     <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
@@ -364,67 +245,91 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">
     <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
-    <a href="index.html">Home</a>
-    <a href="sat-math.html">SAT Math Prep</a>
-    <a href="video-lessons.html">Video Lessons</a>
-    <a href="question-bank.html">Question Bank</a>
-    <a href="mock-test.html">Mock Test</a>
-    <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Book a session</a>
+  <a href="index.html">Home</a>
+  <a href="sat-math.html">SAT Math Prep</a>
+  <a href="question-bank.html">Question Bank</a>
+  <a href="mock-test.html">Mock Test</a>
+  <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Book a session</a>
 </div>
 
-
 <div class="hero">
-  <div class="hero-tag">Free resource</div>
-  <h1>SAT Math Prep</h1>
-  <p>A free, focused lesson on Linear Equations — written by Dr. Ashu Jain, retired IIT professor. More topics coming soon.</p>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="num">1</div>
-      <div class="lbl">topic available</div>
-    </div>
-    <div class="hero-stat">
-      <div class="num">5</div>
-      <div class="lbl">practice questions</div>
-    </div>
-    <div class="hero-stat">
-      <div class="num">100%</div>
-      <div class="lbl">free, no login</div>
-    </div>
-  </div>
+  <div class="hero-tag">Free Mini Courses</div>
+  <h1>SAT Math Prep — <em>Mini Courses</em></h1>
+  <p>Free SAT Math courses taught by Dr. Ashu Jain, retired professor from IIT Kanpur. Each course combines short video lessons with interactive practice questions.</p>
 </div>
 
 <div class="container">
 
-  <div class="section-header">
-    <h2>Available now</h2>
-    <span>Free lesson by Dr. Ashu Jain</span>
+  <div class="section-label">Available now</div>
+  <h2 class="section-title">Pick a course to begin</h2>
+  <p class="section-desc">Each course includes a 5-part video series and a bank of practice questions. Watch in order or jump straight to the topic you need.</p>
+
+  <div class="course-grid">
+
+    <a href="course-linear-equations.html" class="course-card">
+      <div class="course-banner">
+        <div class="course-num">Course 1</div>
+        <h3>Linear Equations</h3>
+      </div>
+      <div class="course-body">
+        <p>A complete walkthrough of linear equations — from the basics through the most common SAT mistakes. Everything in algebra is built on these fundamentals.</p>
+        <div class="course-stats">
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span><strong>5</strong> videos</span>
+          </div>
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span><strong>125</strong> practice questions</span>
+          </div>
+        </div>
+        <ul class="topics-list">
+          <li>One-Variable</li>
+          <li>Two-Variable</li>
+          <li>Functions</li>
+          <li>Systems</li>
+          <li>Inequalities</li>
+        </ul>
+        <span class="course-cta">Start course →</span>
+      </div>
+    </a>
+
+    <a href="course-algebraic-expressions.html" class="course-card">
+      <div class="course-banner">
+        <div class="course-num">Course 2</div>
+        <h3>Algebraic Expressions</h3>
+      </div>
+      <div class="course-body">
+        <p>The foundation of the SAT's "Advanced Math" section. Identities, factoring, rational expressions, and exponents — where the points hide between a 650 and a 750.</p>
+        <div class="course-stats">
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span><strong>5</strong> videos</span>
+          </div>
+          <div class="stat-item">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span><strong>100</strong> practice questions</span>
+          </div>
+        </div>
+        <ul class="topics-list">
+          <li>Equivalent Expressions</li>
+          <li>Nonlinear Equations</li>
+          <li>Nonlinear Systems</li>
+          <li>Nonlinear Functions</li>
+        </ul>
+        <span class="course-cta">Start course →</span>
+      </div>
+    </a>
+
   </div>
 
-  <div class="domain-label">Heart of Algebra</div>
-
-  <a href="topic1-linear-equations.html" class="topic-card">
-    <div class="topic-icon">📐</div>
-    <div class="topic-info">
-      <h3>Linear equations</h3>
-      <p>Solving, word problems, and the shortcut tricks the SAT loves — with practice questions</p>
-    </div>
-    <div class="topic-meta">
-      <span class="freq-badge">~10% of test</span>
-      <span class="topic-arrow">›</span>
-    </div>
-  </a>
-
-
-  <div class="jain-card">
-    <div class="jain-avatar">AJ</div>
-    <div class="jain-text">
-      <h3>Want personalized help from Dr. Jain?</h3>
-      <p>These lessons cover the concepts — but 1-on-1 tutoring is where real score jumps happen. Book a free 15-minute session and see the difference.</p>
-    </div>
-    <a href="https://calendly.com/ashu3069usa" target="_blank" class="jain-btn">Book a free session</a>
+  <div class="instructor-section">
+    <h3>Taught by Dr. Ashu Jain</h3>
+    <p>Retired professor from IIT Kanpur, with 30+ years teaching mathematics. Now bringing professor-level expertise to SAT prep — free and accessible to every student.</p>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="book-btn">Book a free 1-on-1 session</a>
   </div>
 
 </div>

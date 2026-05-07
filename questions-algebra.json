@@ -1,0 +1,1799 @@
+{
+  "title": "ASTA Academy - Digital SAT Math Algebra Question Bank",
+  "description": "125 original SAT-style Algebra questions across 5 subtopics, with full answer keys and step-by-step explanations.",
+  "version": "1.0",
+  "domain": "Algebra",
+  "total_questions": 125,
+  "subtopics": [
+    {
+      "subtopic": "Linear Equations in One Variable",
+      "subtopic_code": "LE1",
+      "question_count": 25,
+      "questions": [
+        {
+          "id": "ALG-LE1-001",
+          "skill": "Solving basic linear equations",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If x + 7 = 15, what is the value of x?",
+          "choices": {
+            "A": "7",
+            "B": "8",
+            "C": "15",
+            "D": "22"
+          },
+          "answer": "B",
+          "explanation": "Subtract 7 from both sides: x = 15 − 7 = 8. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-002",
+          "skill": "Solving basic linear equations",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 3x = 24, what is the value of x?",
+          "choices": {
+            "A": "6",
+            "B": "7",
+            "C": "8",
+            "D": "9"
+          },
+          "answer": "C",
+          "explanation": "Divide both sides by 3: x = 24 ÷ 3 = 8. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-003",
+          "skill": "Two-step equations",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 2x + 5 = 17, what is the value of x?",
+          "choices": {
+            "A": "5",
+            "B": "6",
+            "C": "7",
+            "D": "11"
+          },
+          "answer": "B",
+          "explanation": "Subtract 5: 2x = 12. Divide by 2: x = 6. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-004",
+          "skill": "Two-step equations",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 4x − 3 = 21, what is the value of x?",
+          "choices": {
+            "A": "4.5",
+            "B": "6",
+            "C": "7",
+            "D": "9"
+          },
+          "answer": "B",
+          "explanation": "Add 3: 4x = 24. Divide by 4: x = 6. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-005",
+          "skill": "Two-step equations",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 5x + 8 = 33, what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "8"
+          },
+          "answer": "C",
+          "explanation": "Subtract 8: 5x = 25. Divide by 5: x = 5. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-006",
+          "skill": "Variables on both sides",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 6x = 2x + 20, what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "10"
+          },
+          "answer": "C",
+          "explanation": "Subtract 2x from both sides: 4x = 20. Divide by 4: x = 5. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-007",
+          "skill": "Solving for a specified variable",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "If 3x − 4 = 11, what is the value of x?",
+          "answer": "5",
+          "explanation": "Add 4: 3x = 15. Divide by 3: x = 5."
+        },
+        {
+          "id": "ALG-LE1-008",
+          "skill": "Word problems",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "A taxi charges a $4 base fare plus $2 per mile. If the total fare is $20, how many miles was the trip?",
+          "choices": {
+            "A": "6",
+            "B": "8",
+            "C": "10",
+            "D": "12"
+          },
+          "answer": "B",
+          "explanation": "Set up: 4 + 2m = 20. Subtract 4: 2m = 16. Divide by 2: m = 8 miles. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-009",
+          "skill": "Two-step equations",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If x/3 + 2 = 7, what is the value of x?",
+          "choices": {
+            "A": "5",
+            "B": "9",
+            "C": "12",
+            "D": "15"
+          },
+          "answer": "D",
+          "explanation": "Subtract 2: x/3 = 5. Multiply by 3: x = 15. The answer is D."
+        },
+        {
+          "id": "ALG-LE1-010",
+          "skill": "Variables on both sides",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "If 7x − 2 = 3x + 10, what is the value of x?",
+          "answer": "3",
+          "explanation": "Subtract 3x: 4x − 2 = 10. Add 2: 4x = 12. Divide by 4: x = 3."
+        },
+        {
+          "id": "ALG-LE1-011",
+          "skill": "Distributive property",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 3(x − 2) = 18, what is the value of x?",
+          "choices": {
+            "A": "4",
+            "B": "6",
+            "C": "8",
+            "D": "10"
+          },
+          "answer": "C",
+          "explanation": "Distribute: 3x − 6 = 18. Add 6: 3x = 24. Divide by 3: x = 8. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-012",
+          "skill": "Distributive property and combining terms",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 2(x + 3) + 4 = 5x + 1, what is the value of x?",
+          "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "C",
+          "explanation": "Distribute: 2x + 6 + 4 = 5x + 1, so 2x + 10 = 5x + 1. Subtract 2x: 10 = 3x + 1. Subtract 1: 9 = 3x. Divide by 3: x = 3. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-013",
+          "skill": "Equations with fractions",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If (x + 6)/4 = 5, what is the value of x?",
+          "choices": {
+            "A": "9",
+            "B": "11",
+            "C": "14",
+            "D": "26"
+          },
+          "answer": "C",
+          "explanation": "Multiply both sides by 4: x + 6 = 20. Subtract 6: x = 14. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-014",
+          "skill": "Equations with fractions",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If x/2 + x/3 = 10, what is the value of x?",
+          "choices": {
+            "A": "6",
+            "B": "10",
+            "C": "12",
+            "D": "15"
+          },
+          "answer": "C",
+          "explanation": "Common denominator is 6: 3x/6 + 2x/6 = 10, so 5x/6 = 10. Multiply by 6: 5x = 60. Divide by 5: x = 12. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-015",
+          "skill": "Variables on both sides with distribution",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 4(2x − 1) = 3(x + 7), what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "7"
+          },
+          "answer": "C",
+          "explanation": "Distribute: 8x − 4 = 3x + 21. Subtract 3x: 5x − 4 = 21. Add 4: 5x = 25. Divide by 5: x = 5. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-016",
+          "skill": "Word problems",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Three consecutive integers have a sum of 72. What is the largest of the three integers?",
+          "choices": {
+            "A": "23",
+            "B": "24",
+            "C": "25",
+            "D": "26"
+          },
+          "answer": "C",
+          "explanation": "Let the integers be n, n+1, n+2. Sum: 3n + 3 = 72, so 3n = 69, n = 23. The integers are 23, 24, 25. The largest is 25. The answer is C."
+        },
+        {
+          "id": "ALG-LE1-017",
+          "skill": "Word problems",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "A gym charges a $50 sign-up fee plus $30 per month. If a member's total payment so far is $260, for how many months has the person been a member?",
+          "answer": "7",
+          "explanation": "Set up: 50 + 30m = 260. Subtract 50: 30m = 210. Divide by 30: m = 7 months."
+        },
+        {
+          "id": "ALG-LE1-018",
+          "skill": "Solving for a specified variable",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "The formula F = (9/5)C + 32 converts Celsius to Fahrenheit. Which of the following correctly solves for C in terms of F?",
+          "choices": {
+            "A": "C = (5/9)(F − 32)",
+            "B": "C = (5/9)F − 32",
+            "C": "C = (9/5)(F − 32)",
+            "D": "C = (F − 32)/9"
+          },
+          "answer": "A",
+          "explanation": "Subtract 32: F − 32 = (9/5)C. Multiply both sides by 5/9: C = (5/9)(F − 32). The answer is A."
+        },
+        {
+          "id": "ALG-LE1-019",
+          "skill": "Distributive property",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If −2(3x − 5) = 4, what is the value of x?",
+          "choices": {
+            "A": "1",
+            "B": "1.5",
+            "C": "2",
+            "D": "3"
+          },
+          "answer": "A",
+          "explanation": "Distribute: −6x + 10 = 4. Subtract 10: −6x = −6. Divide by −6: x = 1. The answer is A."
+        },
+        {
+          "id": "ALG-LE1-020",
+          "skill": "Equations with fractions",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "If (2x − 1)/3 = (x + 4)/2, what is the value of x?",
+          "answer": "14",
+          "explanation": "Cross-multiply: 2(2x − 1) = 3(x + 4). Expand: 4x − 2 = 3x + 12. Subtract 3x: x − 2 = 12. Add 2: x = 14."
+        },
+        {
+          "id": "ALG-LE1-021",
+          "skill": "No solution / infinite solutions",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "For what value of k does the equation 3(x − 2) + 4 = kx + 5 have no solution?",
+          "choices": {
+            "A": "−3",
+            "B": "0",
+            "C": "2",
+            "D": "3"
+          },
+          "answer": "D",
+          "explanation": "Simplify the left side: 3x − 6 + 4 = 3x − 2. So the equation is 3x − 2 = kx + 5. A linear equation has no solution when the coefficients of x are equal but the constants differ. If k = 3, the equation becomes 3x − 2 = 3x + 5, which simplifies to −2 = 5, a contradiction. So the equation has no solution when k = 3. The answer is D."
+        },
+        {
+          "id": "ALG-LE1-022",
+          "skill": "Multi-step with distribution and fractions",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "If (3x − 4)/2 + (x + 2)/3 = 6, what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "B",
+          "explanation": "Multiply both sides by 6 to clear fractions: 3(3x − 4) + 2(x + 2) = 36. Expand: 9x − 12 + 2x + 4 = 36, so 11x − 8 = 36. Add 8: 11x = 44. Divide by 11: x = 4. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-023",
+          "skill": "Word problems",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "A car traveling at 60 mph leaves Town A at 9:00 AM. A second car leaves Town A at 10:00 AM traveling at 75 mph in the same direction. At what time will the second car catch up to the first?",
+          "choices": {
+            "A": "1:00 PM",
+            "B": "2:00 PM",
+            "C": "3:00 PM",
+            "D": "4:00 PM"
+          },
+          "answer": "B",
+          "explanation": "Let t = hours after 10:00 AM. The first car has a 1-hour head start, so when the second car has traveled t hours, the first has traveled (t + 1) hours. Set distances equal: 60(t + 1) = 75t. Expand: 60t + 60 = 75t. Subtract 60t: 60 = 15t. Divide: t = 4 hours. So 4 hours after 10:00 AM is 2:00 PM. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-024",
+          "skill": "Solving for a specified variable",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "The formula for the perimeter of a rectangle is P = 2L + 2W. If the perimeter is 50 and the width is 8 less than the length, what is the length?",
+          "choices": {
+            "A": "13.5",
+            "B": "16.5",
+            "C": "17",
+            "D": "21"
+          },
+          "answer": "B",
+          "explanation": "Let L = length. Width W = L − 8. Substitute into P = 2L + 2W: 50 = 2L + 2(L − 8) = 2L + 2L − 16 = 4L − 16. Add 16: 66 = 4L. Divide by 4: L = 16.5. The answer is B."
+        },
+        {
+          "id": "ALG-LE1-025",
+          "skill": "Multi-step with distribution",
+          "difficulty": "Hard",
+          "type": "spr",
+          "question": "If 5(2x − 3) − 4(x + 1) = 3x + 5, what is the value of x?",
+          "answer": "8",
+          "explanation": "Expand the left side: 10x − 15 − 4x − 4 = 6x − 19. The equation becomes 6x − 19 = 3x + 5. Subtract 3x: 3x − 19 = 5. Add 19: 3x = 24. Divide by 3: x = 8."
+        }
+      ]
+    },
+    {
+      "subtopic": "Linear Equations in Two Variables",
+      "subtopic_code": "LE2",
+      "question_count": 25,
+      "questions": [
+        {
+          "id": "ALG-LE2-001",
+          "skill": "Slope from two points",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the slope of the line passing through the points (1, 3) and (5, 11)?",
+          "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "B",
+          "explanation": "Slope = (y₂ − y₁)/(x₂ − x₁) = (11 − 3)/(5 − 1) = 8/4 = 2. The answer is B."
+        },
+        {
+          "id": "ALG-LE2-002",
+          "skill": "Slope-intercept identification",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the y-intercept of the line y = 3x − 7?",
+          "choices": {
+            "A": "−7",
+            "B": "−3",
+            "C": "3",
+            "D": "7"
+          },
+          "answer": "A",
+          "explanation": "In slope-intercept form y = mx + b, the y-intercept is b. For y = 3x − 7, b = −7. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-003",
+          "skill": "Slope-intercept identification",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the slope of the line y = −4x + 9?",
+          "choices": {
+            "A": "−4",
+            "B": "−9",
+            "C": "4",
+            "D": "9"
+          },
+          "answer": "A",
+          "explanation": "In slope-intercept form y = mx + b, m is the slope. For y = −4x + 9, the slope is −4. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-004",
+          "skill": "Slope from two points",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the slope of the line passing through (2, 4) and (6, 4)?",
+          "choices": {
+            "A": "0",
+            "B": "1",
+            "C": "4",
+            "D": "Undefined"
+          },
+          "answer": "A",
+          "explanation": "Slope = (4 − 4)/(6 − 2) = 0/4 = 0. A horizontal line has slope 0. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-005",
+          "skill": "x-intercept and y-intercept",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the x-intercept of the line 2x + 3y = 12?",
+          "choices": {
+            "A": "(0, 4)",
+            "B": "(4, 0)",
+            "C": "(0, 6)",
+            "D": "(6, 0)"
+          },
+          "answer": "D",
+          "explanation": "The x-intercept occurs where y = 0. Substitute: 2x + 3(0) = 12, so 2x = 12, x = 6. The x-intercept is (6, 0). The answer is D."
+        },
+        {
+          "id": "ALG-LE2-006",
+          "skill": "Slope-intercept form",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "A line has slope 5 and passes through the point (0, −2). What is the y-coordinate of the point on the line where x = 4?",
+          "answer": "18",
+          "explanation": "The equation is y = 5x − 2. At x = 4: y = 5(4) − 2 = 18."
+        },
+        {
+          "id": "ALG-LE2-007",
+          "skill": "Vertical and horizontal lines",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Which of the following equations represents a vertical line passing through (5, 3)?",
+          "choices": {
+            "A": "y = 5",
+            "B": "y = 3",
+            "C": "x = 5",
+            "D": "x = 3"
+          },
+          "answer": "C",
+          "explanation": "A vertical line has the form x = constant. Since the line passes through (5, 3), the x-coordinate is always 5, so x = 5. The answer is C."
+        },
+        {
+          "id": "ALG-LE2-008",
+          "skill": "Slope-intercept form",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Which equation represents a line with slope 2 and y-intercept −5?",
+          "choices": {
+            "A": "y = −5x + 2",
+            "B": "y = 2x − 5",
+            "C": "y = 2x + 5",
+            "D": "y = −2x − 5"
+          },
+          "answer": "B",
+          "explanation": "Slope-intercept form: y = mx + b, where m = slope and b = y-intercept. With m = 2 and b = −5: y = 2x − 5. The answer is B."
+        },
+        {
+          "id": "ALG-LE2-009",
+          "skill": "Slope from two points",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the slope of the line through (−2, 1) and (4, 13)?",
+          "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "6"
+          },
+          "answer": "B",
+          "explanation": "Slope = (13 − 1)/(4 − (−2)) = 12/6 = 2. The answer is B."
+        },
+        {
+          "id": "ALG-LE2-010",
+          "skill": "Linear modeling",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "A car rental costs $30 per day plus $0.20 per mile. Which equation gives the total cost C for renting the car for one day and driving m miles?",
+          "choices": {
+            "A": "C = 30 + 0.20m",
+            "B": "C = 30m + 0.20",
+            "C": "C = 0.20(30 + m)",
+            "D": "C = 30 − 0.20m"
+          },
+          "answer": "A",
+          "explanation": "Fixed cost is $30, variable cost is $0.20 per mile times m miles, so C = 30 + 0.20m. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-011",
+          "skill": "Writing line equations from two points",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which equation represents the line passing through (2, 5) and (6, 13)?",
+          "choices": {
+            "A": "y = 2x + 1",
+            "B": "y = 2x − 1",
+            "C": "y = x + 7",
+            "D": "y = 4x − 3"
+          },
+          "answer": "A",
+          "explanation": "Slope = (13 − 5)/(6 − 2) = 8/4 = 2. Using point-slope with (2, 5): y − 5 = 2(x − 2), so y = 2x − 4 + 5 = 2x + 1. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-012",
+          "skill": "Parallel lines",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which line is parallel to y = 3x − 5?",
+          "choices": {
+            "A": "y = −3x + 1",
+            "B": "y = (1/3)x + 5",
+            "C": "y = 3x + 7",
+            "D": "y = −(1/3)x − 5"
+          },
+          "answer": "C",
+          "explanation": "Parallel lines have equal slopes. The given line has slope 3. Only y = 3x + 7 has slope 3. The answer is C."
+        },
+        {
+          "id": "ALG-LE2-013",
+          "skill": "Perpendicular lines",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which line is perpendicular to y = 2x + 4?",
+          "choices": {
+            "A": "y = 2x − 4",
+            "B": "y = −2x + 4",
+            "C": "y = (1/2)x + 1",
+            "D": "y = −(1/2)x + 1"
+          },
+          "answer": "D",
+          "explanation": "Perpendicular slopes are negative reciprocals. The given line has slope 2, so perpendicular slope is −1/2. The line y = −(1/2)x + 1 has this slope. The answer is D."
+        },
+        {
+          "id": "ALG-LE2-014",
+          "skill": "Linear modeling — interpretation",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "The total cost C, in dollars, of a phone plan is given by C = 0.10t + 25, where t is the number of minutes used. What does the value 25 represent?",
+          "choices": {
+            "A": "The cost per minute",
+            "B": "The fixed monthly fee",
+            "C": "The number of free minutes",
+            "D": "The total cost for 25 minutes"
+          },
+          "answer": "B",
+          "explanation": "When t = 0 (no minutes used), C = 25. This represents the fixed cost regardless of usage — the monthly fee. The answer is B."
+        },
+        {
+          "id": "ALG-LE2-015",
+          "skill": "Converting standard form to slope-intercept",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What is the slope of the line 4x − 2y = 10?",
+          "choices": {
+            "A": "−2",
+            "B": "1/2",
+            "C": "2",
+            "D": "4"
+          },
+          "answer": "C",
+          "explanation": "Solve for y: −2y = −4x + 10, so y = 2x − 5. The slope is 2. The answer is C."
+        },
+        {
+          "id": "ALG-LE2-016",
+          "skill": "Writing line from point and slope",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which equation represents the line with slope −3 passing through the point (4, 2)?",
+          "choices": {
+            "A": "y = −3x + 14",
+            "B": "y = −3x − 10",
+            "C": "y = −3x + 10",
+            "D": "y = 3x − 10"
+          },
+          "answer": "A",
+          "explanation": "Using point-slope: y − 2 = −3(x − 4), so y − 2 = −3x + 12, y = −3x + 14. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-017",
+          "skill": "Linear modeling — slope interpretation",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "A pool is being filled at a constant rate. After 3 hours it contains 450 gallons, and after 7 hours it contains 1,050 gallons. How many gallons per hour is the pool being filled?",
+          "answer": "150",
+          "explanation": "Rate = change in gallons / change in hours = (1050 − 450)/(7 − 3) = 600/4 = 150 gallons per hour."
+        },
+        {
+          "id": "ALG-LE2-018",
+          "skill": "Equations of lines from descriptions",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Line ℓ passes through the points (0, 6) and (4, 0). Which equation represents line ℓ?",
+          "choices": {
+            "A": "y = (3/2)x + 6",
+            "B": "y = −(3/2)x + 6",
+            "C": "y = (2/3)x − 6",
+            "D": "y = −(2/3)x + 4"
+          },
+          "answer": "B",
+          "explanation": "Slope = (0 − 6)/(4 − 0) = −6/4 = −3/2. Y-intercept is 6 (the point (0, 6)). So y = −(3/2)x + 6. The answer is B."
+        },
+        {
+          "id": "ALG-LE2-019",
+          "skill": "Finding y-value on a line",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "The line y = 4x − 7 passes through the point (a, 13). What is the value of a?",
+          "answer": "5",
+          "explanation": "Substitute y = 13: 13 = 4a − 7. Add 7: 20 = 4a. Divide: a = 5."
+        },
+        {
+          "id": "ALG-LE2-020",
+          "skill": "Parallel lines through a point",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which equation represents the line through (3, −1) parallel to y = 2x + 5?",
+          "choices": {
+            "A": "y = 2x − 7",
+            "B": "y = 2x + 7",
+            "C": "y = −(1/2)x + 5",
+            "D": "y = 2x − 1"
+          },
+          "answer": "A",
+          "explanation": "Parallel lines share slope, so slope = 2. Using point-slope with (3, −1): y − (−1) = 2(x − 3), so y + 1 = 2x − 6, y = 2x − 7. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-021",
+          "skill": "Perpendicular lines through a point",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "Which equation represents the line through (4, 1) perpendicular to y = (1/2)x + 3?",
+          "choices": {
+            "A": "y = 2x − 7",
+            "B": "y = (1/2)x − 1",
+            "C": "y = −2x + 9",
+            "D": "y = −(1/2)x + 3"
+          },
+          "answer": "C",
+          "explanation": "Perpendicular slope is the negative reciprocal of 1/2, which is −2. Using point-slope with (4, 1): y − 1 = −2(x − 4), so y − 1 = −2x + 8, y = −2x + 9. The answer is C."
+        },
+        {
+          "id": "ALG-LE2-022",
+          "skill": "Linear modeling — combined interpretation",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "A company's revenue R, in thousands of dollars, t months after launch is modeled by R = 8t + 20. Which statement best interprets the equation?",
+          "choices": {
+            "A": "The company started with $20 thousand and grows by $8 thousand per month.",
+            "B": "The company started with $8 thousand and grows by $20 thousand per month.",
+            "C": "The company started with $20 and grows by $8 per month.",
+            "D": "The company will earn $28 thousand per month."
+          },
+          "answer": "A",
+          "explanation": "At t = 0, R = 20 (thousand) — the starting revenue. The slope 8 (thousand/month) is the rate of growth. So the company started with $20K and grows by $8K monthly. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-023",
+          "skill": "Writing equation from two points (word problem)",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "A water tank is being drained. After 2 minutes it contains 80 gallons, and after 6 minutes it contains 50 gallons. Which equation represents the volume V, in gallons, after t minutes?",
+          "choices": {
+            "A": "V = −7.5t + 95",
+            "B": "V = 7.5t + 65",
+            "C": "V = −7.5t + 80",
+            "D": "V = −15t + 110"
+          },
+          "answer": "A",
+          "explanation": "Slope = (50 − 80)/(6 − 2) = −30/4 = −7.5. Use point (2, 80): V − 80 = −7.5(t − 2), V = −7.5t + 15 + 80 = −7.5t + 95. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-024",
+          "skill": "Standard form coefficients",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "The line ax + 2y = 8 passes through the point (3, 4). What is the value of a?",
+          "choices": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "4"
+          },
+          "answer": "A",
+          "explanation": "Substitute (3, 4): a(3) + 2(4) = 8, so 3a + 8 = 8. Subtract 8: 3a = 0. Divide: a = 0. The answer is A."
+        },
+        {
+          "id": "ALG-LE2-025",
+          "skill": "Intercepts and modeling",
+          "difficulty": "Hard",
+          "type": "spr",
+          "question": "A line has x-intercept 5 and y-intercept 4. What is the slope of the line?",
+          "answer": "-4/5",
+          "explanation": "The x-intercept gives the point (5, 0) and the y-intercept gives (0, 4). Slope = (4 − 0)/(0 − 5) = 4/(−5) = −4/5."
+        }
+      ]
+    },
+    {
+      "subtopic": "Linear Functions",
+      "subtopic_code": "LF",
+      "question_count": 25,
+      "questions": [
+        {
+          "id": "ALG-LF-001",
+          "skill": "Function evaluation",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If f(x) = 3x + 2, what is f(5)?",
+          "choices": {
+            "A": "10",
+            "B": "15",
+            "C": "17",
+            "D": "23"
+          },
+          "answer": "C",
+          "explanation": "Substitute x = 5: f(5) = 3(5) + 2 = 15 + 2 = 17. The answer is C."
+        },
+        {
+          "id": "ALG-LF-002",
+          "skill": "Function evaluation",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If g(x) = −2x + 9, what is g(3)?",
+          "choices": {
+            "A": "3",
+            "B": "6",
+            "C": "9",
+            "D": "15"
+          },
+          "answer": "A",
+          "explanation": "g(3) = −2(3) + 9 = −6 + 9 = 3. The answer is A."
+        },
+        {
+          "id": "ALG-LF-003",
+          "skill": "Function evaluation at negative input",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If f(x) = 4x − 3, what is f(−2)?",
+          "choices": {
+            "A": "−11",
+            "B": "−5",
+            "C": "5",
+            "D": "11"
+          },
+          "answer": "A",
+          "explanation": "f(−2) = 4(−2) − 3 = −8 − 3 = −11. The answer is A."
+        },
+        {
+          "id": "ALG-LF-004",
+          "skill": "Initial value (y-intercept)",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the value of f(0) for the function f(x) = 7x − 4?",
+          "choices": {
+            "A": "−7",
+            "B": "−4",
+            "C": "0",
+            "D": "4"
+          },
+          "answer": "B",
+          "explanation": "f(0) = 7(0) − 4 = 0 − 4 = −4. The answer is B."
+        },
+        {
+          "id": "ALG-LF-005",
+          "skill": "Rate of change",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "The function f is defined by f(x) = 6x − 11. What is the rate of change of f?",
+          "choices": {
+            "A": "−11",
+            "B": "−6",
+            "C": "6",
+            "D": "11"
+          },
+          "answer": "C",
+          "explanation": "For a linear function f(x) = mx + b, the rate of change is m, the coefficient of x. Here, m = 6. The answer is C."
+        },
+        {
+          "id": "ALG-LF-006",
+          "skill": "Function evaluation",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "The function f is defined by f(x) = 5x + 12. What is the value of f(8)?",
+          "answer": "52",
+          "explanation": "f(8) = 5(8) + 12 = 40 + 12 = 52."
+        },
+        {
+          "id": "ALG-LF-007",
+          "skill": "Solving for input",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If f(x) = 2x + 5 and f(c) = 17, what is the value of c?",
+          "choices": {
+            "A": "5",
+            "B": "6",
+            "C": "11",
+            "D": "12"
+          },
+          "answer": "B",
+          "explanation": "Set 2c + 5 = 17. Subtract 5: 2c = 12. Divide by 2: c = 6. The answer is B."
+        },
+        {
+          "id": "ALG-LF-008",
+          "skill": "Identifying linear functions from tables",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "The table shows values of x and f(x): when x = 0, f(x) = 3; when x = 1, f(x) = 7; when x = 2, f(x) = 11. Which function describes f?",
+          "choices": {
+            "A": "f(x) = 3x + 4",
+            "B": "f(x) = 4x + 3",
+            "C": "f(x) = 7x",
+            "D": "f(x) = x + 3"
+          },
+          "answer": "B",
+          "explanation": "The values increase by 4 when x increases by 1, so the slope (rate of change) is 4. At x = 0, f = 3, so the y-intercept is 3. Therefore f(x) = 4x + 3. The answer is B."
+        },
+        {
+          "id": "ALG-LF-009",
+          "skill": "Function evaluation with fractions",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If f(x) = (1/2)x + 4, what is f(10)?",
+          "choices": {
+            "A": "5",
+            "B": "7",
+            "C": "9",
+            "D": "14"
+          },
+          "answer": "C",
+          "explanation": "f(10) = (1/2)(10) + 4 = 5 + 4 = 9. The answer is C."
+        },
+        {
+          "id": "ALG-LF-010",
+          "skill": "Real-world linear function",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "A pool is being filled with water at a rate of 25 gallons per minute. If the pool initially contains 100 gallons, which function gives the volume V (in gallons) after t minutes?",
+          "choices": {
+            "A": "V(t) = 25t",
+            "B": "V(t) = 100 + 25t",
+            "C": "V(t) = 100t + 25",
+            "D": "V(t) = 125t"
+          },
+          "answer": "B",
+          "explanation": "Initial amount is 100, and 25 gallons are added per minute. So V(t) = 100 + 25t. The answer is B."
+        },
+        {
+          "id": "ALG-LF-011",
+          "skill": "Function evaluation — composite expression",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If f(x) = 3x − 7, what is f(2) + f(5)?",
+          "choices": {
+            "A": "5",
+            "B": "7",
+            "C": "8",
+            "D": "9"
+          },
+          "answer": "B",
+          "explanation": "f(2) = 3(2) − 7 = −1. f(5) = 3(5) − 7 = 8. Sum: −1 + 8 = 7. The answer is B."
+        },
+        {
+          "id": "ALG-LF-012",
+          "skill": "Building a linear function from two points",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A linear function f satisfies f(2) = 7 and f(5) = 16. What is f(8)?",
+          "choices": {
+            "A": "21",
+            "B": "23",
+            "C": "25",
+            "D": "27"
+          },
+          "answer": "C",
+          "explanation": "Slope = (16 − 7)/(5 − 2) = 9/3 = 3. Using f(2) = 7: 7 = 3(2) + b, so b = 1. Function: f(x) = 3x + 1. f(8) = 3(8) + 1 = 25. The answer is C."
+        },
+        {
+          "id": "ALG-LF-013",
+          "skill": "Interpreting slope in context",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "The cost of a car rental is given by C(d) = 35d + 15, where d is the number of days. What does the value 35 represent?",
+          "choices": {
+            "A": "The fixed fee",
+            "B": "The cost per day",
+            "C": "The total cost",
+            "D": "The number of days"
+          },
+          "answer": "B",
+          "explanation": "In C(d) = 35d + 15, the coefficient 35 multiplies d (days), making it the cost per day. The constant 15 is the fixed fee. The answer is B."
+        },
+        {
+          "id": "ALG-LF-014",
+          "skill": "Solving for input given output",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If f(x) = −4x + 19, for what value of x does f(x) = 3?",
+          "choices": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "C",
+          "explanation": "Set −4x + 19 = 3. Subtract 19: −4x = −16. Divide by −4: x = 4. The answer is C."
+        },
+        {
+          "id": "ALG-LF-015",
+          "skill": "Equivalent function forms",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which function is equivalent to f(x) = 3(x − 2) + 5?",
+          "choices": {
+            "A": "f(x) = 3x − 1",
+            "B": "f(x) = 3x + 1",
+            "C": "f(x) = 3x + 3",
+            "D": "f(x) = 3x + 7"
+          },
+          "answer": "A",
+          "explanation": "Expand: f(x) = 3x − 6 + 5 = 3x − 1. The answer is A."
+        },
+        {
+          "id": "ALG-LF-016",
+          "skill": "Linear modeling",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "The number of subscribers to a magazine is decreasing linearly. The number was 5,000 at the start of 2020 and 4,400 at the start of 2022. If this rate continues, how many subscribers will there be at the start of 2025?",
+          "answer": "3500",
+          "explanation": "Rate of change = (4400 − 5000)/(2022 − 2020) = −600/2 = −300 per year. From 2020 to 2025 is 5 years, so subscribers = 5000 + 5(−300) = 5000 − 1500 = 3500."
+        },
+        {
+          "id": "ALG-LF-017",
+          "skill": "Function evaluation — algebraic input",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If f(x) = 2x + 3, what is f(x + 1)?",
+          "choices": {
+            "A": "2x + 4",
+            "B": "2x + 5",
+            "C": "2x + 6",
+            "D": "3x + 4"
+          },
+          "answer": "B",
+          "explanation": "Replace x with (x + 1): f(x + 1) = 2(x + 1) + 3 = 2x + 2 + 3 = 2x + 5. The answer is B."
+        },
+        {
+          "id": "ALG-LF-018",
+          "skill": "Comparing two linear functions",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Functions f and g are defined by f(x) = 2x + 6 and g(x) = 3x + 1. For what value of x is f(x) = g(x)?",
+          "choices": {
+            "A": "3",
+            "B": "5",
+            "C": "6",
+            "D": "7"
+          },
+          "answer": "B",
+          "explanation": "Set 2x + 6 = 3x + 1. Subtract 2x: 6 = x + 1. Subtract 1: x = 5. The answer is B."
+        },
+        {
+          "id": "ALG-LF-019",
+          "skill": "Solving for unknown coefficient",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If f(x) = ax + 5 and f(3) = 17, what is the value of a?",
+          "choices": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "6"
+          },
+          "answer": "C",
+          "explanation": "f(3) = 3a + 5 = 17. Subtract 5: 3a = 12. Divide: a = 4. The answer is C."
+        },
+        {
+          "id": "ALG-LF-020",
+          "skill": "Linear modeling — interpreting initial value",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A scientist models the temperature of a cooling object as T(t) = −5t + 80, where T is in degrees Celsius and t is in minutes. What was the initial temperature?",
+          "choices": {
+            "A": "−5°C",
+            "B": "5°C",
+            "C": "75°C",
+            "D": "80°C"
+          },
+          "answer": "D",
+          "explanation": "Initial temperature is T(0) = −5(0) + 80 = 80°C. The answer is D."
+        },
+        {
+          "id": "ALG-LF-021",
+          "skill": "Function transformation",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "If f(x) = 2x − 5, which expression equals f(x) + 3?",
+          "choices": {
+            "A": "2x − 8",
+            "B": "2x − 2",
+            "C": "2x + 3",
+            "D": "5x − 2"
+          },
+          "answer": "B",
+          "explanation": "f(x) + 3 = (2x − 5) + 3 = 2x − 2. The answer is B."
+        },
+        {
+          "id": "ALG-LF-022",
+          "skill": "Using two known values to build function",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "A linear function h satisfies h(−1) = 8 and h(3) = −4. What is h(5)?",
+          "choices": {
+            "A": "−10",
+            "B": "−8",
+            "C": "−6",
+            "D": "0"
+          },
+          "answer": "A",
+          "explanation": "Slope = (−4 − 8)/(3 − (−1)) = −12/4 = −3. Use h(3) = −4: −4 = −3(3) + b, so b = 5. h(x) = −3x + 5. h(5) = −15 + 5 = −10. The answer is A."
+        },
+        {
+          "id": "ALG-LF-023",
+          "skill": "Function modeling with constraints",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "A delivery service charges a flat fee plus a per-mile rate. A 10-mile delivery costs $22, and a 25-mile delivery costs $40. What does a 30-mile delivery cost?",
+          "choices": {
+            "A": "$44",
+            "B": "$46",
+            "C": "$48",
+            "D": "$50"
+          },
+          "answer": "B",
+          "explanation": "Per-mile rate = (40 − 22)/(25 − 10) = 18/15 = 1.20. Use point (10, 22): 22 = 10(1.20) + b, so b = 22 − 12 = 10. Cost(d) = 1.20d + 10. Cost(30) = 36 + 10 = $46. The answer is B."
+        },
+        {
+          "id": "ALG-LF-024",
+          "skill": "Function with parameter",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "The function f is defined by f(x) = kx + 7. If f(4) − f(1) = 9, what is the value of k?",
+          "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "C",
+          "explanation": "f(4) − f(1) = (4k + 7) − (k + 7) = 3k. Set 3k = 9, so k = 3. The answer is C."
+        },
+        {
+          "id": "ALG-LF-025",
+          "skill": "Composite linear function",
+          "difficulty": "Hard",
+          "type": "spr",
+          "question": "If f(x) = 2x + 3 and g(x) = x − 4, what is the value of f(g(7))?",
+          "answer": "9",
+          "explanation": "First find g(7) = 7 − 4 = 3. Then f(3) = 2(3) + 3 = 9."
+        }
+      ]
+    },
+    {
+      "subtopic": "Systems of Two Linear Equations",
+      "subtopic_code": "SYS",
+      "question_count": 25,
+      "questions": [
+        {
+          "id": "ALG-SYS-001",
+          "skill": "Substitution — basic",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If x = 4 and 2x + y = 11, what is the value of y?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "7",
+            "D": "11"
+          },
+          "answer": "A",
+          "explanation": "Substitute x = 4: 2(4) + y = 11, so 8 + y = 11, giving y = 3. The answer is A."
+        },
+        {
+          "id": "ALG-SYS-002",
+          "skill": "Elimination — basic",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If x + y = 10 and x − y = 4, what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "5",
+            "C": "6",
+            "D": "7"
+          },
+          "answer": "D",
+          "explanation": "Add the two equations: 2x = 14, so x = 7. The answer is D."
+        },
+        {
+          "id": "ALG-SYS-003",
+          "skill": "Elimination — basic",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 3x + y = 14 and 3x − y = 4, what is the value of y?",
+          "choices": {
+            "A": "3",
+            "B": "5",
+            "C": "9",
+            "D": "10"
+          },
+          "answer": "B",
+          "explanation": "Subtract the second from the first: 2y = 10, so y = 5. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-004",
+          "skill": "Substitution",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If y = 2x and 3x + y = 25, what is the value of x?",
+          "choices": {
+            "A": "4",
+            "B": "5",
+            "C": "6",
+            "D": "10"
+          },
+          "answer": "B",
+          "explanation": "Substitute y = 2x into the second equation: 3x + 2x = 25, so 5x = 25, giving x = 5. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-005",
+          "skill": "Solving for one variable",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If 2x + 3y = 13 and y = 1, what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "7"
+          },
+          "answer": "C",
+          "explanation": "Substitute y = 1: 2x + 3(1) = 13, so 2x + 3 = 13, 2x = 10, x = 5. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-006",
+          "skill": "Word problem — system",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "The sum of two numbers is 30, and their difference is 8. What is the larger number?",
+          "answer": "19",
+          "explanation": "Let the numbers be x and y with x > y. x + y = 30 and x − y = 8. Adding: 2x = 38, so x = 19."
+        },
+        {
+          "id": "ALG-SYS-007",
+          "skill": "Identifying solution from graph",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Two lines intersect at the point (3, 7). If the lines represent the equations of a system of two linear equations, what is the solution to the system?",
+          "choices": {
+            "A": "x = 3, y = 7",
+            "B": "x = 7, y = 3",
+            "C": "x = 3, y = 3",
+            "D": "x = 7, y = 7"
+          },
+          "answer": "A",
+          "explanation": "The solution to a system of two linear equations is the intersection point of their graphs. Since the lines meet at (3, 7), the solution is x = 3, y = 7. The answer is A."
+        },
+        {
+          "id": "ALG-SYS-008",
+          "skill": "Substitution",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "If x = y + 3 and x + y = 11, what is the value of y?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "7"
+          },
+          "answer": "B",
+          "explanation": "Substitute x = y + 3 into x + y = 11: (y + 3) + y = 11, so 2y + 3 = 11, 2y = 8, y = 4. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-009",
+          "skill": "Word problem — money",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "A movie theater sells adult tickets for $12 and child tickets for $8. If 50 tickets were sold for a total of $480, how many adult tickets were sold?",
+          "choices": {
+            "A": "15",
+            "B": "20",
+            "C": "25",
+            "D": "30"
+          },
+          "answer": "B",
+          "explanation": "Let a = adult, c = child. a + c = 50 and 12a + 8c = 480. From the first, c = 50 − a. Substitute: 12a + 8(50 − a) = 480, so 12a + 400 − 8a = 480, 4a = 80, a = 20. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-010",
+          "skill": "Elimination",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "If 4x + y = 22 and x + y = 10, what is the value of x?",
+          "answer": "4",
+          "explanation": "Subtract the second equation from the first: 3x = 12, so x = 4."
+        },
+        {
+          "id": "ALG-SYS-011",
+          "skill": "Elimination — multiplication required",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 2x + 3y = 16 and 4x − y = 18, what is the value of x?",
+          "choices": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "answer": "C",
+          "explanation": "Multiply second equation by 3: 12x − 3y = 54. Add to first: 14x = 70, so x = 5. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-012",
+          "skill": "Substitution with rearrangement",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 2x − y = 7 and x + 3y = 14, what is the value of y?",
+          "choices": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+          },
+          "answer": "C",
+          "explanation": "From the first: y = 2x − 7. Substitute: x + 3(2x − 7) = 14, so x + 6x − 21 = 14, 7x = 35, x = 5. Then y = 2(5) − 7 = 3. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-013",
+          "skill": "Finding x + y or x − y",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 3x + 2y = 18 and x + y = 7, what is the value of x?",
+          "choices": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "C",
+          "explanation": "Multiply the second equation by 2: 2x + 2y = 14. Subtract from the first: x = 4. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-014",
+          "skill": "Word problem — mixture",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A store sells two types of coffee: Type A at $9 per pound and Type B at $6 per pound. If a 12-pound mixture costs $90 total, how many pounds of Type A are in the mixture?",
+          "choices": {
+            "A": "4",
+            "B": "5",
+            "C": "6",
+            "D": "8"
+          },
+          "answer": "C",
+          "explanation": "Let a = pounds of A, b = pounds of B. a + b = 12 and 9a + 6b = 90. From first, b = 12 − a. Substitute: 9a + 6(12 − a) = 90, so 9a + 72 − 6a = 90, 3a = 18, a = 6. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-015",
+          "skill": "Word problem — distance/speed",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Two trains leave the same station traveling in opposite directions. One travels at 60 mph and the other at 80 mph. After how many hours will they be 350 miles apart?",
+          "choices": {
+            "A": "2",
+            "B": "2.5",
+            "C": "3",
+            "D": "3.5"
+          },
+          "answer": "B",
+          "explanation": "Combined speed = 60 + 80 = 140 mph. Time = distance/speed = 350/140 = 2.5 hours. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-016",
+          "skill": "Solving for sum or difference",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "If 2x + 5y = 23 and 4x + 3y = 25, what is the value of x + y?",
+          "answer": "7",
+          "explanation": "Solve the system. From the first equation: 2x = 23 − 5y, so x = (23 − 5y)/2. Substitute into the second: 2(23 − 5y) + 3y = 25, so 46 − 10y + 3y = 25, giving −7y = −21, y = 3. Then x = (23 − 15)/2 = 4. Therefore x + y = 4 + 3 = 7."
+        },
+        {
+          "id": "ALG-SYS-017",
+          "skill": "Substitution",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If y = 3x − 4 and 2x + y = 11, what is the value of x?",
+          "choices": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "B",
+          "explanation": "Substitute y = 3x − 4 into 2x + y = 11: 2x + 3x − 4 = 11, so 5x = 15, x = 3. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-018",
+          "skill": "Word problem — money/items",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Sarah bought 3 notebooks and 2 pens for $13, and Marcus bought 2 notebooks and 5 pens for $16. What is the price of one notebook?",
+          "choices": {
+            "A": "$1.50",
+            "B": "$2.00",
+            "C": "$2.50",
+            "D": "$3.00"
+          },
+          "answer": "D",
+          "explanation": "Let n = notebook price, p = pen price. 3n + 2p = 13 and 2n + 5p = 16. Multiply the first by 5 and the second by 2: 15n + 10p = 65 and 4n + 10p = 32. Subtract: 11n = 33, so n = 3. The answer is D."
+        },
+        {
+          "id": "ALG-SYS-019",
+          "skill": "Combined operations",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "If 5x − 2y = 16 and x + 2y = 8, what is the value of x?",
+          "choices": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "answer": "C",
+          "explanation": "Add the two equations: 6x = 24, so x = 4. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-020",
+          "skill": "Verifying a solution",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which ordered pair (x, y) is the solution to the system 2x + y = 9 and x − y = 3?",
+          "choices": {
+            "A": "(3, 0)",
+            "B": "(4, 1)",
+            "C": "(2, 5)",
+            "D": "(5, 2)"
+          },
+          "answer": "B",
+          "explanation": "Check (4, 1): 2(4) + 1 = 9 ✓ and 4 − 1 = 3 ✓. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-021",
+          "skill": "No solution",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "For what value of k does the system 2x + 4y = 10 and 3x + ky = 12 have no solution?",
+          "choices": {
+            "A": "2",
+            "B": "4",
+            "C": "6",
+            "D": "8"
+          },
+          "answer": "C",
+          "explanation": "Two lines have no solution when they are parallel (same slope, different intercepts). Slope of first: solving for y, y = −x/2 + 5/2, slope = −1/2. Slope of second: y = −3x/k + 12/k, slope = −3/k. Set −3/k = −1/2: k = 6. Check that y-intercepts differ: first has 5/2 = 2.5, second has 12/6 = 2. Different ✓. So k = 6. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-022",
+          "skill": "Infinitely many solutions",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "The system 4x − 2y = 6 and 8x + ky = 12 has infinitely many solutions. What is the value of k?",
+          "choices": {
+            "A": "−4",
+            "B": "−2",
+            "C": "2",
+            "D": "4"
+          },
+          "answer": "A",
+          "explanation": "Infinitely many solutions means one equation is a multiple of the other. Multiply first by 2: 8x − 4y = 12. So we need 8x + ky = 12 to match 8x − 4y = 12, meaning k = −4. The answer is A."
+        },
+        {
+          "id": "ALG-SYS-023",
+          "skill": "Word problem — age",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "Ten years ago, Maria was three times as old as her brother. Today, she is twice as old as he is. How old is Maria today?",
+          "choices": {
+            "A": "30",
+            "B": "35",
+            "C": "40",
+            "D": "45"
+          },
+          "answer": "C",
+          "explanation": "Let M = Maria's age now, B = brother's age now. M = 2B. Ten years ago: M − 10 = 3(B − 10). Substitute M = 2B: 2B − 10 = 3B − 30, so B = 20. Then M = 40. The answer is C."
+        },
+        {
+          "id": "ALG-SYS-024",
+          "skill": "Solving for an expression",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "If 3x + 2y = 14 and 5x + 2y = 22, what is the value of 4x + 2y?",
+          "choices": {
+            "A": "16",
+            "B": "18",
+            "C": "20",
+            "D": "22"
+          },
+          "answer": "B",
+          "explanation": "Subtract first from second: 2x = 8, so x = 4. Substitute into 3x + 2y = 14: 12 + 2y = 14, so 2y = 2, y = 1. Then 4x + 2y = 16 + 2 = 18. The answer is B."
+        },
+        {
+          "id": "ALG-SYS-025",
+          "skill": "Word problem — investment",
+          "difficulty": "Hard",
+          "type": "spr",
+          "question": "A person invested a total of $10,000 in two accounts. One account pays 4% simple interest annually and the other pays 6%. If the total interest earned in one year is $480, how much was invested at 6%?",
+          "answer": "4000",
+          "explanation": "Let x = amount at 4%, y = amount at 6%. x + y = 10,000 and 0.04x + 0.06y = 480. From first, x = 10000 − y. Substitute: 0.04(10000 − y) + 0.06y = 480, so 400 − 0.04y + 0.06y = 480, 0.02y = 80, y = 4000. So $4,000 was invested at 6%."
+        }
+      ]
+    },
+    {
+      "subtopic": "Linear Inequalities",
+      "subtopic_code": "INEQ",
+      "question_count": 25,
+      "questions": [
+        {
+          "id": "ALG-INEQ-001",
+          "skill": "Solving one-variable inequality",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Which of the following values of x satisfies x + 5 > 12?",
+          "choices": {
+            "A": "5",
+            "B": "6",
+            "C": "7",
+            "D": "8"
+          },
+          "answer": "D",
+          "explanation": "Solve x + 5 > 12: x > 7. Only x = 8 satisfies x > 7. The answer is D."
+        },
+        {
+          "id": "ALG-INEQ-002",
+          "skill": "Solving one-variable inequality",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the solution to 3x ≤ 15?",
+          "choices": {
+            "A": "x ≤ 3",
+            "B": "x ≤ 5",
+            "C": "x ≥ 5",
+            "D": "x ≥ 12"
+          },
+          "answer": "B",
+          "explanation": "Divide both sides by 3: x ≤ 5. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-003",
+          "skill": "Sign flip — dividing by negative",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the solution to −2x > 10?",
+          "choices": {
+            "A": "x > 5",
+            "B": "x > −5",
+            "C": "x < 5",
+            "D": "x < −5"
+          },
+          "answer": "D",
+          "explanation": "Divide both sides by −2 and flip the inequality sign: x < −5. The answer is D."
+        },
+        {
+          "id": "ALG-INEQ-004",
+          "skill": "Two-step inequality",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the solution to 2x + 3 ≥ 11?",
+          "choices": {
+            "A": "x ≥ 4",
+            "B": "x ≤ 4",
+            "C": "x ≥ 7",
+            "D": "x ≤ 7"
+          },
+          "answer": "A",
+          "explanation": "Subtract 3: 2x ≥ 8. Divide by 2: x ≥ 4. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-005",
+          "skill": "Two-step inequality",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Which value of x satisfies 4x − 7 ≤ 13?",
+          "choices": {
+            "A": "x = 5",
+            "B": "x = 6",
+            "C": "x = 7",
+            "D": "x = 8"
+          },
+          "answer": "A",
+          "explanation": "Add 7: 4x ≤ 20. Divide by 4: x ≤ 5. Only x = 5 satisfies x ≤ 5. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-006",
+          "skill": "Solving one-variable inequality",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "What is the largest integer value of x that satisfies x + 4 < 11?",
+          "answer": "6",
+          "explanation": "Solve: x < 7. The largest integer less than 7 is 6."
+        },
+        {
+          "id": "ALG-INEQ-007",
+          "skill": "Word problem — inequality",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "Tony has $50. If he buys a book for $12, which inequality represents how many $4 cookies c he can buy with the rest of his money?",
+          "choices": {
+            "A": "4c ≤ 38",
+            "B": "4c ≥ 38",
+            "C": "4c ≤ 50",
+            "D": "12 + 4c ≥ 50"
+          },
+          "answer": "A",
+          "explanation": "After buying the book, Tony has $50 − $12 = $38 left. The cost of c cookies (4c) must not exceed $38: 4c ≤ 38. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-008",
+          "skill": "Variables on both sides",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the solution to 5x + 2 > 3x + 10?",
+          "choices": {
+            "A": "x > 2",
+            "B": "x > 4",
+            "C": "x < 4",
+            "D": "x < 2"
+          },
+          "answer": "B",
+          "explanation": "Subtract 3x: 2x + 2 > 10. Subtract 2: 2x > 8. Divide by 2: x > 4. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-009",
+          "skill": "Compound inequality",
+          "difficulty": "Easy",
+          "type": "multiple_choice",
+          "question": "What is the solution to −2 ≤ x + 3 < 7?",
+          "choices": {
+            "A": "−5 ≤ x < 4",
+            "B": "−5 ≤ x ≤ 4",
+            "C": "1 ≤ x < 10",
+            "D": "−2 ≤ x < 7"
+          },
+          "answer": "A",
+          "explanation": "Subtract 3 from all three parts: −5 ≤ x < 4. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-010",
+          "skill": "Word problem — inequality",
+          "difficulty": "Easy",
+          "type": "spr",
+          "question": "Maria needs to score at least 540 total points across three tests. She scored 175 on the first and 180 on the second. What is the minimum score she needs on the third test?",
+          "answer": "185",
+          "explanation": "Let s = third score. 175 + 180 + s ≥ 540, so 355 + s ≥ 540, giving s ≥ 185. The minimum is 185."
+        },
+        {
+          "id": "ALG-INEQ-011",
+          "skill": "Distributive with inequality",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What is the solution to 3(x − 2) < 12?",
+          "choices": {
+            "A": "x < 4",
+            "B": "x < 6",
+            "C": "x > 4",
+            "D": "x > 6"
+          },
+          "answer": "B",
+          "explanation": "Distribute: 3x − 6 < 12. Add 6: 3x < 18. Divide by 3: x < 6. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-012",
+          "skill": "Sign flip with multi-step",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What is the solution to 7 − 2x ≤ 1?",
+          "choices": {
+            "A": "x ≤ 3",
+            "B": "x ≥ 3",
+            "C": "x ≤ 4",
+            "D": "x ≥ 4"
+          },
+          "answer": "B",
+          "explanation": "Subtract 7: −2x ≤ −6. Divide by −2 (flip sign): x ≥ 3. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-013",
+          "skill": "Two-variable inequality",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which point (x, y) satisfies the inequality 2x + 3y > 12?",
+          "choices": {
+            "A": "(0, 3)",
+            "B": "(2, 2)",
+            "C": "(3, 3)",
+            "D": "(1, 3)"
+          },
+          "answer": "C",
+          "explanation": "Test each: A: 2(0)+3(3)=9, not >12. B: 4+6=10, not >12. C: 6+9=15 >12 ✓. The answer is C."
+        },
+        {
+          "id": "ALG-INEQ-014",
+          "skill": "Word problem — multi-step",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "A company manufactures items at $8 per item with $200 fixed costs. They sell each item for $14. Which inequality represents the number of items n needed to make at least $400 profit?",
+          "choices": {
+            "A": "14n − 8n − 200 ≥ 400",
+            "B": "14n − 200 ≥ 400",
+            "C": "8n + 200 ≥ 400",
+            "D": "14n + 8n ≥ 600"
+          },
+          "answer": "A",
+          "explanation": "Profit = revenue − costs = 14n − (8n + 200) = 14n − 8n − 200. For profit ≥ $400: 14n − 8n − 200 ≥ 400. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-015",
+          "skill": "Compound inequality",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "How many integer values of x satisfy −5 < 2x − 1 < 9?",
+          "choices": {
+            "A": "5",
+            "B": "6",
+            "C": "7",
+            "D": "8"
+          },
+          "answer": "B",
+          "explanation": "Add 1 to all parts: −4 < 2x < 10. Divide by 2: −2 < x < 5. Integer values: −1, 0, 1, 2, 3, 4. That's 6 integers. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-016",
+          "skill": "Variables on both sides",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What is the solution to 4x + 9 ≥ 7x − 6?",
+          "choices": {
+            "A": "x ≤ 5",
+            "B": "x ≥ 5",
+            "C": "x ≤ 1",
+            "D": "x ≥ 1"
+          },
+          "answer": "A",
+          "explanation": "Subtract 4x: 9 ≥ 3x − 6. Add 6: 15 ≥ 3x. Divide by 3: 5 ≥ x, or x ≤ 5. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-017",
+          "skill": "Word problem — translating",
+          "difficulty": "Medium",
+          "type": "spr",
+          "question": "A car rental costs $30 per day plus $0.20 per mile. If a customer's total cost is no more than $80 for one day, what is the maximum number of miles they can drive?",
+          "answer": "250",
+          "explanation": "Let m = miles. 30 + 0.20m ≤ 80. Subtract 30: 0.20m ≤ 50. Divide: m ≤ 250. The maximum is 250 miles."
+        },
+        {
+          "id": "ALG-INEQ-018",
+          "skill": "Sign flip with distribution",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What is the solution to −3(x + 4) > 6?",
+          "choices": {
+            "A": "x > −6",
+            "B": "x < −6",
+            "C": "x > 2",
+            "D": "x < 2"
+          },
+          "answer": "B",
+          "explanation": "Distribute: −3x − 12 > 6. Add 12: −3x > 18. Divide by −3 (flip sign): x < −6. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-019",
+          "skill": "Two-variable inequality",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "Which inequality is satisfied by the point (4, 1)?",
+          "choices": {
+            "A": "2x − y < 5",
+            "B": "x + y > 6",
+            "C": "3x − 2y < 10",
+            "D": "x − y ≥ 3"
+          },
+          "answer": "D",
+          "explanation": "Check D: 4 − 1 = 3, and 3 ≥ 3 ✓. (Check others: A: 2(4)−1=7, not <5. B: 4+1=5, not >6. C: 3(4)−2(1)=10, not <10.) The answer is D."
+        },
+        {
+          "id": "ALG-INEQ-020",
+          "skill": "Inequality with fractions",
+          "difficulty": "Medium",
+          "type": "multiple_choice",
+          "question": "What is the solution to (x − 2)/3 ≥ 4?",
+          "choices": {
+            "A": "x ≥ 6",
+            "B": "x ≥ 10",
+            "C": "x ≥ 12",
+            "D": "x ≥ 14"
+          },
+          "answer": "D",
+          "explanation": "Multiply both sides by 3: x − 2 ≥ 12. Add 2: x ≥ 14. The answer is D."
+        },
+        {
+          "id": "ALG-INEQ-021",
+          "skill": "Word problem — system of inequalities",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "A factory produces tables and chairs. Each table requires 4 hours of labor, and each chair requires 2 hours. If the factory has at most 80 hours of labor available, which inequality represents the constraint, where t is the number of tables and c is the number of chairs?",
+          "choices": {
+            "A": "4t + 2c ≥ 80",
+            "B": "4t + 2c ≤ 80",
+            "C": "2t + 4c ≤ 80",
+            "D": "4t − 2c ≤ 80"
+          },
+          "answer": "B",
+          "explanation": "Total labor = 4t + 2c (hours per table × tables + hours per chair × chairs). Available labor is at most 80 hours, so 4t + 2c ≤ 80. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-022",
+          "skill": "Multi-step inequality",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "What is the solution to 2(3x − 1) ≤ 5x + 8?",
+          "choices": {
+            "A": "x ≤ 6",
+            "B": "x ≤ 10",
+            "C": "x ≥ 6",
+            "D": "x ≥ 10"
+          },
+          "answer": "B",
+          "explanation": "Distribute: 6x − 2 ≤ 5x + 8. Subtract 5x: x − 2 ≤ 8. Add 2: x ≤ 10. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-023",
+          "skill": "Word problem — compound inequality",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "Erin's test scores must average between 80 and 90 (inclusive) to earn a grade of B. She has scored 78, 85, and 92 on three tests. What range of scores s on the fourth test will give her a B?",
+          "choices": {
+            "A": "65 ≤ s ≤ 105",
+            "B": "65 ≤ s ≤ 95",
+            "C": "75 ≤ s ≤ 105",
+            "D": "70 ≤ s ≤ 100"
+          },
+          "answer": "A",
+          "explanation": "Average = (78 + 85 + 92 + s)/4 = (255 + s)/4. We need 80 ≤ (255 + s)/4 ≤ 90. Multiply by 4: 320 ≤ 255 + s ≤ 360. Subtract 255: 65 ≤ s ≤ 105. The answer is A."
+        },
+        {
+          "id": "ALG-INEQ-024",
+          "skill": "Inequality with parameter",
+          "difficulty": "Hard",
+          "type": "multiple_choice",
+          "question": "If 3x + a > 7 and x = 4 is a solution, what is the smallest integer value of a for which this is true?",
+          "choices": {
+            "A": "−5",
+            "B": "−4",
+            "C": "0",
+            "D": "1"
+          },
+          "answer": "B",
+          "explanation": "Substitute x = 4: 3(4) + a > 7, so 12 + a > 7, giving a > −5. The smallest integer greater than −5 is −4. The answer is B."
+        },
+        {
+          "id": "ALG-INEQ-025",
+          "skill": "Word problem — system of inequalities",
+          "difficulty": "Hard",
+          "type": "spr",
+          "question": "A student is buying notebooks at $3 each and pens at $2 each. They have at most $30 to spend and need to buy at least 12 items total. If they buy exactly 6 notebooks, what is the maximum number of pens they can buy?",
+          "answer": "6",
+          "explanation": "Cost: 3(6) + 2p ≤ 30 → 18 + 2p ≤ 30 → 2p ≤ 12 → p ≤ 6. Total items: 6 + p ≥ 12 → p ≥ 6. So p = 6 (the only value satisfying both). Maximum pens is 6."
+        }
+      ]
+    }
+  ]
+}

@@ -42,7 +42,6 @@
   .nav-links a.active { color: #FFD700; }
   .nav-book { background: #EF9F27 !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; }
 
-  /* HERO */
   .hero {
     background: var(--navy); padding: 56px 40px 50px;
     text-align: center; color: #fff;
@@ -51,7 +50,7 @@
     font-size: 13px; color: rgba(255,255,255,0.55);
     margin-bottom: 16px;
   }
-  .breadcrumb a { color: var(--gold); text-decoration: none; }
+  .breadcrumb a { color: var(--gold); }
   .breadcrumb a:hover { text-decoration: underline; }
   .course-num {
     display: inline-block;
@@ -72,10 +71,7 @@
     max-width: 620px; margin: 0 auto;
   }
 
-  /* CONTAINER */
   .container { max-width: 920px; margin: 0 auto; padding: 50px 40px; }
-
-  /* SECTION */
   .section { margin-bottom: 56px; }
   .section-label {
     font-size: 11px; font-weight: 600;
@@ -87,46 +83,82 @@
     font-size: 28px; color: var(--navy);
     font-weight: 600; margin-bottom: 12px;
   }
-  .section p { color: var(--text-muted); margin-bottom: 14px; }
+  .section > p { color: var(--text-muted); margin-bottom: 14px; }
 
-  /* OBJECTIVES */
+  /* OBJECTIVES + ACCORDION */
   .objectives {
     background: #fff; border: 1px solid var(--border);
     border-radius: 14px; padding: 28px;
   }
-  .objectives p { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+  .objectives > p { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
   .objectives h3 {
-    font-size: 13px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.05em;
-    color: var(--navy); margin: 20px 0 12px;
+    font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--navy); margin: 24px 0 8px;
   }
-  .objectives ul { list-style: none; padding: 0; }
-  .objectives li {
-    padding: 8px 0 8px 28px;
-    position: relative; font-size: 14.5px;
-    color: var(--text); line-height: 1.6;
+  .parts-list { list-style: none; padding: 0; }
+  .part-item {
     border-bottom: 1px solid var(--border);
   }
-  .objectives li:last-child { border-bottom: none; }
-  .objectives li::before {
-    content: '▸'; position: absolute; left: 8px;
-    color: var(--gold); font-weight: 700;
+  .part-item:last-child { border-bottom: none; }
+  .part-toggle {
+    display: flex; align-items: flex-start; gap: 12px;
+    width: 100%; background: none; border: none;
+    padding: 16px 0; text-align: left; cursor: pointer;
+    font-family: inherit; font-size: 15px;
+    color: var(--text); transition: color 0.15s;
   }
-  .objectives li strong { color: var(--navy); }
+  .part-toggle:hover { color: var(--navy-light); }
+  .part-chevron {
+    color: var(--gold); font-weight: 700;
+    font-size: 16px; line-height: 1.5;
+    transition: transform 0.2s; flex-shrink: 0;
+    width: 14px; display: inline-block;
+  }
+  .part-toggle[aria-expanded="true"] .part-chevron {
+    transform: rotate(90deg);
+  }
+  .part-toggle.is-wip .part-chevron { color: var(--text-muted); }
+  .part-title { flex: 1; line-height: 1.6; }
+  .part-title strong { color: var(--navy); font-weight: 600; }
+  .part-wip-badge {
+    display: inline-block; margin-left: 6px;
+    background: var(--gold-soft); color: #6B5A00;
+    font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 2px 8px; border-radius: 99px;
+  }
+  .part-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .part-body.open { max-height: 800px; }
+  .part-content { padding: 0 0 20px 26px; }
+  .part-desc { display: none; }
+  .part-wip {
+    background: var(--gold-soft); border: 1px solid #F5D700;
+    color: #6B5A00; padding: 14px 18px; border-radius: 10px;
+    font-size: 14px; margin: 0 0 0 26px;
+  }
 
-  /* VIDEO PLAYER */
   .video-wrapper {
     position: relative; padding-bottom: 56.25%;
-    height: 0; border-radius: 14px;
+    height: 0; border-radius: 12px;
     overflow: hidden; background: #000;
-    box-shadow: 0 4px 24px rgba(26,58,92,0.15);
+    box-shadow: 0 4px 20px rgba(26,58,92,0.12);
   }
   .video-wrapper iframe {
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%; border: 0;
   }
 
-  /* PRACTICE SECTION */
+  .accordion-footer {
+    margin-top: 22px; font-style: italic;
+    font-size: 14px; color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* PRACTICE */
   .practice-wrapper {
     background: #fff;
     border: 1px solid var(--border);
@@ -153,8 +185,6 @@
     height: 100%; background: var(--gold); border-radius: 99px;
     transition: width 0.3s ease; width: 0%;
   }
-
-  /* SUBTOPIC FILTER */
   .subtopic-pills {
     display: flex; flex-wrap: wrap; gap: 8px;
     margin-bottom: 24px;
@@ -179,6 +209,7 @@
   .q-num {
     font-size: 11px; font-weight: 600; letter-spacing: 0.05em;
     color: var(--navy-light); margin-bottom: 8px;
+    text-transform: uppercase;
   }
   .q-meta { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 11px; }
   .q-text {
@@ -230,14 +261,29 @@
     border: 1px solid #F5C4B3;
   }
   .feedback-title { font-weight: 600; margin-bottom: 4px; }
+  .question-actions {
+    display: flex; gap: 10px; margin-top: 16px;
+    align-items: center; justify-content: flex-end;
+  }
+  .skip-btn {
+    background: transparent; color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 11px 20px; border-radius: 8px;
+    font-size: 14px; font-weight: 500;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.15s;
+  }
+  .skip-btn:hover { background: var(--blue-soft); color: var(--navy); border-color: var(--navy-light); }
   .next-btn {
-    margin-top: 16px; background: var(--navy); color: #fff;
+    background: var(--navy); color: #fff;
     border: none; padding: 11px 24px; border-radius: 8px;
     font-size: 14px; font-weight: 500; cursor: pointer;
     font-family: inherit; display: none;
     transition: opacity 0.15s;
   }
   .next-btn.show { display: inline-block; }
+  .next-btn:hover { opacity: 0.85; }
+
   .results-card {
     text-align: center; padding: 30px 20px; display: none;
   }
@@ -256,7 +302,6 @@
   }
   .practice-loading { text-align: center; color: var(--text-muted); padding: 30px; font-size: 14px; }
 
-  /* CTA */
   .cta-section {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
     border-radius: 14px; padding: 36px;
@@ -273,7 +318,6 @@
     border-radius: 10px;
   }
 
-  /* COURSE NAV */
   .course-nav {
     display: flex; justify-content: space-between;
     padding: 24px 0; margin-top: 30px;
@@ -282,9 +326,7 @@
   }
   .course-nav a { color: var(--navy-light); font-weight: 500; }
   .course-nav a:hover { color: var(--navy); }
-  .course-nav .disabled { color: var(--text-muted); cursor: default; }
 
-  /* HAMBURGER */
   .hamburger {
     display: none;
     background: rgba(255,255,255,0.1);
@@ -327,6 +369,9 @@
     .hero h1 { font-size: 28px; }
     .container { padding: 30px 20px; }
     .practice-wrapper { padding: 22px 18px; }
+    .objectives { padding: 22px 18px; }
+    .question-actions { flex-direction: column-reverse; align-items: stretch; }
+    .skip-btn, .next-btn { width: 100%; text-align: center; }
   }
 </style>
 </head>
@@ -379,39 +424,94 @@
 
 <div class="container">
 
-  <!-- COURSE OBJECTIVES -->
   <div class="section">
     <div class="section-label">About this course</div>
     <h2>What you'll learn</h2>
     <div class="objectives">
-      <p>This 5-part series is taught by Dr. Ashu Jain, retired from IIT Kanpur after 30+ years of teaching mathematics. It's designed for high school students preparing for the SAT or ACT — particularly those who are solid on basic algebra but want to sharpen the skills that show up on the harder questions.</p>
-      <h3>What's covered</h3>
-      <ul>
-      <li><strong>Part 1 — Introduction:</strong> vocabulary, terms, like terms, the basics of simplifying</li>
-      <li><strong>Part 2 — Identities:</strong> the patterns every SAT student should know cold</li>
-      <li><strong>Part 3 — Multiplying &amp; Factoring:</strong> equivalent expressions, FOIL, factoring quadratics</li>
-      <li><strong>Part 4 — Rational Expressions:</strong> fractions with variables, simplification, common traps</li>
-      <li><strong>Part 5 — Exponents:</strong> product, quotient, power, negative, and fractional rules</li>
+      <p>Taught by Dr. Jain. This 5-part series is designed for high school students preparing for the SAT or ACT — particularly those who are solid on basic algebra but want to sharpen the skills that show up on the harder questions.</p>
+      <h3>What's covered — click to watch</h3>
+      <ul class="parts-list">
+        <li class="part-item">
+          <button class="part-toggle" onclick="togglePart('part1')" aria-expanded="false" id="toggle-part1">
+            <span class="part-chevron">▸</span>
+            <span class="part-title">
+              <strong>Part 1 — Introduction:</strong> vocabulary, terms, like terms, the basics of simplifying 
+            </span>
+          </button>
+          <div class="part-body" id="body-part1">
+            <p class="part-desc">Vocabulary, terms, like terms, the basics of simplifying.</p>
+            <div class="part-content">
+            <div class="video-wrapper">
+              <iframe data-vid="o22wNw1CSwo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="part-item">
+          <button class="part-toggle" onclick="togglePart('part2')" aria-expanded="false" id="toggle-part2">
+            <span class="part-chevron">▸</span>
+            <span class="part-title">
+              <strong>Part 2 — Identities:</strong> the patterns every SAT student should know cold 
+            </span>
+          </button>
+          <div class="part-body" id="body-part2">
+            <p class="part-desc">The patterns every SAT student should know cold.</p>
+            <div class="part-content">
+            <div class="video-wrapper">
+              <iframe data-vid="pSWMpZtN71E" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="part-item">
+          <button class="part-toggle" onclick="togglePart('part3')" aria-expanded="false" id="toggle-part3">
+            <span class="part-chevron">▸</span>
+            <span class="part-title">
+              <strong>Part 3 — Multiplying &amp; Factoring:</strong> equivalent expressions, FOIL, factoring quadratics 
+            </span>
+          </button>
+          <div class="part-body" id="body-part3">
+            <p class="part-desc">Equivalent expressions, FOIL, factoring quadratics.</p>
+            <div class="part-content">
+            <div class="video-wrapper">
+              <iframe data-vid="lXrYND8pnJ0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="part-item">
+          <button class="part-toggle is-wip" onclick="togglePart('part4')" aria-expanded="false" id="toggle-part4">
+            <span class="part-chevron">▸</span>
+            <span class="part-title">
+              <strong>Part 4 — Rational Expressions:</strong> fractions with variables, simplification, common traps <span class="part-wip-badge">Coming soon</span>
+            </span>
+          </button>
+          <div class="part-body" id="body-part4">
+            <p class="part-desc">Fractions with variables, simplification, common traps.</p>
+            <div class="part-content">
+            <div class="part-wip">📹 Video coming soon — Dr. Jain is recording this part.</div>
+          </div>
+          </div>
+        </li>
+        <li class="part-item">
+          <button class="part-toggle is-wip" onclick="togglePart('part5')" aria-expanded="false" id="toggle-part5">
+            <span class="part-chevron">▸</span>
+            <span class="part-title">
+              <strong>Part 5 — Exponents:</strong> product, quotient, power, negative, and fractional rules <span class="part-wip-badge">Coming soon</span>
+            </span>
+          </button>
+          <div class="part-body" id="body-part5">
+            <p class="part-desc">Product, quotient, power, negative, and fractional rules.</p>
+            <div class="part-content">
+            <div class="part-wip">📹 Video coming soon — Dr. Jain is recording this part.</div>
+          </div>
+          </div>
+        </li>
       </ul>
-      <p style="margin-top: 20px; font-style: italic; font-size: 14px;">Each video is short and focused, with hand-drawn worked examples on screen. Watch in order or jump to the topic you need.</p>
+      <p class="accordion-footer">Each video is short and focused, with hand-drawn worked examples on screen.</p>
     </div>
   </div>
 
-  <!-- VIDEO PLAYLIST -->
-  <div class="section">
-    <div class="section-label">Watch</div>
-    <h2>Video lessons</h2>
-    <p>The full algebraic expressions playlist. Click any video in the sidebar to jump to it.</p>
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/videoseries?list=PLJx5j2jQO4zoGcW4Rgt2RZD6y-eh7yzz9"
-        title="Algebraic Expressions Playlist"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <!-- PRACTICE SECTION -->
   <div class="section">
     <div class="section-label">Apply</div>
     <h2>Practice questions</h2>
@@ -438,7 +538,10 @@
           <div class="feedback-title" id="feedback-title"></div>
           <div id="feedback-text"></div>
         </div>
-        <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question →</button>
+        <div class="question-actions">
+          <button class="skip-btn" id="skip-btn" onclick="skipQuestion()">Skip →</button>
+          <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question →</button>
+        </div>
       </div>
 
       <div class="results-card" id="results-card">
@@ -449,14 +552,12 @@
     </div>
   </div>
 
-  <!-- CTA -->
   <div class="cta-section">
     <h3>Need help with anything in this course?</h3>
-    <p>Book a free 1-on-1 session with Dr. Jain — bring any question, walk away with answers.</p>
+    <p>Book a free 1-on-1 session — bring any question, walk away with answers.</p>
     <a class="cta-btn" href="https://calendly.com/ashu3069usa" target="_blank">Book a free session →</a>
   </div>
 
-  <!-- COURSE NAV -->
   <div class="course-nav">
     <a href="course-linear-equations.html">← Previous: Linear Equations</a>
     <a href="sat-math.html">All courses →</a>
@@ -465,6 +566,31 @@
 </div>
 
 <script>
+  // ============ ACCORDION ============
+  function togglePart(id) {
+    const body = document.getElementById('body-' + id);
+    const toggle = document.getElementById('toggle-' + id);
+    const isOpen = body.classList.contains('open');
+
+    if (isOpen) {
+      body.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      // Pause/clear video to stop playback
+      const iframe = body.querySelector('iframe[data-vid]');
+      if (iframe) iframe.src = '';
+    } else {
+      body.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      // Lazy-load video
+      const iframe = body.querySelector('iframe[data-vid]');
+      if (iframe && !iframe.src) {
+        const vid = iframe.getAttribute('data-vid');
+        iframe.src = `https://www.youtube.com/embed/${vid}`;
+      }
+    }
+  }
+
+  // ============ PRACTICE QUESTIONS ============
   let allSubtopics = [];
   let currentSubtopic = 'all';
   let questions = [];
@@ -546,19 +672,36 @@
 
     const grid = document.getElementById('choices-grid');
     grid.innerHTML = '';
-    ['A', 'B', 'C', 'D'].forEach(letter => {
-      if (q.choices && q.choices[letter] !== undefined) {
-        const btn = document.createElement('button');
-        btn.className = 'choice-btn';
-        btn.dataset.letter = letter;
-        btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
-        btn.onclick = () => selectAnswer(letter);
-        grid.appendChild(btn);
-      }
-    });
+    if (q.choices) {
+      ['A', 'B', 'C', 'D'].forEach(letter => {
+        if (q.choices[letter] !== undefined) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          btn.dataset.letter = letter;
+          btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
+          btn.onclick = () => selectAnswer(letter);
+          grid.appendChild(btn);
+        }
+      });
+    } else {
+      // SPR
+      const wrap = document.createElement('div');
+      wrap.innerHTML = '<input class="choice-btn" id="spr-input" placeholder="Type your answer" style="font-size:15px; padding:14px 18px;">';
+      grid.appendChild(wrap);
+      const submitBtn = document.createElement('button');
+      submitBtn.className = 'next-btn show';
+      submitBtn.textContent = 'Submit answer';
+      submitBtn.style.marginTop = '12px';
+      submitBtn.onclick = () => {
+        const val = document.getElementById('spr-input').value.trim();
+        if (val) selectAnswer(val);
+      };
+      grid.appendChild(submitBtn);
+    }
 
     document.getElementById('feedback').classList.remove('show');
     document.getElementById('next-btn').classList.remove('show');
+    document.getElementById('skip-btn').style.display = 'inline-block';
   }
 
   function selectAnswer(chosen) {
@@ -572,7 +715,7 @@
       else if (letter === chosen) btn.classList.add('incorrect');
     });
     const feedback = document.getElementById('feedback');
-    if (chosen === q.answer) {
+    if (chosen === q.answer || chosen.toString().toLowerCase() === q.answer.toString().toLowerCase()) {
       score++;
       feedback.className = 'feedback correct show';
       document.getElementById('feedback-title').textContent = '✓ Correct!';
@@ -581,9 +724,14 @@
       document.getElementById('feedback-title').textContent = `✗ Not quite — correct answer is ${q.answer}`;
     }
     document.getElementById('feedback-text').textContent = q.explanation;
+    document.getElementById('skip-btn').style.display = 'none';
     const nextBtn = document.getElementById('next-btn');
     nextBtn.textContent = currentQ === questions.length - 1 ? 'See results →' : 'Next question →';
     nextBtn.classList.add('show');
+  }
+
+  function skipQuestion() {
+    nextQuestion();
   }
 
   function nextQuestion() {

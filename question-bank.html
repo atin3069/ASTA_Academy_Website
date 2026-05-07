@@ -18,27 +18,19 @@
     --blue-soft: #EBF3FF;
     --success: #0F6E56;
     --success-soft: #E1F5EE;
-    --warn-soft: #FAECE7;
     --warn: #993C1D;
+    --warn-soft: #FAECE7;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  /* NAV */
   nav {
     display: flex; align-items: center; justify-content: space-between;
     padding: 1.2rem 2.5rem;
     background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 3px 20px rgba(12,68,124,0.35);
-    height: auto;
   }
   .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
   .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
@@ -49,9 +41,7 @@
   .nav-links a:hover { color: #fff; }
   .nav-links a.active { color: #FFD700; }
   .nav-book { background: #EF9F27 !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; }
-  .nav-book:hover { background: #BA7517 !important; color: #fff !important; }
 
-  /* HERO */
   .hero {
     background: var(--navy);
     padding: 56px 40px 48px;
@@ -61,39 +51,25 @@
     display: inline-block;
     background: rgba(255,215,0,0.15);
     color: var(--gold);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 14px;
-    border-radius: 99px;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 99px;
     margin-bottom: 18px;
     border: 1px solid rgba(255,215,0,0.3);
   }
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.2;
-    margin-bottom: 14px;
+    font-size: 40px; font-weight: 600; color: #fff;
+    line-height: 1.2; margin-bottom: 14px;
   }
   .hero p {
-    font-size: 15.5px;
-    color: rgba(255,255,255,0.65);
-    max-width: 540px;
-    margin: 0 auto;
+    font-size: 15.5px; color: rgba(255,255,255,0.65);
+    max-width: 540px; margin: 0 auto;
     line-height: 1.7;
   }
 
-  /* CONTAINER */
-  .container {
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 40px;
-  }
+  .container { max-width: 860px; margin: 0 auto; padding: 40px; }
 
-  /* TOPIC SELECTOR */
   .selector-section { margin-bottom: 40px; }
   .selector-label {
     font-size: 11px; font-weight: 600;
@@ -101,9 +77,7 @@
     color: var(--text-muted); margin-bottom: 14px;
   }
 
-  .topic-pills {
-    display: flex; flex-wrap: wrap; gap: 10px;
-  }
+  .topic-pills { display: flex; flex-wrap: wrap; gap: 10px; }
   .topic-pill {
     background: #fff; border: 1.5px solid var(--border);
     border-radius: 99px; padding: 10px 22px;
@@ -112,14 +86,9 @@
     font-family: inherit; transition: all 0.15s;
   }
   .topic-pill:hover { border-color: var(--navy-light); }
-  .topic-pill.active {
-    background: var(--navy); color: #fff; border-color: var(--navy);
-  }
-  .topic-pill .count {
-    font-size: 11px; opacity: 0.7; margin-left: 6px;
-  }
+  .topic-pill.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .topic-pill .count { font-size: 11px; opacity: 0.7; margin-left: 6px; }
 
-  /* QUESTION CARD */
   .practice-wrapper {
     background: #fff;
     border: 1px solid var(--border);
@@ -153,7 +122,7 @@
     padding: 24px;
   }
   .q-num {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.05em;
     text-transform: uppercase; color: var(--navy-light); margin-bottom: 8px;
   }
   .q-meta { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
@@ -167,17 +136,13 @@
     border: 1.5px solid var(--border);
     border-radius: 10px;
     padding: 14px 18px;
-    font-size: 14.5px;
-    color: var(--text);
-    text-align: left;
-    cursor: pointer;
-    font-family: inherit;
+    font-size: 14.5px; color: var(--text);
+    text-align: left; cursor: pointer; font-family: inherit;
     transition: all 0.15s;
     display: flex; align-items: center; gap: 12px;
   }
   .choice-btn:hover:not(:disabled) {
-    border-color: var(--navy-light);
-    background: var(--blue-soft);
+    border-color: var(--navy-light); background: var(--blue-soft);
   }
   .choice-btn:disabled { cursor: default; }
   .choice-letter {
@@ -185,8 +150,7 @@
     background: var(--blue-soft); color: var(--navy);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-weight: 600; font-size: 13px;
-    flex-shrink: 0;
+    font-weight: 600; font-size: 13px; flex-shrink: 0;
   }
   .choice-btn.correct { border-color: var(--success); background: var(--success-soft); }
   .choice-btn.correct .choice-letter { background: var(--success); color: #fff; }
@@ -195,8 +159,7 @@
   .feedback {
     margin-top: 16px; padding: 14px 18px;
     border-radius: 10px; font-size: 14px;
-    line-height: 1.6;
-    display: none;
+    line-height: 1.6; display: none;
   }
   .feedback.show { display: block; }
   .feedback.correct {
@@ -208,19 +171,32 @@
     border: 1px solid #F5C4B3;
   }
   .feedback-title { font-weight: 600; margin-bottom: 4px; }
+
+  .question-actions {
+    display: flex; gap: 10px; margin-top: 16px;
+    align-items: center; justify-content: flex-end;
+  }
+  .skip-btn {
+    background: transparent; color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 11px 20px; border-radius: 8px;
+    font-size: 14px; font-weight: 500;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.15s;
+  }
+  .skip-btn:hover { background: var(--blue-soft); color: var(--navy); border-color: var(--navy-light); }
   .next-btn {
-    margin-top: 16px; background: var(--navy); color: #fff;
+    background: var(--navy); color: #fff;
     border: none; padding: 11px 24px; border-radius: 8px;
     font-size: 14px; font-weight: 500; cursor: pointer;
-    font-family: inherit;
-    display: none;
+    font-family: inherit; display: none;
     transition: opacity 0.15s;
   }
   .next-btn.show { display: inline-block; }
   .next-btn:hover { opacity: 0.85; }
+
   .results-card {
-    text-align: center; padding: 30px 20px;
-    display: none;
+    text-align: center; padding: 30px 20px; display: none;
   }
   .results-card.show { display: block; }
   .results-score {
@@ -237,109 +213,72 @@
   }
   .practice-loading { text-align: center; color: var(--text-muted); padding: 30px; font-size: 14px; }
 
-  /* JAIN CARD */
-  .jain-card {
+  .cta-card {
     background: var(--navy);
     border-radius: 14px;
     padding: 28px 32px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    display: flex; align-items: center; gap: 24px;
     margin-top: 40px;
   }
-  .jain-avatar {
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    background: rgba(255,215,0,0.2);
-    border: 2px solid var(--gold);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; color: var(--gold);
-    flex-shrink: 0;
-  }
-  .jain-text { flex: 1; }
-  .jain-text h3 { font-size: 15px; font-weight: 500; color: #fff; margin-bottom: 4px; }
-  .jain-text p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
-  .jain-btn {
+  .cta-text { flex: 1; }
+  .cta-text h3 { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+  .cta-text p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+  .cta-btn-link {
     background: var(--gold); color: var(--navy);
-    font-weight: 500; font-size: 13.5px;
+    font-weight: 600; font-size: 13.5px;
     padding: 10px 20px; border-radius: 8px;
     text-decoration: none; white-space: nowrap; flex-shrink: 0;
   }
 
-  @media (max-width: 600px) {
-    .container { padding: 24px 20px; }
-    nav { padding: 0 20px; }
-    .hero { padding: 40px 20px 36px; }
-    .hero h1 { font-size: 28px; }
-    .nav-links { display: none; }
-    .jain-card { flex-direction: column; text-align: center; }
-  }
-
-  /* HAMBURGER MENU (mobile) */
+  /* HAMBURGER */
   .hamburger {
     display: none;
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    cursor: pointer;
-    padding: 9px 11px;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
+    color: #fff; cursor: pointer;
+    padding: 9px 11px; border-radius: 8px;
+    align-items: center; justify-content: center;
   }
-  .hamburger:hover { background: rgba(255,255,255,0.2); }
-  .hamburger svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .hamburger svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; }
   .mobile-menu {
     display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
-    z-index: 999;
-    padding: 90px 32px 40px;
-    overflow-y: auto;
+    z-index: 999; padding: 90px 32px 40px; overflow-y: auto;
   }
   .mobile-menu.open { display: block; }
   .mobile-menu a {
-    display: block;
-    color: #fff;
+    display: block; color: #fff; font-size: 20px; font-weight: 500;
+    padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.15);
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-    transition: color 0.2s;
   }
-  .mobile-menu a:hover { color: #FFD700; }
   .mobile-menu a.book {
     background: #EF9F27; color: #412402;
-    border: none;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-top: 24px;
-    font-weight: 700;
-    text-align: center;
+    border: none; border-radius: 10px;
+    padding: 16px 20px; margin-top: 24px;
+    font-weight: 700; text-align: center;
   }
   .mobile-menu-close {
-    position: absolute;
-    top: 22px; right: 22px;
+    position: absolute; top: 22px; right: 22px;
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    cursor: pointer;
-    padding: 9px 11px;
-    border-radius: 8px;
+    color: #fff; cursor: pointer;
+    padding: 9px 11px; border-radius: 8px;
   }
-  .mobile-menu-close svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; }
+  .mobile-menu-close svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; }
 
   @media (max-width: 720px) {
+    nav { padding: 1rem 1.25rem; }
     .nav-links { display: none !important; }
-    .nav-cta { display: none !important; }
-    .nav-book { display: none !important; }
     .hamburger { display: flex !important; }
+    .container { padding: 24px 20px; }
+    .hero { padding: 40px 20px 36px; }
+    .hero h1 { font-size: 28px; }
+    .practice-wrapper { padding: 22px 18px; }
+    .cta-card { flex-direction: column; text-align: center; }
+    .question-actions { flex-direction: column-reverse; align-items: stretch; }
+    .skip-btn, .next-btn { width: 100%; text-align: center; }
   }
-
 </style>
 </head>
 <body>
@@ -359,33 +298,31 @@
   </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="index.html#why">Why ASTA</a>
     <a href="sat-math.html">SAT Math Prep</a>
-        <a href="question-bank.html" class="active">Question Bank</a>
+    <a href="question-bank.html" class="active">Question Bank</a>
     <a href="mock-test.html">Mock Test</a>
     <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
   </div>
-  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
     <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">
     <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
-    <a href="index.html">Home</a>
-    <a href="sat-math.html">SAT Math Prep</a>
-        <a href="question-bank.html">Question Bank</a>
-    <a href="mock-test.html">Mock Test</a>
-    <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Book a session</a>
+  <a href="index.html">Home</a>
+  <a href="sat-math.html">SAT Math Prep</a>
+  <a href="question-bank.html">Question Bank</a>
+  <a href="mock-test.html">Mock Test</a>
+  <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Book a session</a>
 </div>
-
 
 <div class="hero">
   <div class="hero-tag">Free practice</div>
   <h1>Question Bank</h1>
-  <p>Practice SAT-style math questions with instant feedback and step-by-step explanations from Dr. Ashu Jain.</p>
+  <p>Practice SAT-style math questions with instant feedback and step-by-step explanations.</p>
 </div>
 
 <div class="container">
@@ -414,7 +351,10 @@
         <div class="feedback-title" id="feedback-title"></div>
         <div id="feedback-text"></div>
       </div>
-      <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question →</button>
+      <div class="question-actions">
+        <button class="skip-btn" id="skip-btn" onclick="skipQuestion()">Skip →</button>
+        <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question →</button>
+      </div>
     </div>
 
     <div class="results-card" id="results-card">
@@ -424,21 +364,20 @@
     </div>
   </div>
 
-  <div class="jain-card">
-    <div class="jain-avatar">AJ</div>
-    <div class="jain-text">
+  <div class="cta-card">
+    <div class="cta-text">
       <h3>Stuck on a problem?</h3>
-      <p>Book a free 15-minute session with Dr. Jain and get personalized help on the topics you find toughest.</p>
+      <p>Book a free 15-minute session and get personalized help on the topics you find toughest.</p>
     </div>
-    <a href="https://calendly.com/ashu3069usa" target="_blank" class="jain-btn">Book a session</a>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="cta-btn-link">Book a session</a>
   </div>
 
 </div>
 
 <script>
   let domains = [];
-  let allQuestions = [];      // flat list of all questions
-  let filteredQuestions = []; // currently active filter
+  let allQuestions = [];
+  let filteredQuestions = [];
   let currentQ = 0;
   let score = 0;
   let answered = false;
@@ -446,19 +385,41 @@
 
   async function loadAllQuestions() {
     try {
-      const res = await fetch('questions.json');
+      // Load from mock test data which has the rich domain structure
+      const res = await fetch('mock-test-1.json');
       const data = await res.json();
-      domains = data.domains || [];
+
+      // Aggregate questions from all modules in the test
+      const questionsByDomain = {};
+      const addQuestions = (questions) => {
+        questions.forEach(q => {
+          const dom = q.domain || 'Other';
+          if (!questionsByDomain[dom]) questionsByDomain[dom] = [];
+          questionsByDomain[dom].push(q);
+        });
+      };
+
+      if (data.module_1 && data.module_1.questions) addQuestions(data.module_1.questions);
+      if (data.easy_module_2 && data.easy_module_2.questions) addQuestions(data.easy_module_2.questions);
+      if (data.hard_module_2 && data.hard_module_2.questions) addQuestions(data.hard_module_2.questions);
+
+      domains = Object.keys(questionsByDomain).map(d => ({
+        domain: d,
+        questions: questionsByDomain[d]
+      }));
+
       allQuestions = [];
       domains.forEach(d => {
         d.questions.forEach(q => {
           allQuestions.push({...q, domainName: d.domain});
         });
       });
+
       renderDomainPills();
       selectDomain('all');
     } catch (e) {
-      document.getElementById('practice-loading').textContent = 'Could not load questions. Make sure questions.json is in the same folder.';
+      document.getElementById('practice-loading').textContent = 'Could not load questions. Make sure mock-test-1.json is in the same folder.';
+      console.error('Question load error:', e);
     }
   }
 
@@ -466,7 +427,6 @@
     const container = document.getElementById('topic-pills');
     container.innerHTML = '';
 
-    // "All" pill
     const allPill = document.createElement('button');
     allPill.className = 'topic-pill';
     allPill.dataset.filter = 'all';
@@ -490,9 +450,7 @@
       ? [...allQuestions]
       : allQuestions.filter(q => q.domainName === filter);
 
-    // Shuffle for variety
     filteredQuestions.sort(() => Math.random() - 0.5);
-
     currentQ = 0;
     score = 0;
 
@@ -506,35 +464,68 @@
     document.getElementById('question-card').style.display = 'block';
     document.getElementById('results-card').classList.remove('show');
 
-    showQuestion();
+    if (filteredQuestions.length > 0) showQuestion();
   }
 
   function showQuestion() {
     const q = filteredQuestions[currentQ];
     answered = false;
 
+    let metaParts = [];
+    if (q.skill || q.subtopic) metaParts.push(q.skill || q.subtopic);
+    if (q.difficulty) metaParts.push(q.difficulty);
+    const metaText = metaParts.length > 0 ? ` <span class="q-meta">· ${metaParts.join(' · ')}</span>` : '';
+
     document.getElementById('q-num').innerHTML =
-      `Question ${currentQ + 1} of ${filteredQuestions.length}` +
-      ` <span class="q-meta">· ${q.skill} · ${q.difficulty}</span>`;
+      `Question ${currentQ + 1} of ${filteredQuestions.length}${metaText}`;
     document.getElementById('q-text').textContent = q.question;
     document.getElementById('progress-text').textContent = `${currentQ + 1} of ${filteredQuestions.length}`;
     document.getElementById('progress-fill').style.width = `${(currentQ / filteredQuestions.length) * 100}%`;
 
     const grid = document.getElementById('choices-grid');
     grid.innerHTML = '';
-    const letters = ['A', 'B', 'C', 'D'];
-    letters.forEach(letter => {
-      if (q.choices[letter] === undefined) return;
-      const btn = document.createElement('button');
-      btn.className = 'choice-btn';
-      btn.dataset.letter = letter;
-      btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
-      btn.onclick = () => selectAnswer(letter);
-      grid.appendChild(btn);
-    });
+
+    if (q.choices && typeof q.choices === 'object') {
+      // Multiple choice
+      ['A', 'B', 'C', 'D'].forEach(letter => {
+        if (q.choices[letter] !== undefined && q.choices[letter] !== null) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn';
+          btn.dataset.letter = letter;
+          btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
+          btn.onclick = () => selectAnswer(letter);
+          grid.appendChild(btn);
+        }
+      });
+    } else {
+      // Student-produced response (write-in)
+      const inputWrap = document.createElement('div');
+      inputWrap.style.display = 'flex';
+      inputWrap.style.gap = '10px';
+      inputWrap.innerHTML = `
+        <input type="text" id="spr-input" placeholder="Type your answer"
+          style="flex:1; padding:14px 18px; font-size:15px; border:1.5px solid var(--border); border-radius:10px; font-family:inherit;">
+        <button class="next-btn show" style="margin-top:0;" onclick="(function(){const v=document.getElementById('spr-input').value.trim(); if(v) selectAnswer(v);})()">
+          Submit
+        </button>
+      `;
+      grid.appendChild(inputWrap);
+      setTimeout(() => {
+        const input = document.getElementById('spr-input');
+        if (input) {
+          input.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+              const v = input.value.trim();
+              if (v) selectAnswer(v);
+            }
+          });
+        }
+      }, 50);
+    }
 
     document.getElementById('feedback').classList.remove('show');
     document.getElementById('next-btn').classList.remove('show');
+    document.getElementById('skip-btn').style.display = 'inline-block';
   }
 
   function selectAnswer(chosenLetter) {
@@ -550,7 +541,9 @@
     });
 
     const feedback = document.getElementById('feedback');
-    if (chosenLetter === q.answer) {
+    const isCorrect = chosenLetter.toString().toLowerCase() === q.answer.toString().toLowerCase();
+
+    if (isCorrect) {
       score++;
       feedback.className = 'feedback correct show';
       document.getElementById('feedback-title').textContent = '✓ Correct!';
@@ -558,11 +551,16 @@
       feedback.className = 'feedback incorrect show';
       document.getElementById('feedback-title').textContent = `✗ Not quite — correct answer is ${q.answer}`;
     }
-    document.getElementById('feedback-text').textContent = q.explanation;
+    document.getElementById('feedback-text').textContent = q.explanation || '';
 
+    document.getElementById('skip-btn').style.display = 'none';
     const nextBtn = document.getElementById('next-btn');
     nextBtn.textContent = currentQ === filteredQuestions.length - 1 ? 'See results →' : 'Next question →';
     nextBtn.classList.add('show');
+  }
+
+  function skipQuestion() {
+    nextQuestion();
   }
 
   function nextQuestion() {
@@ -580,10 +578,10 @@
 
     const pct = (score / filteredQuestions.length) * 100;
     let msg = '';
-    if (pct === 100) msg = 'Perfect score! You\'ve mastered this set.';
-    else if (pct >= 80) msg = 'Excellent work! You\'re close to mastery.';
-    else if (pct >= 60) msg = 'Good effort. Review the explanations and try again.';
-    else msg = 'Keep practicing — review and try again.';
+    if (pct === 100) msg = "Perfect score! You've mastered this set.";
+    else if (pct >= 80) msg = "Excellent work! You're close to mastery.";
+    else if (pct >= 60) msg = "Good effort. Review the explanations and try again.";
+    else msg = "Keep practicing — review and try again.";
     document.getElementById('results-message').textContent = msg;
   }
 

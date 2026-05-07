@@ -480,30 +480,34 @@
           </div>
         </li>
         <li class="part-item">
-          <button class="part-toggle is-wip" onclick="togglePart('part4')" aria-expanded="false" id="toggle-part4">
+          <button class="part-toggle" onclick="togglePart('part4')" aria-expanded="false" id="toggle-part4">
             <span class="part-chevron">▸</span>
             <span class="part-title">
-              <strong>Part 4 — Rational Expressions:</strong> fractions with variables, simplification, common traps <span class="part-wip-badge">Coming soon</span>
+              <strong>Part 4 — Rational Expressions:</strong> fractions with variables, simplification, common traps
             </span>
           </button>
           <div class="part-body" id="body-part4">
             <p class="part-desc">Fractions with variables, simplification, common traps.</p>
             <div class="part-content">
-            <div class="part-wip">📹 Video coming soon — Dr. Jain is recording this part.</div>
+            <div class="video-wrapper">
+              <iframe data-vid="skyWpmRWnKM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
           </div>
         </li>
         <li class="part-item">
-          <button class="part-toggle is-wip" onclick="togglePart('part5')" aria-expanded="false" id="toggle-part5">
+          <button class="part-toggle" onclick="togglePart('part5')" aria-expanded="false" id="toggle-part5">
             <span class="part-chevron">▸</span>
             <span class="part-title">
-              <strong>Part 5 — Exponents:</strong> product, quotient, power, negative, and fractional rules <span class="part-wip-badge">Coming soon</span>
+              <strong>Part 5 — Exponents:</strong> product, quotient, power, negative, and fractional rules
             </span>
           </button>
           <div class="part-body" id="body-part5">
             <p class="part-desc">Product, quotient, power, negative, and fractional rules.</p>
             <div class="part-content">
-            <div class="part-wip">📹 Video coming soon — Dr. Jain is recording this part.</div>
+            <div class="video-wrapper">
+              <iframe data-vid="_ItlemItCdc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
           </div>
         </li>
@@ -684,19 +688,39 @@
         }
       });
     } else {
-      // SPR
-      const wrap = document.createElement('div');
-      wrap.innerHTML = '<input class="choice-btn" id="spr-input" placeholder="Type your answer" style="font-size:15px; padding:14px 18px;">';
-      grid.appendChild(wrap);
-      const submitBtn = document.createElement('button');
-      submitBtn.className = 'next-btn show';
-      submitBtn.textContent = 'Submit answer';
-      submitBtn.style.marginTop = '12px';
-      submitBtn.onclick = () => {
-        const val = document.getElementById('spr-input').value.trim();
-        if (val) selectAnswer(val);
-      };
-      grid.appendChild(submitBtn);
+      // SPR — write-in answer
+      const inputWrap = document.createElement('div');
+      inputWrap.style.display = 'flex';
+      inputWrap.style.gap = '10px';
+      inputWrap.style.flexWrap = 'wrap';
+      inputWrap.innerHTML = `
+        <input type="text" id="spr-input" placeholder="Type your answer"
+          style="flex:1; min-width:200px; padding:14px 18px; font-size:15px; border:1.5px solid var(--border); border-radius:10px; font-family:inherit; background:#fff;">
+        <button id="spr-submit"
+          style="background: var(--navy); color:#fff; border:none; padding:11px 24px; border-radius:8px; font-size:14px; font-weight:500; cursor:pointer; font-family:inherit;">
+          Submit
+        </button>
+      `;
+      grid.appendChild(inputWrap);
+      setTimeout(() => {
+        const input = document.getElementById('spr-input');
+        const btn = document.getElementById('spr-submit');
+        if (input) {
+          input.focus();
+          input.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+              const v = input.value.trim();
+              if (v) selectAnswer(v);
+            }
+          });
+        }
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const v = document.getElementById('spr-input').value.trim();
+            if (v) selectAnswer(v);
+          });
+        }
+      }, 50);
     }
 
     document.getElementById('feedback').classList.remove('show');

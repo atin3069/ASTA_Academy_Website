@@ -1,0 +1,1514 @@
+{
+  "title": "ASTA Academy - Digital SAT Reading & Writing Mock Test 1",
+  "description": "Adaptive 2-module mock test. Module 1 routes students to Easy or Hard Module 2 based on weighted score (>= 22.0 → Hard).",
+  "version": "1.0",
+  "test_id": "RWMT1",
+  "subject": "Reading and Writing",
+  "total_questions": 81,
+  "total_unique_passages": 81,
+  "module_1": {
+    "module": "Module 1",
+    "test_id": "RWMT1",
+    "module_code": "M1",
+    "subject": "Reading and Writing",
+    "total_questions": 27,
+    "time_minutes": 32,
+    "difficulty_distribution": {
+      "Easy": 10,
+      "Medium": 11,
+      "Hard": 6
+    },
+    "questions": [
+      {
+        "id": "RWMT1-M1-001",
+        "domain": "Information and Ideas",
+        "subskill": "Central Ideas and Details",
+        "passage_type": "Science",
+        "difficulty": "Easy",
+        "passage": "The mantis shrimp possesses one of the most sophisticated visual systems in the animal kingdom. While humans see the world through three types of color receptors, the mantis shrimp has sixteen. This abundance of receptors allows the creature to perceive ultraviolet and polarized light, providing a richness of visual information that scientists are only beginning to understand.",
+        "question": "Which choice best states the main idea of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "The mantis shrimp's visual system is exceptionally complex compared to that of humans.",
+          "B": "Humans have only three types of color receptors in their eyes.",
+          "C": "Scientists have completed extensive research on the mantis shrimp.",
+          "D": "Polarized light cannot be seen by most animals."
+        },
+        "answer": "A",
+        "explanation": "The passage centers on the mantis shrimp's visual sophistication, contrasting it with humans (3 vs. 16 receptors). Choice A captures this main idea. B and D are details that support, but don't state, the main point. C contradicts the passage's last sentence."
+      },
+      {
+        "id": "RWMT1-M1-002",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "Marie Curie discovered two new elements during her research _____ polonium and radium. Both elements are radioactive and were named with significance: polonium for her native Poland, and radium from the Latin word for ray.",
+        "question": "Which choice completes the text with the most logical and conventional punctuation?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ", which were",
+          "B": ": polonium",
+          "C": "; polonium",
+          "D": " polonium"
+        },
+        "answer": "B",
+        "explanation": "The colon is the appropriate punctuation to introduce a list or specification that elaborates on a complete preceding clause. \"Marie Curie discovered two new elements during her research\" is a complete clause, and \"polonium and radium\" specifies what those two elements were. Note that the question stem has '_____' followed by 'polonium and radium' — option B inserts ': polonium' to create the colon introduction. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-003",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Humanities",
+        "difficulty": "Easy",
+        "passage": "Architect Frank Lloyd Wright was known for his ______ approach to design, integrating buildings with their natural surroundings rather than imposing rigid forms upon the landscape. His Fallingwater residence, built directly over a waterfall, exemplifies this philosophy.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "harmonious",
+          "B": "indifferent",
+          "C": "unpredictable",
+          "D": "elaborate"
+        },
+        "answer": "A",
+        "explanation": "The passage describes Wright as integrating buildings with their natural surroundings — a harmonious approach. \"Indifferent\" contradicts this; \"unpredictable\" doesn't fit the context of intentional integration; \"elaborate\" describes complexity, not the integration concept. The answer is A."
+      },
+      {
+        "id": "RWMT1-M1-004",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (subject-verb agreement)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "The collection of rare books at the university library _____ visitors from across the country, who come to study manuscripts dating back to the medieval period.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "attract",
+          "B": "attracts",
+          "C": "are attracting",
+          "D": "have attracted"
+        },
+        "answer": "B",
+        "explanation": "The subject is \"the collection\" (singular), not \"books\" (plural). Singular subjects take singular verbs, so \"attracts\" is correct. The phrase \"of rare books\" is a prepositional phrase that doesn't change the subject. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-005",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Easy",
+        "passage": "When the printing press arrived in Europe in the mid-fifteenth century, the cost of producing a book dropped dramatically. Before the press, scribes spent months copying a single manuscript by hand. After Gutenberg's invention, the same work could be produced in a fraction of the time, and at a fraction of the cost.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Gutenberg invented the printing press primarily for religious purposes.",
+          "B": "The printing press likely made books accessible to more people than before.",
+          "C": "Hand-copied manuscripts were of higher quality than printed books.",
+          "D": "Scribes lost their jobs immediately after the press was invented."
+        },
+        "answer": "B",
+        "explanation": "If books became dramatically cheaper and faster to produce, it follows logically that more people could afford and access them. The passage doesn't mention religious purposes (A), make quality comparisons (C), or describe scribes' employment outcomes (D). The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-006",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Easy",
+        "passage": "Solar panels have become significantly more affordable over the past decade. Many homeowners hesitate to install them. _____ the long-term savings on electricity often exceed the initial investment within seven to ten years.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Similarly,",
+          "B": "However,",
+          "C": "For example,",
+          "D": "Meanwhile,"
+        },
+        "answer": "B",
+        "explanation": "The third sentence contradicts the hesitation mentioned in the second sentence — long-term savings counter the reluctance to install. \"However\" signals contrast. \"Similarly\" and \"For example\" indicate continuation; \"Meanwhile\" indicates simultaneity, not contrast. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-007",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Literature",
+        "difficulty": "Easy",
+        "passage": "In the closing lines of her novel, Eleanor's voice grew _____ as she addressed the reader directly: \"And so, dear friend, you who have walked this journey with me, know that I have held nothing back. Every joy, every sorrow — they are yours now, as they were once mine.\"",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "intimate",
+          "B": "hesitant",
+          "C": "scholarly",
+          "D": "indifferent"
+        },
+        "answer": "A",
+        "explanation": "The passage shows Eleanor speaking directly to the reader as \"dear friend,\" sharing personal emotions — characteristics of an intimate tone. \"Hesitant\" contradicts the assertive sharing; \"scholarly\" suggests academic detachment; \"indifferent\" contradicts the emotional sharing. The answer is A."
+      },
+      {
+        "id": "RWMT1-M1-008",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "The aurora borealis _____ also known as the northern lights _____ occurs when charged particles from the sun interact with Earth's atmosphere.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "(comma) (comma)",
+          "B": "(no punctuation) (comma)",
+          "C": "(comma) (no punctuation)",
+          "D": "(dash) (comma)"
+        },
+        "answer": "A",
+        "explanation": "The phrase \"also known as the northern lights\" is a non-essential appositive providing additional information about \"the aurora borealis.\" Non-essential appositives must be set off by matching punctuation marks — two commas (or two dashes, but the choices specify commas as the matching pair). The answer is A."
+      },
+      {
+        "id": "RWMT1-M1-009",
+        "domain": "Information and Ideas",
+        "subskill": "Central Ideas and Details",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Easy",
+        "passage": "The Silk Road was not a single road but rather a network of trade routes connecting East Asia to the Mediterranean. For over a thousand years, merchants traveled segments of this network, passing goods from one trader to the next. Few merchants traveled the entire length; most specialized in shorter, regional segments.",
+        "question": "According to the text, which of the following best describes how goods moved along the Silk Road?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "A single merchant transported each shipment from beginning to end.",
+          "B": "Goods passed through multiple traders, each covering a regional portion.",
+          "C": "Most goods were transported only between East Asia and India.",
+          "D": "The Silk Road operated for less than five hundred years."
+        },
+        "answer": "B",
+        "explanation": "The passage explicitly states that merchants \"passed goods from one trader to the next\" and that most specialized in shorter regional segments. A contradicts this; C is not supported; D contradicts the \"over a thousand years\" detail. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-010",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Easy",
+        "passage": "While researching coral reefs, a student took the following notes:\n• Coral reefs cover less than 1% of the ocean floor.\n• They support roughly 25% of all marine species.\n• Reefs are threatened by warming ocean temperatures.\n• Some scientists call them \"underwater rainforests.\"",
+        "question": "The student wants to emphasize the disproportionate biological importance of coral reefs. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Coral reefs face serious threats from warming ocean temperatures.",
+          "B": "Often called \"underwater rainforests,\" coral reefs are vital ecosystems.",
+          "C": "Despite covering less than 1% of the ocean floor, coral reefs support roughly 25% of all marine species.",
+          "D": "Coral reefs are tropical ecosystems that cover less than 1% of the ocean floor."
+        },
+        "answer": "C",
+        "explanation": "The goal is to emphasize disproportionate biological importance — that reefs do far more biologically than their tiny area would suggest. Choice C makes this contrast explicit (1% area vs. 25% biodiversity). A focuses on threats; B uses a metaphor without the comparison; D is incomplete. The answer is C."
+      },
+      {
+        "id": "RWMT1-M1-011",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (textual)",
+        "passage_type": "Literature",
+        "difficulty": "Medium",
+        "passage": "The following is from a 1923 short story. Margaret has just inherited her aunt's seaside cottage.\n\nMargaret stood at the threshold, key in hand, and considered turning back. The cottage had been her aunt's refuge for forty years; what right had she to disturb its quiet rooms? Yet the train ticket in her pocket had been one-way, and the city she had left behind held nothing for her now. She turned the key.",
+        "question": "Which quotation from the text best supports the idea that Margaret feels she has no choice but to enter the cottage?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "\"Margaret stood at the threshold, key in hand, and considered turning back.\"",
+          "B": "\"The cottage had been her aunt's refuge for forty years\"",
+          "C": "\"Yet the train ticket in her pocket had been one-way, and the city she had left behind held nothing for her now.\"",
+          "D": "\"She turned the key.\""
+        },
+        "answer": "C",
+        "explanation": "The question asks which quotation best supports that Margaret feels she has no choice. Choice C provides the reason: the one-way ticket and nothing waiting for her in the city — these constraints leave her no alternative. A shows hesitation but not the lack of choice; B describes the aunt's history; D is the action itself, not the reason. The answer is C."
+      },
+      {
+        "id": "RWMT1-M1-012",
+        "domain": "Craft and Structure",
+        "subskill": "Text Structure and Purpose",
+        "passage_type": "Science",
+        "difficulty": "Medium",
+        "passage": "Many people assume that diamond is the hardest natural substance. While diamond is indeed extremely hard, recent research has identified materials with comparable or greater hardness. Wurtzite boron nitride, a substance formed from volcanic eruptions, may be approximately 18% harder than diamond under certain conditions. Lonsdaleite, found in some meteorite impact sites, may be even harder still.",
+        "question": "Which choice best describes the main purpose of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "To explain how diamond is formed in nature",
+          "B": "To challenge a common assumption about a material's hardness",
+          "C": "To argue that volcanic eruptions produce the hardest known materials",
+          "D": "To describe the chemical composition of wurtzite boron nitride"
+        },
+        "answer": "B",
+        "explanation": "The text opens with a common assumption (\"diamond is the hardest natural substance\") and then presents evidence challenging it (wurtzite boron nitride and lonsdaleite). The structure is assumption → counter-evidence. A is too narrow; C overstates the claim; D is a detail, not the main purpose. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-013",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (modifier placement)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "_____ the soccer team finally won the regional championship, ending a twelve-year drought.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Practicing diligently for months,",
+          "B": "After months of diligent practice,",
+          "C": "While their coach was watching,",
+          "D": "Months of diligent practice having occurred,"
+        },
+        "answer": "B",
+        "explanation": "The subject after the blank is \"the soccer team.\" Modifiers at the start of a sentence should describe the subject that follows. \"Practicing diligently for months\" (A) creates a dangling modifier — grammatically the team practices, but the construction is awkward and unclear about WHO practiced. \"After months of diligent practice\" (B) is a prepositional phrase that doesn't need to modify the subject directly — it's a clean adverbial phrase. C changes the meaning entirely; D is awkward and overly complex. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-014",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "Science",
+        "difficulty": "Medium",
+        "passage": "Researchers studying tropical bird populations have found that species inhabiting the upper canopy of rainforests show greater genetic diversity than species living closer to the forest floor. Canopy species, the researchers note, range across wider territories and encounter more potential mates from neighboring populations.",
+        "question": "Which choice most reasonably completes the text's implication about why canopy species exhibit greater genetic diversity?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Canopy species reproduce more frequently than ground-dwelling species.",
+          "B": "Wider territorial range increases gene flow between populations.",
+          "C": "The upper canopy provides more food than the forest floor.",
+          "D": "Researchers have collected more data on canopy species."
+        },
+        "answer": "B",
+        "explanation": "The passage links wider territories and encountering more potential mates from other populations directly to the canopy species' greater genetic diversity. Wider range → more gene flow between populations → greater genetic diversity. A, C, and D introduce information not supported by the passage. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-015",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Humanities",
+        "difficulty": "Medium",
+        "passage": "Critic Susan Sontag argued that interpretation, when applied too eagerly to art, could ______ a work's immediate sensory impact. Rather than experiencing a painting or film viscerally, she warned, audiences too often rushed to extract meaning from it, mistaking analysis for appreciation.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "amplify",
+          "B": "diminish",
+          "C": "preserve",
+          "D": "imitate"
+        },
+        "answer": "B",
+        "explanation": "Sontag's argument is that over-analysis hurts the immediate sensory experience — \"mistaking analysis for appreciation.\" \"Diminish\" fits this critical view of interpretation's effect on art. \"Amplify\" contradicts her concern; \"preserve\" suggests interpretation maintains the experience; \"imitate\" is illogical here. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-016",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Medium",
+        "passage": "While researching urban green spaces, a student took the following notes:\n• Urban parks reduce city temperatures by 2-9 degrees Fahrenheit.\n• Trees absorb carbon dioxide from the atmosphere.\n• Studies show 30% lower stress levels in residents living near parks.\n• Many cities are increasing park acreage.",
+        "question": "The student wants to highlight the health benefits of urban parks for nearby residents. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Many cities are recognizing the benefits of urban parks and increasing their park acreage.",
+          "B": "Trees in urban parks absorb carbon dioxide and reduce city temperatures.",
+          "C": "Urban parks provide both temperature regulation and air purification benefits.",
+          "D": "Studies show that residents living near urban parks experience 30% lower stress levels."
+        },
+        "answer": "D",
+        "explanation": "The student's specific goal is to highlight HEALTH BENEFITS for NEARBY RESIDENTS. Choice D directly addresses both: a health metric (stress levels) and proximity (residents living near parks). A is about city policy; B and C focus on environmental, not residents' health, benefits. The answer is D."
+      },
+      {
+        "id": "RWMT1-M1-017",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (sentence structure)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "The lighthouse on Cape Henry has guided ships safely for over two centuries _____ it remains one of the oldest functioning lighthouses on the Atlantic coast.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ", and",
+          "B": ",",
+          "C": "; and",
+          "D": " and,"
+        },
+        "answer": "A",
+        "explanation": "The text contains two independent clauses (\"The lighthouse... two centuries\" and \"it remains... Atlantic coast\"). Joining two independent clauses requires a coordinating conjunction with a comma (\", and\"). B alone creates a comma splice; C is incorrect (semicolons don't take coordinating conjunctions); D has incorrect comma placement. The answer is A."
+      },
+      {
+        "id": "RWMT1-M1-018",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (textual)",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Medium",
+        "passage": "The Erie Canal, completed in 1825, transformed transportation in the eastern United States. By providing a navigable water route from the Great Lakes to the Atlantic, it dramatically reduced the cost of moving goods and contributed to New York City's emergence as a major commercial center. Some historians consider it the most successful infrastructure project of its century.",
+        "question": "Which quotation from the text best supports the claim that the Erie Canal had a significant economic impact?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "\"The Erie Canal, completed in 1825, transformed transportation in the eastern United States.\"",
+          "B": "\"By providing a navigable water route from the Great Lakes to the Atlantic, it dramatically reduced the cost of moving goods\"",
+          "C": "\"contributed to New York City's emergence as a major commercial center\"",
+          "D": "\"Some historians consider it the most successful infrastructure project of its century.\""
+        },
+        "answer": "B",
+        "explanation": "The question seeks evidence of significant economic impact. Choice B directly identifies an economic effect — \"dramatically reduced the cost of moving goods.\" A is general (transportation), C describes a result but doesn't quantify the economic impact, and D is a historical evaluation, not direct evidence of economic effect. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-019",
+        "domain": "Craft and Structure",
+        "subskill": "Cross-Text Connections",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Medium",
+        "passage": "Text 1: Critics of standardized testing argue that such tests reduce learning to memorization and test-taking strategies, sidelining creativity and critical thinking. They contend that schools, pressured by test results, often narrow their curricula to focus on tested subjects.\n\nText 2: Defenders of standardized testing emphasize that the tests provide objective, comparable data across schools and districts. Without such measures, they argue, identifying achievement gaps and underperforming schools would be far more difficult, hampering efforts to direct resources where they are needed most.",
+        "question": "How would the author of Text 2 most likely respond to the concern raised in Text 1 that schools narrow their curricula in response to testing?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "By agreeing that curricular narrowing is a serious problem worth addressing",
+          "B": "By acknowledging the tradeoff but emphasizing the benefits of objective measurement",
+          "C": "By denying that any narrowing of curricula occurs in response to testing",
+          "D": "By recommending that standardized testing be abolished entirely"
+        },
+        "answer": "B",
+        "explanation": "Text 2 acknowledges costs are part of the discussion but emphasizes a benefit (objective data for resource allocation) that the critics in Text 1 don't address. The author of Text 2 wouldn't agree with Text 1's conclusion (rules out A), wouldn't deny the phenomenon (rules out C), and certainly wouldn't recommend abolishing testing (rules out D). The most reasonable response is to acknowledge the concern while emphasizing what Text 2 sees as overriding benefits. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-020",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Medium",
+        "passage": "Octopuses are considered among the most intelligent invertebrates. They can solve puzzles, use tools, and recognize individual humans. _____ they have remarkably short lifespans, with most species living only one to two years.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Therefore,",
+          "B": "Surprisingly,",
+          "C": "For instance,",
+          "D": "Likewise,"
+        },
+        "answer": "B",
+        "explanation": "The text describes octopuses' impressive intelligence, then notes their short lifespan — a contrast that's unexpected given their cognitive sophistication. \"Surprisingly\" captures this unexpected juxtaposition. \"Therefore\" suggests cause-effect (intelligence ≠ short life is not causal); \"For instance\" introduces an example of intelligence; \"Likewise\" suggests similarity. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-021",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (verb tense)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "By the time the conservation team arrived at the wildlife reserve, poachers _____ already removed three of the elephants tagged for the study.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "have",
+          "B": "had",
+          "C": "are",
+          "D": "will have"
+        },
+        "answer": "B",
+        "explanation": "The phrase \"by the time the conservation team arrived\" establishes a past reference point. The poachers' action happened before that past arrival, requiring past perfect tense (\"had\"). \"Have\" is present perfect; \"are\" is present; \"will have\" is future perfect — none match the past sequence. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-022",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (quantitative)",
+        "passage_type": "Science",
+        "difficulty": "Hard",
+        "passage": "A research team measured average daily water consumption (in liters) for four mammal species at a single zoo over thirty days:\n\n• African elephant: 195 L\n• Brown bear: 42 L\n• Giraffe: 38 L\n• Bengal tiger: 28 L\n\nThe team hypothesized that water consumption among these mammals correlates strongly with body mass.",
+        "question": "Which finding would best support the team's hypothesis?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Across many species, the species with the largest body mass consistently consumed the most water.",
+          "B": "Brown bears and giraffes consumed similar amounts despite different diets.",
+          "C": "The African elephant consumed more water than any of the other species in the study.",
+          "D": "Tigers, despite being carnivores, consumed less water than herbivorous giraffes."
+        },
+        "answer": "A",
+        "explanation": "The hypothesis claims water consumption correlates strongly with body mass. The strongest support would be a broader pattern showing that, across many species, larger mass consistently means more water consumption. C is one data point consistent with the hypothesis but doesn't establish a strong correlation. B and D actually complicate or contradict a clean mass-based correlation. The answer is A."
+      },
+      {
+        "id": "RWMT1-M1-023",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Literature",
+        "difficulty": "Hard",
+        "passage": "Henry James was famous for his ______ prose: sentences that wound through clause after clause, each qualifying the last, until a single thought might fill an entire paragraph. Some readers found this style profound; others found it nearly impenetrable.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "concise",
+          "B": "labyrinthine",
+          "C": "candid",
+          "D": "unembellished"
+        },
+        "answer": "B",
+        "explanation": "The passage describes prose that winds through clauses, each qualifying the last, with a single thought filling a paragraph. \"Labyrinthine\" (maze-like, intricate, hard to navigate) precisely captures this. \"Concise\" and \"unembellished\" mean the opposite; \"candid\" describes honesty, not complexity. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-024",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "Science",
+        "difficulty": "Hard",
+        "passage": "When astronomers measured the rotation speeds of stars at the outer edges of spiral galaxies, they found that the stars moved much faster than would be expected from the visible matter alone. Based on the gravitational pull of stars, gas, and dust that we can observe, the outer stars should be flung outward by their high velocities. Yet they remain in stable orbits.",
+        "question": "Which of the following can most reasonably be inferred from the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Visible matter accounts for nearly all the mass of spiral galaxies.",
+          "B": "The outer stars of spiral galaxies are gradually being flung outward.",
+          "C": "Some unseen source of gravitational influence holds the stars in orbit.",
+          "D": "Astronomers have miscalculated the rotation speeds of outer stars."
+        },
+        "answer": "C",
+        "explanation": "If outer stars rotate fast enough to escape based on visible matter's gravity, but DON'T escape, then SOMETHING ELSE must be providing the gravity to hold them. This is the classic inference that led to dark matter theory. A contradicts the passage's reasoning; B contradicts \"stable orbits\"; D doesn't follow from the text. The answer is C."
+      },
+      {
+        "id": "RWMT1-M1-025",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Hard",
+        "passage": "While researching the development of jazz, a student took the following notes:\n• Jazz emerged in New Orleans in the late 19th and early 20th centuries.\n• It blended African musical traditions with European harmonic structures.\n• Early jazz was largely improvisational and performed in social settings.\n• Critics initially dismissed jazz as unrefined.\n• By the 1930s, jazz had spread internationally and gained critical respect.",
+        "question": "The student wants to emphasize the dramatic shift in critical reception of jazz. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Originally dismissed as unrefined, jazz had achieved critical respect and international recognition by the 1930s.",
+          "B": "Jazz emerged in New Orleans by blending African and European musical traditions.",
+          "C": "Early jazz was largely improvisational and performed in social settings before spreading internationally.",
+          "D": "Jazz combined African musical traditions with European harmonic structures and became internationally popular."
+        },
+        "answer": "A",
+        "explanation": "The goal is to emphasize the SHIFT in critical reception. Choice A directly contrasts the early dismissive view (\"dismissed as unrefined\") with the later respect (\"critical respect and international recognition\") — making the shift explicit. B describes origins; C describes form and spread but not critical reception; D omits the early dismissal. The answer is A."
+      },
+      {
+        "id": "RWMT1-M1-026",
+        "domain": "Craft and Structure",
+        "subskill": "Text Structure and Purpose",
+        "passage_type": "Humanities",
+        "difficulty": "Hard",
+        "passage": "Aristotle's Poetics is often cited as the first systematic work of literary theory. Yet to read it merely as a foundational text — a starting point to be respectfully acknowledged before one moves on to more sophisticated frameworks — is to miss its enduring relevance. Aristotle's distinctions, particularly between plot and character, between recognition and reversal, remain remarkably useful tools for analyzing narrative even today.",
+        "question": "Which choice best describes the function of the second sentence in the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "It introduces evidence supporting the claim made in the first sentence.",
+          "B": "It anticipates and rejects an oversimplified view of the work being discussed.",
+          "C": "It provides a counterexample that complicates the first sentence's claim.",
+          "D": "It offers a brief biographical detail about Aristotle."
+        },
+        "answer": "B",
+        "explanation": "The second sentence describes a possible interpretation (\"to read it merely as a foundational text\") and rejects it (\"is to miss its enduring relevance\"). This anticipation-and-rejection pattern sets up the argument that follows in the third sentence, which provides positive evidence. A inverts the relationship; C and D mischaracterize the function. The answer is B."
+      },
+      {
+        "id": "RWMT1-M1-027",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (parallel structure)",
+        "passage_type": "Conventions",
+        "difficulty": "Hard",
+        "passage": "The successful entrepreneur attributed her achievements to careful planning, persistent effort, and _____ to learn from her failures.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "she was willing",
+          "B": "her willingness",
+          "C": "having been willing",
+          "D": "willingly"
+        },
+        "answer": "B",
+        "explanation": "The list contains three nouns/noun phrases: \"careful planning,\" \"persistent effort,\" and the third item must match. \"Her willingness to learn\" is a noun phrase that matches the parallel structure. A is a clause; C is an awkward participle; D is an adverb. The answer is B."
+      }
+    ]
+  },
+  "easy_module_2": {
+    "module": "Easy Module 2",
+    "test_id": "RWMT1",
+    "module_code": "M2E",
+    "subject": "Reading and Writing",
+    "total_questions": 27,
+    "time_minutes": 32,
+    "difficulty_distribution": {
+      "Easy": 14,
+      "Medium": 10,
+      "Hard": 3
+    },
+    "max_score_cap": 600,
+    "questions": [
+      {
+        "id": "RWMT1-M2E-001",
+        "domain": "Information and Ideas",
+        "subskill": "Central Ideas and Details",
+        "passage_type": "Science",
+        "difficulty": "Easy",
+        "passage": "Honeybees communicate the location of food sources through a behavior known as the waggle dance. By moving in a figure-eight pattern and varying the angle and duration of their movements, a returning bee can convey both the direction and distance of nectar sources to other members of the hive.",
+        "question": "Which choice best states the main idea of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Honeybees use a specific dance to share information about food locations.",
+          "B": "Bees produce honey from nectar collected by foragers.",
+          "C": "The figure-eight pattern is the only way bees communicate.",
+          "D": "Bees prefer flowers with high nectar content."
+        },
+        "answer": "A",
+        "explanation": "The passage centers on the waggle dance as a communication method conveying food source information. A captures this main idea. B and D introduce information not in the passage; C overstates the claim (the passage doesn't say it's the ONLY method). The answer is A."
+      },
+      {
+        "id": "RWMT1-M2E-002",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (subject-verb agreement)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "Each of the volunteers _____ assigned a specific task before the cleanup event begins.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "are",
+          "B": "is",
+          "C": "were",
+          "D": "have been"
+        },
+        "answer": "B",
+        "explanation": "The subject is \"each\" (singular), not \"volunteers.\" Singular subjects take singular verbs, so \"is\" is correct. \"Each\" always takes a singular verb regardless of any prepositional phrase that follows. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-003",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Humanities",
+        "difficulty": "Easy",
+        "passage": "The composer's early symphonies were _____ by critics, who praised her bold use of unconventional rhythms and innovative orchestration. Within a few years, she had become one of the most discussed figures in contemporary music.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "ignored",
+          "B": "celebrated",
+          "C": "rejected",
+          "D": "questioned"
+        },
+        "answer": "B",
+        "explanation": "Critics praised her work, leading her to become one of the most discussed figures. \"Celebrated\" matches the positive context. \"Ignored,\" \"rejected,\" and \"questioned\" all contradict the praise mentioned. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-004",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Easy",
+        "passage": "The library has expanded its hours to accommodate working professionals. _____ it now offers evening tutoring sessions and weekend workshops for community members.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "However,",
+          "B": "Additionally,",
+          "C": "Therefore,",
+          "D": "Otherwise,"
+        },
+        "answer": "B",
+        "explanation": "The second sentence adds another service the library offers, building on the first. \"Additionally\" signals addition. \"However\" suggests contrast (not present); \"Therefore\" suggests cause-effect; \"Otherwise\" suggests an alternative. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-005",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "Science",
+        "difficulty": "Easy",
+        "passage": "Sea otters keep kelp forests healthy by feeding on sea urchins. Where otter populations have declined, urchin populations have grown unchecked, devouring kelp at unsustainable rates and leaving behind barren ocean floors.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Sea otters prefer kelp to sea urchins as food.",
+          "B": "Restoring otter populations would likely help kelp forests recover.",
+          "C": "Sea urchins do not eat kelp in healthy ecosystems.",
+          "D": "Kelp forests cannot survive without barren ocean floors."
+        },
+        "answer": "B",
+        "explanation": "If otters control urchins, and unchecked urchins destroy kelp, then restoring otters would reduce urchin damage and allow kelp recovery. A contradicts the passage; C is unsupported (urchins still eat kelp, just less); D contradicts the passage. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-006",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "After hiking for six hours through the dense forest _____ the team finally reached the lookout point with its panoramic view of the valley.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ",",
+          "B": ";",
+          "C": ":",
+          "D": " (no punctuation)"
+        },
+        "answer": "A",
+        "explanation": "The introductory phrase \"After hiking for six hours through the dense forest\" should be set off by a comma before the main clause begins. Semicolons separate independent clauses; colons introduce lists or elaborations; no punctuation creates a run-on. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2E-007",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Literature",
+        "difficulty": "Easy",
+        "passage": "The old farmhouse stood _____ at the edge of the wheat field, its weathered boards and faded paint suggesting decades of quiet endurance against wind and rain.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "luxuriously",
+          "B": "stubbornly",
+          "C": "briefly",
+          "D": "carelessly"
+        },
+        "answer": "B",
+        "explanation": "The passage emphasizes the farmhouse's \"quiet endurance\" against the elements. \"Stubbornly\" captures persistent resistance. \"Luxuriously\" contradicts the weathered description; \"briefly\" contradicts \"decades\"; \"carelessly\" doesn't fit endurance. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-008",
+        "domain": "Information and Ideas",
+        "subskill": "Central Ideas and Details",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Easy",
+        "passage": "Public libraries in the United States grew rapidly during the late nineteenth century, due in part to the philanthropy of Andrew Carnegie. Between 1883 and 1929, Carnegie funded the construction of more than 1,600 libraries across the country, transforming access to books and education for millions of Americans.",
+        "question": "According to the text, what was Andrew Carnegie's contribution to American libraries?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "He wrote books that were donated to libraries.",
+          "B": "He provided funding for the construction of many library buildings.",
+          "C": "He served as a librarian in several U.S. cities.",
+          "D": "He published a directory of American libraries."
+        },
+        "answer": "B",
+        "explanation": "The passage states Carnegie \"funded the construction of more than 1,600 libraries.\" A, C, and D are not supported by the passage. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-009",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Easy",
+        "passage": "While researching the giant panda, a student took the following notes:\n• Giant pandas are native to central China.\n• They primarily eat bamboo, consuming up to 40 pounds per day.\n• Their digestive system is adapted to a meat-based diet.\n• Pandas are considered a vulnerable species.",
+        "question": "The student wants to emphasize an unusual aspect of panda biology. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Giant pandas are native to central China and primarily eat bamboo.",
+          "B": "Despite having a digestive system adapted to a meat-based diet, giant pandas eat almost exclusively bamboo.",
+          "C": "Pandas eat up to 40 pounds of bamboo per day and are considered a vulnerable species.",
+          "D": "Pandas are native to central China and considered a vulnerable species."
+        },
+        "answer": "B",
+        "explanation": "The unusual aspect is the mismatch between a carnivore-adapted digestive system and a bamboo diet. Choice B explicitly contrasts these. A, C, and D state facts but don't highlight the unusual contradiction. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-010",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (verb tense)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "Last summer, my family _____ to several national parks in the western United States.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "travels",
+          "B": "is traveling",
+          "C": "traveled",
+          "D": "will travel"
+        },
+        "answer": "C",
+        "explanation": "The phrase \"last summer\" indicates past time, requiring past tense \"traveled.\" \"Travels\" is present; \"is traveling\" is present continuous; \"will travel\" is future. The answer is C."
+      },
+      {
+        "id": "RWMT1-M2E-011",
+        "domain": "Craft and Structure",
+        "subskill": "Text Structure and Purpose",
+        "passage_type": "Science",
+        "difficulty": "Easy",
+        "passage": "The blue whale is the largest animal ever known to have lived on Earth. An adult can reach lengths of up to 100 feet and weigh as much as 200 tons. Despite its enormous size, the blue whale feeds primarily on krill, tiny shrimp-like creatures only an inch or two long.",
+        "question": "Which choice best describes the main purpose of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "To compare blue whales to other large animals",
+          "B": "To present surprising facts about the blue whale",
+          "C": "To argue for the protection of blue whale habitats",
+          "D": "To explain how krill survive in cold ocean waters"
+        },
+        "answer": "B",
+        "explanation": "The passage presents striking facts (largest animal ever, eats tiny krill), creating a sense of surprise. A is too narrow; C is not present; D is unrelated. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-012",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Easy",
+        "passage": "When the Roman Empire began constructing roads across its territories, it used a remarkably consistent design: a deep foundation of stones, layered with gravel, and topped with carefully fitted paving stones. Many of these roads remain partially intact today, more than 1,500 years after the empire's collapse.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Roman roads were primarily built by enslaved laborers.",
+          "B": "The Roman Empire's design and construction methods were highly durable.",
+          "C": "Modern roads are built using the same techniques as Roman roads.",
+          "D": "Roman roads connected only the empire's capital cities."
+        },
+        "answer": "B",
+        "explanation": "Roads surviving over 1,500 years strongly suggests durable design and construction. A, C, and D introduce details not supported by the passage. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-013",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Easy",
+        "passage": "Many people believe that bats are blind. _____ bats actually have functional eyes and can see reasonably well; they simply rely more heavily on echolocation in the dark.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Furthermore,",
+          "B": "In fact,",
+          "C": "Therefore,",
+          "D": "Likewise,"
+        },
+        "answer": "B",
+        "explanation": "The second sentence corrects the misconception in the first sentence. \"In fact\" signals correction or clarification of a common belief. \"Furthermore\" adds; \"Therefore\" suggests cause; \"Likewise\" suggests similarity. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-014",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "The novel features three main characters _____ a determined detective, a mysterious stranger, and a reluctant witness whose memory holds the key to the case.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ":",
+          "B": ";",
+          "C": ",",
+          "D": " (no punctuation)"
+        },
+        "answer": "A",
+        "explanation": "A colon introduces a list that elaborates on a complete preceding clause. \"The novel features three main characters\" is complete, and the list specifies who the three characters are. Semicolons join independent clauses; commas alone create awkward construction; no punctuation runs the sentences together. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2E-015",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (textual)",
+        "passage_type": "Literature",
+        "difficulty": "Medium",
+        "passage": "The following is from a 1908 novel. Catherine has just received an unexpected letter.\n\nCatherine read the letter twice, then folded it carefully and placed it in her desk drawer. She did not weep, though her hands trembled slightly as she closed the drawer. The garden outside her window was full of summer bloom, but she did not see it. Her thoughts had already traveled far beyond this small house, to a place she had not allowed herself to think of in years.",
+        "question": "Which quotation from the text best supports the idea that Catherine is deeply affected by the letter despite outward composure?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "\"Catherine read the letter twice, then folded it carefully and placed it in her desk drawer.\"",
+          "B": "\"She did not weep, though her hands trembled slightly as she closed the drawer.\"",
+          "C": "\"The garden outside her window was full of summer bloom\"",
+          "D": "\"a place she had not allowed herself to think of in years.\""
+        },
+        "answer": "B",
+        "explanation": "Choice B captures both the outward composure (\"did not weep\") and the inward agitation (\"hands trembled\") in a single sentence. A shows action but not the inner-outer contrast; C is scenery; D shows internal preoccupation but not the contrast with outward composure. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-016",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Humanities",
+        "difficulty": "Medium",
+        "passage": "Photographer Dorothea Lange's images of Depression-era America were _____ in their honesty: she did not pose her subjects or romanticize their hardships, but instead captured the dignity and desperation of ordinary people exactly as she found them.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "selective",
+          "B": "uncompromising",
+          "C": "decorative",
+          "D": "evasive"
+        },
+        "answer": "B",
+        "explanation": "The passage emphasizes Lange's refusal to pose, romanticize, or soften — she captured truth without compromise. \"Uncompromising\" fits this. \"Selective\" suggests she chose carefully; \"decorative\" contradicts honesty; \"evasive\" contradicts directness. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-017",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (pronoun-antecedent)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "Neither the manager nor the employees expressed _____ concerns about the new scheduling system during the meeting.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "his or her",
+          "B": "their",
+          "C": "its",
+          "D": "ones"
+        },
+        "answer": "B",
+        "explanation": "With \"neither/nor\" constructions, the pronoun should agree with the noun closest to the verb. Here, \"employees\" (plural) is closest, so the plural pronoun \"their\" is correct. \"His or her\" agrees with \"manager\" (further from the verb); \"its\" is for things; \"ones\" is awkward. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-018",
+        "domain": "Information and Ideas",
+        "subskill": "Central Ideas and Details",
+        "passage_type": "Science",
+        "difficulty": "Medium",
+        "passage": "Tardigrades, microscopic creatures sometimes called water bears, are remarkably resilient. They can survive temperatures from near absolute zero to well above boiling, withstand pressures six times greater than those at the deepest ocean trenches, and even endure the vacuum of space. When conditions become harsh, they enter a dehydrated state called cryptobiosis, in which their metabolism nearly halts.",
+        "question": "Which choice best states the main idea of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Tardigrades demonstrate extraordinary survival capabilities under extreme conditions.",
+          "B": "Cryptobiosis is the most important biological process in microscopic creatures.",
+          "C": "Tardigrades are primarily found in the deepest ocean trenches.",
+          "D": "Most microscopic creatures cannot survive temperature extremes."
+        },
+        "answer": "A",
+        "explanation": "The passage centers on tardigrades' remarkable resilience, with multiple examples of extreme survival. Choice A captures this main idea. B overgeneralizes; C is wrong (the trenches are mentioned only as a pressure comparison); D is not supported. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2E-019",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Medium",
+        "passage": "While researching wind energy, a student took the following notes:\n• Wind turbines convert kinetic energy from wind into electricity.\n• Modern turbines can be over 250 feet tall.\n• Wind energy produces no greenhouse gas emissions during operation.\n• Wind farms can affect local bird populations.",
+        "question": "The student wants to introduce wind energy to readers unfamiliar with how it works. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Modern wind turbines can be over 250 feet tall and produce no greenhouse gas emissions.",
+          "B": "Wind turbines convert kinetic energy from moving air into electricity.",
+          "C": "Wind farms can affect local bird populations and produce no emissions.",
+          "D": "Wind energy is a renewable resource that has both benefits and drawbacks."
+        },
+        "answer": "B",
+        "explanation": "The goal is introducing how wind energy works. Choice B explicitly explains the mechanism — kinetic energy converted to electricity. A focuses on size and emissions; C focuses on tradeoffs; D is too general. Only B addresses how it actually works. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-020",
+        "domain": "Craft and Structure",
+        "subskill": "Cross-Text Connections",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Medium",
+        "passage": "Text 1: Some historians argue that the printing press was the single most transformative invention of the second millennium. By making the mass production of texts possible, it enabled the rapid spread of ideas, the rise of literacy, and the foundation of modern science.\n\nText 2: While the printing press was undeniably significant, focusing on it alone overlooks earlier innovations that made it possible. Without paper-making technology imported from China, without metallurgical advances enabling movable type, and without growing literacy already spreading through Europe, the printing press would have had little to print upon, no efficient way to print, and few to read its products.",
+        "question": "How would the author of Text 2 most likely respond to the claim in Text 1 that the printing press was \"the single most transformative invention\"?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "By agreeing fully with the claim",
+          "B": "By rejecting the claim and arguing that the printing press was unimportant",
+          "C": "By acknowledging the press's significance while emphasizing that it depended on prior innovations",
+          "D": "By arguing that the press's effects were primarily negative"
+        },
+        "answer": "C",
+        "explanation": "Text 2 explicitly says the press was \"undeniably significant\" — so A is too strong and B contradicts the text. Text 2's main point is that the press depended on prior innovations (paper, metallurgy, literacy), making C the precise match. D introduces a negativity not in Text 2. The answer is C."
+      },
+      {
+        "id": "RWMT1-M2E-021",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "Science",
+        "difficulty": "Medium",
+        "passage": "Researchers studying decision-making found that participants asked to make important choices while standing in a brightly lit, sparse room reported feeling more decisive than those making the same choices in dimly lit, cluttered rooms. The researchers suggested that environmental factors may influence cognitive processes more than is commonly recognized.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Lighting and clutter may affect how confidently people make decisions.",
+          "B": "Bright rooms always produce better decisions than dim rooms.",
+          "C": "Cognitive processes are entirely independent of environmental factors.",
+          "D": "The participants in the study had no prior decision-making experience."
+        },
+        "answer": "A",
+        "explanation": "The study compared two environments and found a difference in reported decisiveness, suggesting environmental factors (lighting, clutter) affect decision confidence. A captures this inference. B overgeneralizes; C contradicts the finding; D introduces an unsupported detail. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2E-022",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Medium",
+        "passage": "Coral reefs around the world are facing severe threats from rising ocean temperatures and acidification. _____ scientists have identified some coral species that show greater resilience than others, offering hope that selective conservation may protect the most adaptable populations.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Consequently,",
+          "B": "Nevertheless,",
+          "C": "For example,",
+          "D": "Specifically,"
+        },
+        "answer": "B",
+        "explanation": "The first sentence describes severe threats; the second sentence offers hope. \"Nevertheless\" signals contrast — despite the threats, hope exists. \"Consequently\" suggests result; \"For example\" introduces an example; \"Specifically\" adds detail. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-023",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "The new restaurant has earned glowing reviews _____ however, its prices have made it inaccessible to many local residents who would otherwise enjoy the cuisine.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ",",
+          "B": ";",
+          "C": ":",
+          "D": " (no punctuation)"
+        },
+        "answer": "B",
+        "explanation": "Two independent clauses joined by \"however\" require a semicolon before \"however\" and a comma after. The structure is: [independent clause]; however, [independent clause]. A comma alone creates a comma splice. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-024",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Literature",
+        "difficulty": "Medium",
+        "passage": "The detective's reputation for solving impossible cases was _____ by his colleagues, but his methods — which often defied conventional procedure — left some questioning whether his successes came from genius or simply from luck.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "challenged",
+          "B": "acknowledged",
+          "C": "ignored",
+          "D": "fabricated"
+        },
+        "answer": "B",
+        "explanation": "The passage describes the detective's reputation, which his colleagues recognize even as they question his methods. \"Acknowledged\" fits — they recognize his reputation while also doubting his methods. \"Challenged\" or \"ignored\" contradict the framing; \"fabricated\" implies the colleagues invented his reputation. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-025",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (quantitative)",
+        "passage_type": "Science",
+        "difficulty": "Hard",
+        "passage": "A research team measured the average height (in inches) of three plant species grown in two different soil types over a 90-day study period:\n\n• Species A — Sandy soil: 12 in.; Clay soil: 18 in.\n• Species B — Sandy soil: 22 in.; Clay soil: 24 in.\n• Species C — Sandy soil: 8 in.; Clay soil: 14 in.\n\nThe team hypothesized that clay soil promotes greater plant growth than sandy soil across these species.",
+        "question": "Which finding from the data best supports the team's hypothesis?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "All three species grew taller in clay soil than in sandy soil.",
+          "B": "Species B was the tallest in both soil types.",
+          "C": "Species C grew the least in sandy soil.",
+          "D": "Species A and Species C had similar heights in clay soil."
+        },
+        "answer": "A",
+        "explanation": "The hypothesis claims clay soil promotes greater growth than sandy soil ACROSS these species. The strongest support is that all three grew taller in clay than sand (12 < 18, 22 < 24, 8 < 14). B compares species but not soils; C and D don't address the soil comparison directly. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2E-026",
+        "domain": "Craft and Structure",
+        "subskill": "Text Structure and Purpose",
+        "passage_type": "Humanities",
+        "difficulty": "Hard",
+        "passage": "It is tempting to imagine ancient Greek philosophy as a series of solitary thinkers — Socrates alone in the marketplace, Plato isolated in his Academy, Aristotle dissecting specimens in private. The reality, however, was deeply collaborative. Each of these philosophers developed his ideas in constant conversation with peers, students, and rivals; the dialogues we have inherited are merely the most polished record of those exchanges.",
+        "question": "Which choice best describes the function of the second sentence in the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "It introduces evidence supporting the first sentence's image of solitary philosophers.",
+          "B": "It corrects the first sentence's image and introduces the actual nature of Greek philosophical work.",
+          "C": "It describes the physical settings in which Greek philosophy was conducted.",
+          "D": "It explains why the dialogues are considered polished."
+        },
+        "answer": "B",
+        "explanation": "The first sentence presents the tempting image (solitary thinkers); the second sentence corrects it (\"the reality, however, was deeply collaborative\"). This sets up the rest of the passage. A inverts the function; C and D mischaracterize. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2E-027",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (parallel structure)",
+        "passage_type": "Conventions",
+        "difficulty": "Hard",
+        "passage": "The chef's training emphasized three principles: respect for ingredients, precision in technique, and _____",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "she should be patient with timing.",
+          "B": "to be patient with timing.",
+          "C": "patience with timing.",
+          "D": "patiently waiting for timing."
+        },
+        "answer": "C",
+        "explanation": "The list contains three parallel noun phrases: \"respect for ingredients,\" \"precision in technique,\" and the third must match. \"Patience with timing\" is a noun phrase that matches. A is a clause; B is an infinitive; D is a participle phrase. Only C is parallel. The answer is C."
+      }
+    ]
+  },
+  "hard_module_2": {
+    "module": "Hard Module 2",
+    "test_id": "RWMT1",
+    "module_code": "M2H",
+    "subject": "Reading and Writing",
+    "total_questions": 27,
+    "time_minutes": 32,
+    "difficulty_distribution": {
+      "Easy": 5,
+      "Medium": 11,
+      "Hard": 11
+    },
+    "max_score_cap": 800,
+    "questions": [
+      {
+        "id": "RWMT1-M2H-001",
+        "domain": "Information and Ideas",
+        "subskill": "Central Ideas and Details",
+        "passage_type": "Science",
+        "difficulty": "Easy",
+        "passage": "The platypus, native to eastern Australia, is one of only a few mammals that lay eggs rather than giving birth to live young. Despite this reptilian-like trait, platypuses produce milk to feed their offspring, just as other mammals do.",
+        "question": "Which choice best states the main idea of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "The platypus combines mammalian and reptilian characteristics in unusual ways.",
+          "B": "Most mammals lay eggs rather than giving birth to live young.",
+          "C": "The platypus is the only mammal that produces milk.",
+          "D": "Platypuses are found only in eastern Australia."
+        },
+        "answer": "A",
+        "explanation": "The passage emphasizes the platypus's mix of traits — egg-laying (reptile-like) plus milk production (mammal-like). A captures this combination. B contradicts the passage; C overstates; D is a detail, not the main idea. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2H-002",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Easy",
+        "passage": "After completing her PhD in environmental science _____ Dr. Reyes joined a research team studying the effects of climate change on Arctic ecosystems.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ",",
+          "B": ";",
+          "C": ":",
+          "D": " (no punctuation)"
+        },
+        "answer": "A",
+        "explanation": "The introductory phrase \"After completing her PhD in environmental science\" should be set off by a comma before the main clause. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2H-003",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Easy",
+        "passage": "Electric vehicles produce no tailpipe emissions while driving. _____ the electricity that powers them often comes from sources that do produce emissions, such as coal-fired power plants.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Therefore,",
+          "B": "However,",
+          "C": "Similarly,",
+          "D": "For example,"
+        },
+        "answer": "B",
+        "explanation": "The first sentence describes a benefit (no emissions while driving), and the second qualifies it (the source of electricity may still emit). \"However\" signals contrast. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-004",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Humanities",
+        "difficulty": "Easy",
+        "passage": "The artist's later works showed a _____ shift from her earlier style: she abandoned the muted earth tones that had defined her career and embraced bright primary colors that demanded attention.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "subtle",
+          "B": "dramatic",
+          "C": "gradual",
+          "D": "negligible"
+        },
+        "answer": "B",
+        "explanation": "The change is described as abandoning one style and embracing the opposite — a major shift. \"Dramatic\" fits. \"Subtle,\" \"gradual,\" and \"negligible\" all suggest a small change, contradicting the text. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-005",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Easy",
+        "passage": "Before the invention of refrigeration, fresh fish was a luxury available only near the coast. Communities far from the sea relied on salted, smoked, or pickled fish — preservation methods that altered both flavor and texture significantly. The widespread availability of fresh fish in inland markets is a remarkably recent development.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Refrigeration technology had a significant impact on inland diets.",
+          "B": "Salted fish tastes identical to fresh fish.",
+          "C": "Coastal communities did not eat preserved fish.",
+          "D": "Fresh fish has always been widely available in inland markets."
+        },
+        "answer": "A",
+        "explanation": "If fresh fish was previously a luxury inland and refrigeration changed that, refrigeration must have had a significant impact on inland diets. B contradicts the passage; C is unsupported; D directly contradicts the passage. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2H-006",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (textual)",
+        "passage_type": "Literature",
+        "difficulty": "Medium",
+        "passage": "The following is from a 1915 short story. The narrator describes his uncle.\n\nMy uncle Andrew was a man of few words, but those words were carefully chosen and never wasted. He could spend an entire dinner in silence, listening to the chatter of others with a small smile, and then, just as the meal ended, offer a single sentence that would reframe everything that had been said. People left his table feeling that they had been the cleverer ones, when in fact, it was always Uncle Andrew who had quietly understood the most.",
+        "question": "Which quotation from the text best supports the idea that Uncle Andrew was perceptive about other people's conversations?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "\"My uncle Andrew was a man of few words\"",
+          "B": "\"He could spend an entire dinner in silence, listening to the chatter of others with a small smile\"",
+          "C": "\"offer a single sentence that would reframe everything that had been said\"",
+          "D": "\"People left his table feeling that they had been the cleverer ones\""
+        },
+        "answer": "C",
+        "explanation": "The question asks for evidence of perceptiveness about conversations. \"Reframe everything that had been said\" demonstrates Andrew's understanding of and insight into the conversation. A describes his quietness; B describes his behavior but not his insight; D describes others' impressions, not his perception. The answer is C."
+      },
+      {
+        "id": "RWMT1-M2H-007",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (subject-verb agreement)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "Among the discoveries made during the excavation _____ a collection of pottery fragments dating to the early Bronze Age.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "are",
+          "B": "is",
+          "C": "were",
+          "D": "have been"
+        },
+        "answer": "B",
+        "explanation": "When a sentence begins with a prepositional phrase like \"Among the discoveries,\" the subject usually follows the verb. The subject is \"a collection\" (singular), so the singular verb \"is\" is correct. \"Among the discoveries\" doesn't make the subject plural. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-008",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Humanities",
+        "difficulty": "Medium",
+        "passage": "The novelist's commentary on contemporary politics was deliberately _____ readers from all political backgrounds praised the work, while none could quite identify the author's own views, which were buried beneath layers of irony and ambiguous symbolism.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "transparent:",
+          "B": "elusive:",
+          "C": "predictable:",
+          "D": "hostile:"
+        },
+        "answer": "B",
+        "explanation": "Readers couldn't identify the author's views, which were buried beneath irony and ambiguity — characteristics of elusive (hard to pin down) commentary. \"Transparent\" contradicts; \"predictable\" doesn't fit; \"hostile\" suggests aggressive directness. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-009",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "Science",
+        "difficulty": "Medium",
+        "passage": "Dolphins have been observed using sponges to protect their snouts while foraging on the rocky sea floor. This behavior is taught from mother to daughter in specific dolphin populations and has not been observed in dolphins from neighboring areas, suggesting that the technique is culturally transmitted rather than instinctive.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "All dolphins are born knowing how to use sponges as tools.",
+          "B": "Dolphin behavior can vary between populations based on learned traditions.",
+          "C": "Sponge use is the only example of dolphin tool use.",
+          "D": "Male dolphins teach this technique to their offspring."
+        },
+        "answer": "B",
+        "explanation": "The passage notes the technique is taught (not instinctive) and varies by population. This implies behavior varies based on learned traditions. A contradicts the cultural-transmission point; C is unsupported; D contradicts \"mother to daughter.\" The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-010",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Medium",
+        "passage": "While researching the development of vaccines, a student took the following notes:\n• Edward Jenner developed the first vaccine, against smallpox, in 1796.\n• Jenner observed that milkmaids who contracted cowpox seemed protected from smallpox.\n• Smallpox was officially declared eradicated in 1980.\n• Vaccines now exist for many other diseases, including polio and measles.",
+        "question": "The student wants to emphasize the lasting impact of Jenner's discovery. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "In 1796, Edward Jenner developed the first vaccine after observing that milkmaids who contracted cowpox seemed protected from smallpox.",
+          "B": "Jenner's smallpox vaccine, developed in 1796, paved the way for the eradication of smallpox in 1980 and the development of vaccines against many other diseases.",
+          "C": "Smallpox was officially declared eradicated in 1980, nearly two centuries after Jenner's discovery.",
+          "D": "Many vaccines now exist for diseases like polio and measles."
+        },
+        "answer": "B",
+        "explanation": "The goal is emphasizing Jenner's lasting IMPACT. Choice B explicitly connects Jenner to two long-term outcomes: smallpox eradication and the development of vaccines for other diseases. A describes the discovery but not impact; C and D mention outcomes but not the connection to Jenner. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-011",
+        "domain": "Craft and Structure",
+        "subskill": "Text Structure and Purpose",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Medium",
+        "passage": "The Great Migration — the movement of approximately six million African Americans from the rural South to the urban North between 1910 and 1970 — is sometimes treated as a single, unified event. In reality, it was two distinct waves with different demographics, destinations, and motivations. The first wave, from 1910 to 1940, was driven largely by industrial labor demand. The second, from 1940 to 1970, responded to the economic shifts of World War II and the postwar expansion.",
+        "question": "Which choice best describes the main purpose of the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "To argue that the Great Migration was less significant than commonly believed",
+          "B": "To distinguish between two phases of the Great Migration that are sometimes conflated",
+          "C": "To list the cities that received the most migrants during the Great Migration",
+          "D": "To explain why the Great Migration ended in 1970"
+        },
+        "answer": "B",
+        "explanation": "The passage opens by noting that the Migration is treated as a single event but argues it was actually two distinct waves, then describes each. The purpose is to distinguish them. A misrepresents the argument; C and D introduce details not central to the passage. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-012",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (sentence structure)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "The orchestra's new conductor brings extensive international experience _____ she has led performances on five continents over the past two decades.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ",",
+          "B": ";",
+          "C": ":",
+          "D": ", and"
+        },
+        "answer": "B",
+        "explanation": "Two independent clauses can be joined by a semicolon when they are closely related. Both \"The orchestra's new conductor brings extensive international experience\" and \"she has led performances on five continents over the past two decades\" are independent clauses. A creates a comma splice; D works grammatically but the semicolon is the choice that maintains the elegant pause without adding a conjunction. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-013",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (textual)",
+        "passage_type": "Science",
+        "difficulty": "Medium",
+        "passage": "Researchers studying urban tree canopies have found significant cooling effects in cities with extensive green coverage. Streets shaded by mature trees can be 4-7 degrees Fahrenheit cooler than nearby treeless streets during summer afternoons. The effect compounds in dense canopies, where transpiration from leaves further reduces ambient temperatures.",
+        "question": "Which quotation from the text best supports the claim that tree canopies have a measurable impact on urban temperatures?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "\"Researchers studying urban tree canopies have found significant cooling effects in cities with extensive green coverage.\"",
+          "B": "\"Streets shaded by mature trees can be 4-7 degrees Fahrenheit cooler than nearby treeless streets during summer afternoons.\"",
+          "C": "\"The effect compounds in dense canopies\"",
+          "D": "\"transpiration from leaves further reduces ambient temperatures\""
+        },
+        "answer": "B",
+        "explanation": "The question asks for measurable impact. Choice B provides a specific, measurable comparison (4-7 degrees cooler). A is a general claim, C describes intensification, and D explains a mechanism — none provides the same quantitative measure. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-014",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Medium",
+        "passage": "Critics initially dismissed the novelist's debut work as overly sentimental and structurally unsound. _____ subsequent reviewers — and eventually mainstream literary scholars — would come to regard the same novel as a quietly revolutionary achievement that anticipated the experimental fiction of the following decade.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Likewise,",
+          "B": "Yet",
+          "C": "Therefore,",
+          "D": "Specifically,"
+        },
+        "answer": "B",
+        "explanation": "The two sentences contrast — early dismissal versus later acclaim. \"Yet\" signals this contrast. \"Likewise\" suggests similarity; \"Therefore\" suggests cause; \"Specifically\" adds detail. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-015",
+        "domain": "Craft and Structure",
+        "subskill": "Cross-Text Connections",
+        "passage_type": "Humanities",
+        "difficulty": "Medium",
+        "passage": "Text 1: Some art historians argue that the Renaissance represented a clean break from medieval traditions, with artists rediscovering classical techniques and turning away from the religious symbolism that had dominated earlier centuries.\n\nText 2: This narrative oversimplifies what was, in fact, a gradual and uneven transition. Medieval iconographic traditions persisted well into the sixteenth century, often blended with classical influences in ways that the artists themselves saw as continuous rather than revolutionary.",
+        "question": "How would the author of Text 2 most likely respond to the argument in Text 1?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "By agreeing that the Renaissance was a clean break from medieval traditions",
+          "B": "By arguing that the transition was gradual and that medieval traditions persisted alongside classical revival",
+          "C": "By denying that any classical revival occurred during the Renaissance",
+          "D": "By claiming that medieval traditions were entirely abandoned by the fifteenth century"
+        },
+        "answer": "B",
+        "explanation": "Text 2 explicitly characterizes the transition as gradual and uneven and notes that medieval traditions persisted into the sixteenth century, blended with classical influences. B captures this. A directly contradicts Text 2; C and D are not Text 2's positions. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-016",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (modifier placement)",
+        "passage_type": "Conventions",
+        "difficulty": "Medium",
+        "passage": "_____ the volunteers were able to clean up the entire shoreline by sunset.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Working efficiently in small teams,",
+          "B": "Working efficient in small teams,",
+          "C": "By the working efficiently of small teams,",
+          "D": "Worked efficiently in small teams,"
+        },
+        "answer": "A",
+        "explanation": "The introductory phrase modifies \"the volunteers,\" who are doing the working. \"Working efficiently in small teams\" is a present participial phrase that correctly modifies the volunteers. B uses an adjective where an adverb is needed; C is awkward and ungrammatical; D uses past tense, breaking the construction. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2H-017",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "Science",
+        "difficulty": "Hard",
+        "passage": "Recent research on memory consolidation suggests that during sleep, the brain selectively strengthens neural pathways associated with information deemed important — typically information accompanied by strong emotional or contextual cues. Information lacking such cues, even if recently encountered, is more likely to be discarded during these processes.",
+        "question": "Which of the following can most reasonably be inferred from the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Sleep has no effect on which memories are retained.",
+          "B": "Information learned during emotionally significant moments may be more likely to be remembered long-term.",
+          "C": "All recently learned information is permanently retained regardless of context.",
+          "D": "Strong emotional cues prevent memory consolidation."
+        },
+        "answer": "B",
+        "explanation": "If the brain strengthens pathways for information with strong emotional cues during sleep, then information learned with such cues would likely be remembered better. A and C contradict the passage; D inverts the relationship. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-018",
+        "domain": "Craft and Structure",
+        "subskill": "Words in Context",
+        "passage_type": "Literature",
+        "difficulty": "Hard",
+        "passage": "The poet's language was famously _____ each word seemed plucked from a private vocabulary, employed in ways that sometimes baffled even her most devoted readers, who needed annotated editions to follow her meaning.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "conventional:",
+          "B": "idiosyncratic:",
+          "C": "imitative:",
+          "D": "transparent:"
+        },
+        "answer": "B",
+        "explanation": "The poet uses words from a \"private vocabulary\" in unusual ways that baffle even devoted readers — characteristics of idiosyncratic (peculiar to the individual) language. \"Conventional,\" \"imitative,\" and \"transparent\" all contradict the description. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-019",
+        "domain": "Standard English Conventions",
+        "subskill": "Boundaries (punctuation)",
+        "passage_type": "Conventions",
+        "difficulty": "Hard",
+        "passage": "The architect's most celebrated building _____ a museum constructed entirely from recycled materials _____ has won three international design awards since its completion.",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": ", , ",
+          "B": "—, ",
+          "C": "—, —",
+          "D": ", —"
+        },
+        "answer": "C",
+        "explanation": "The non-essential phrase \"a museum constructed entirely from recycled materials\" interrupts the main clause. Non-essential phrases must be set off by matching punctuation marks — either two commas OR two dashes (NEVER one of each). Choice C provides matching dashes. The answer is C."
+      },
+      {
+        "id": "RWMT1-M2H-020",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (quantitative)",
+        "passage_type": "Science",
+        "difficulty": "Hard",
+        "passage": "A team of biologists tracked nesting success rates for four bird species in a wetland over five breeding seasons:\n\n• Marsh Wren: 71% success\n• Red-winged Blackbird: 68% success\n• Yellow Warbler: 45% success\n• Common Yellowthroat: 41% success\n\nThe team hypothesized that species nesting closer to the wetland's edge experience lower success rates due to greater predator access.",
+        "question": "Which additional finding would most strongly support the team's hypothesis?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Marsh Wrens and Red-winged Blackbirds nest near the center of the wetland, while Yellow Warblers and Common Yellowthroats nest near the edges.",
+          "B": "All four species had higher success rates in seasons with abundant food.",
+          "C": "Yellow Warblers had the lowest success in the fifth season.",
+          "D": "Common Yellowthroats are smaller than Marsh Wrens."
+        },
+        "answer": "A",
+        "explanation": "The hypothesis links edge-nesting to lower success. A directly establishes that the species with higher success (71%, 68%) nest centrally and the lower-success species (45%, 41%) nest at edges — supporting the hypothesis. B, C, and D don't address the location-success relationship. The answer is A."
+      },
+      {
+        "id": "RWMT1-M2H-021",
+        "domain": "Expression of Ideas",
+        "subskill": "Rhetorical Synthesis",
+        "passage_type": "Expression",
+        "difficulty": "Hard",
+        "passage": "While researching the history of cartography, a student took the following notes:\n• Early world maps placed Jerusalem at the center.\n• Mercator's 1569 projection prioritized navigational accuracy over relative continent sizes.\n• The Mercator projection significantly enlarges land masses near the poles.\n• Modern projections like the Gall-Peters attempt to represent continents at proportionally accurate sizes.",
+        "question": "The student wants to argue that the Mercator projection introduced specific distortions that later cartographers sought to correct. Which choice best uses the relevant information from the notes to accomplish this goal?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Early world maps and the Mercator projection both reflected the worldviews of their creators.",
+          "B": "By prioritizing navigational accuracy, the Mercator projection significantly enlarges polar land masses; modern projections like the Gall-Peters attempt to represent continents at proportionally accurate sizes.",
+          "C": "Cartography has evolved significantly since the time of early world maps.",
+          "D": "The Mercator projection, created in 1569, remains widely used today."
+        },
+        "answer": "B",
+        "explanation": "The argument requires both (1) Mercator's specific distortion (polar enlargement) and (2) later attempts to correct it. Choice B contains both elements explicitly. A is vague; C is too general; D doesn't address the correction. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-022",
+        "domain": "Craft and Structure",
+        "subskill": "Text Structure and Purpose",
+        "passage_type": "Humanities",
+        "difficulty": "Hard",
+        "passage": "It would be tempting to read Toni Morrison's later novels as departures from the more accessible style of her earlier work — to see in their density and difficulty an artist drifting away from her readers. To read them this way, however, is to mistake the direction of her development. Morrison was not abandoning her audience; she was demanding more of them, trusting them to follow her into territory that her earlier prose had merely glimpsed.",
+        "question": "Which choice best describes the function of the second sentence in the text?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "It supports the first sentence's interpretation of Morrison's later work.",
+          "B": "It introduces a new biographical detail about Morrison.",
+          "C": "It anticipates and rejects an interpretation introduced in the first sentence.",
+          "D": "It compares Morrison's work to that of other contemporary novelists."
+        },
+        "answer": "C",
+        "explanation": "The second sentence directly rejects the reading offered in the first (\"To read them this way, however, is to mistake the direction of her development\"). This sets up the corrective interpretation in the third sentence. A inverts the function; B and D are unsupported. The answer is C."
+      },
+      {
+        "id": "RWMT1-M2H-023",
+        "domain": "Standard English Conventions",
+        "subskill": "Form, Structure, and Sense (parallel structure)",
+        "passage_type": "Conventions",
+        "difficulty": "Hard",
+        "passage": "The committee evaluated each proposal based on its originality, its feasibility, and _____",
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "whether it would have an impact on the community.",
+          "B": "the impact it would have on the community.",
+          "C": "if there was an impact on the community.",
+          "D": "could it impact the community."
+        },
+        "answer": "B",
+        "explanation": "The list contains parallel noun phrases: \"its originality,\" \"its feasibility,\" and the third must match. \"The impact it would have on the community\" is a noun phrase that maintains parallel structure. A, C, and D introduce clauses that break parallelism. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-024",
+        "domain": "Information and Ideas",
+        "subskill": "Command of Evidence (textual)",
+        "passage_type": "Literature",
+        "difficulty": "Hard",
+        "passage": "The following is from a 1922 novella. Rosalind, a violinist, prepares for an important audition.\n\nRosalind opened the case and lifted the violin from its velvet bed. She did not play it immediately. For a long moment she simply held it, her fingers tracing the worn edges of the chinrest where her grandmother's hand had rested for forty years before her own. Tomorrow's audition would not, after all, be hers alone. The instrument carried something that no amount of practice could provide, and no failure could quite undo.",
+        "question": "Which quotation from the text best supports the idea that Rosalind draws strength from a sense of inherited tradition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "\"Rosalind opened the case and lifted the violin from its velvet bed.\"",
+          "B": "\"For a long moment she simply held it\"",
+          "C": "\"her fingers tracing the worn edges of the chinrest where her grandmother's hand had rested for forty years before her own\"",
+          "D": "\"The instrument carried something that no amount of practice could provide\""
+        },
+        "answer": "C",
+        "explanation": "The question seeks evidence of inherited tradition giving strength. Choice C provides direct evidence of the inheritance — the chinrest worn by her grandmother for forty years before her own — making the inherited connection tactile and explicit. D suggests something carried but doesn't name what (the inheritance); A and B are actions without the inheritance content. The answer is C."
+      },
+      {
+        "id": "RWMT1-M2H-025",
+        "domain": "Craft and Structure",
+        "subskill": "Cross-Text Connections",
+        "passage_type": "Science",
+        "difficulty": "Hard",
+        "passage": "Text 1: Some psychologists argue that personality traits remain remarkably stable across an individual's lifetime. Decades-long studies have found that a person assessed as highly extraverted in their twenties is statistically very likely to remain so in their sixties.\n\nText 2: While trait stability is real, this finding is sometimes overstated. The same studies that demonstrate stability also reveal meaningful changes — particularly increases in conscientiousness and emotional stability — that occur gradually over the life course. Stability is the larger pattern, but it is not the entire picture.",
+        "question": "How would the author of Text 2 most likely respond to the description of personality stability in Text 1?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "By denying that personality traits show any stability over time",
+          "B": "By acknowledging the stability finding while emphasizing that the same research reveals meaningful changes",
+          "C": "By arguing that personality changes more than it stays the same",
+          "D": "By claiming that the long-term studies are methodologically flawed"
+        },
+        "answer": "B",
+        "explanation": "Text 2 explicitly states \"trait stability is real\" and \"Stability is the larger pattern\" — so the author accepts the basic finding but adds that meaningful changes also occur. Choice B captures this. A and D contradict Text 2; C overstates Text 2's argument (the author says stability is the LARGER pattern). The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-026",
+        "domain": "Expression of Ideas",
+        "subskill": "Transitions",
+        "passage_type": "Expression",
+        "difficulty": "Hard",
+        "passage": "The architectural firm's bold proposal — a glass-and-steel addition to a centuries-old cathedral — drew immediate opposition from preservationists who viewed it as a desecration. _____ the same proposal earned enthusiastic support from a younger generation of city residents who saw the addition as a meaningful dialogue between historical and contemporary architecture.",
+        "question": "Which choice completes the text with the most logical transition?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "Specifically,",
+          "B": "Conversely,",
+          "C": "As a result,",
+          "D": "In sum,"
+        },
+        "answer": "B",
+        "explanation": "The first sentence describes opposition; the second describes support. The two responses are opposite reactions to the same proposal. \"Conversely\" signals this opposite relationship. \"Specifically\" adds detail; \"As a result\" suggests cause; \"In sum\" introduces a summary. The answer is B."
+      },
+      {
+        "id": "RWMT1-M2H-027",
+        "domain": "Information and Ideas",
+        "subskill": "Inferences",
+        "passage_type": "History/Social Studies",
+        "difficulty": "Hard",
+        "passage": "Historians studying the Industrial Revolution have noted that nations adopting steam-powered manufacturing earlier did not always emerge as long-term economic leaders. Some early adopters became locked into infrastructure and labor patterns that proved difficult to update as newer technologies emerged. Later adopters, by contrast, sometimes leapfrogged early adopters by building modern infrastructure from the start, unburdened by aging systems.",
+        "question": "Based on the text, which of the following can most reasonably be inferred?",
+        "type": "multiple_choice",
+        "choices": {
+          "A": "The first nations to adopt new technology always become long-term leaders.",
+          "B": "Adopting a new technology early can sometimes create disadvantages later.",
+          "C": "The Industrial Revolution had no lasting impact on global economics.",
+          "D": "Later adopters always outperform earlier adopters."
+        },
+        "answer": "B",
+        "explanation": "The passage's central observation is that early adoption can lead to lock-in problems that hurt long-term competitiveness. B captures this nuanced inference. A directly contradicts the passage; C is unsupported; D overstates (the passage says \"sometimes leapfrogged,\" not \"always outperform\"). The answer is B."
+      }
+    ]
+  }
+}

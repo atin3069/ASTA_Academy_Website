@@ -1,0 +1,197 @@
+{
+  "spec_name": "ASTA Academy SAT Reading & Writing Mock Test - Scoring & Routing Specification",
+  "version": "1.0",
+  "subject": "Reading and Writing",
+  "module_1_scoring": {
+    "method": "weighted_correct_answers",
+    "weights": {
+      "Easy": 1.0,
+      "Medium": 1.5,
+      "Hard": 2.0
+    },
+    "max_possible_weighted_score": 38.0
+  },
+  "routing_logic": {
+    "routing_threshold": 22.0,
+    "rule": "If Module 1 weighted score >= 22.0, route to Hard Module 2. Otherwise Easy Module 2."
+  },
+  "final_scoring": {
+    "method": "lookup_table",
+    "easy_module_2_score_table": {
+      "comment": "Easy R&W M2 caps around 600.",
+      "rows": [
+        {
+          "m1_score_min": 0,
+          "m1_score_max": 5.999,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 220
+        },
+        {
+          "m1_score_min": 0,
+          "m1_score_max": 5.999,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 290
+        },
+        {
+          "m1_score_min": 0,
+          "m1_score_max": 5.999,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 350
+        },
+        {
+          "m1_score_min": 6,
+          "m1_score_max": 11.999,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 330
+        },
+        {
+          "m1_score_min": 6,
+          "m1_score_max": 11.999,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 410
+        },
+        {
+          "m1_score_min": 6,
+          "m1_score_max": 11.999,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 480
+        },
+        {
+          "m1_score_min": 12,
+          "m1_score_max": 16.999,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 420
+        },
+        {
+          "m1_score_min": 12,
+          "m1_score_max": 16.999,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 500
+        },
+        {
+          "m1_score_min": 12,
+          "m1_score_max": 16.999,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 560
+        },
+        {
+          "m1_score_min": 17,
+          "m1_score_max": 99,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 470
+        },
+        {
+          "m1_score_min": 17,
+          "m1_score_max": 99,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 540
+        },
+        {
+          "m1_score_min": 17,
+          "m1_score_max": 99,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 600
+        }
+      ]
+    },
+    "hard_module_2_score_table": {
+      "comment": "Hard R&W M2 reaches 800.",
+      "rows": [
+        {
+          "m1_score_min": 22,
+          "m1_score_max": 26.999,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 520
+        },
+        {
+          "m1_score_min": 22,
+          "m1_score_max": 26.999,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 600
+        },
+        {
+          "m1_score_min": 22,
+          "m1_score_max": 26.999,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 670
+        },
+        {
+          "m1_score_min": 27,
+          "m1_score_max": 31.999,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 570
+        },
+        {
+          "m1_score_min": 27,
+          "m1_score_max": 31.999,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 650
+        },
+        {
+          "m1_score_min": 27,
+          "m1_score_max": 31.999,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 730
+        },
+        {
+          "m1_score_min": 32,
+          "m1_score_max": 99,
+          "m2_score_min": 0,
+          "m2_score_max": 12.999,
+          "estimated_score": 620
+        },
+        {
+          "m1_score_min": 32,
+          "m1_score_max": 99,
+          "m2_score_min": 13,
+          "m2_score_max": 24.999,
+          "estimated_score": 710
+        },
+        {
+          "m1_score_min": 32,
+          "m1_score_max": 99,
+          "m2_score_min": 25,
+          "m2_score_max": 99,
+          "estimated_score": 790
+        }
+      ]
+    },
+    "score_range_output": {
+      "calculation": "Output range = [estimated_score - 15, estimated_score + 15]"
+    }
+  },
+  "performance_level_thresholds": {
+    "Strong": {
+      "min_percent_correct": 85
+    },
+    "On-Track": {
+      "min_percent_correct": 65,
+      "max_percent_correct": 84
+    },
+    "Needs-Work": {
+      "min_percent_correct": 40,
+      "max_percent_correct": 64
+    },
+    "Critical-Gap": {
+      "max_percent_correct": 39
+    }
+  }
+}

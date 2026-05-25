@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&W Mock Test [DEBUG MODE] — ASTA Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a3a5c;
+    --navy-light: #2563a8;
+    --gold: #FFD700;
+    --gold-soft: #FFF3B0;
+    --cream: #FAFAF7;
+    --text: #1C1C1E;
+    --text-muted: #6B6B6E;
+    --border: #E8E8E4;
+    --blue-soft: #EBF3FF;
+    --success: #0F6E56;
+    --success-soft: #E1F5EE;
+    --warn: #993C1D;
+    --warn-soft: #FAECE7;
+    --red: #B82929;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
+
+  /* TEST HEADER (visible during test) */
+  .test-header {
+    background: var(--navy); color: #fff;
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .test-title { font-size: 14px; font-weight: 500; }
+  .test-title span { color: var(--gold); }
+
+  .timer {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 16px; border-radius: 99px;
+    font-size: 14px; font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .timer.warning { background: rgba(184,41,41,0.2); border-color: var(--red); color: #ffb0b0; }
+
+  /* SCREENS - all hidden by default, shown via JS */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* WELCOME SCREEN */
+  .welcome-wrap {
+    min-height: calc(100vh - 60px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .welcome-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 48px; max-width: 600px; width: 100%;
+    box-shadow: 0 4px 30px rgba(26,58,92,0.08);
+  }
+  .welcome-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; color: var(--navy);
+    font-weight: 600; margin-bottom: 12px;
+  }
+  .welcome-card > p {
+    color: var(--text-muted); font-size: 15px; margin-bottom: 24px;
+  }
+  .module-info {
+    background: var(--blue-soft); border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 24px;
+  }
+  .module-info-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 10px; font-size: 14px;
+  }
+  .module-info-row:last-child { margin-bottom: 0; }
+  .module-info-row strong { color: var(--navy); }
+
+  .start-btn {
+    display: inline-block; background: var(--gold);
+    color: var(--navy); border: none;
+    font-family: inherit; font-size: 15px; font-weight: 700;
+    padding: 13px 32px; border-radius: 10px; cursor: pointer;
+    transition: transform 0.15s;
+    width: 100%;
+  }
+  .start-btn:hover { transform: translateY(-1px); }
+  .secondary-btn {
+    display: inline-block; background: transparent;
+    color: var(--text-muted); border: 1px solid var(--border);
+    font-family: inherit; font-size: 14px; font-weight: 500;
+    padding: 11px 24px; border-radius: 8px; cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  /* QUESTION SCREEN */
+  .question-wrap {
+    max-width: 760px; margin: 0 auto;
+    padding: 40px 32px 100px;
+  }
+  .progress-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px; font-size: 13px; color: var(--text-muted);
+  }
+  .progress-meta strong { color: var(--navy); }
+  .progress-bar {
+    height: 6px; background: var(--blue-soft); border-radius: 99px;
+    overflow: hidden; margin-bottom: 30px;
+  }
+  .progress-fill {
+    height: 100%; background: var(--navy); border-radius: 99px;
+    transition: width 0.3s ease;
+  }
+  .question-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 14px; padding: 32px;
+  }
+  .q-meta {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--navy-light);
+    margin-bottom: 14px;
+  }
+  .q-meta .difficulty {
+    margin-left: 8px; padding: 2px 8px; border-radius: 4px;
+    font-size: 10px;
+  }
+  .difficulty.Easy { background: var(--success-soft); color: var(--success); }
+  .difficulty.Medium { background: var(--gold-soft); color: #6B5A00; }
+  .difficulty.Hard { background: var(--warn-soft); color: var(--warn); }
+
+  .q-text {
+    font-size: 17px; color: var(--navy);
+    line-height: 1.6; margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .choices { display: flex; flex-direction: column; gap: 10px; }
+  .choice-btn {
+    background: #fff; border: 1.5px solid var(--border);
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 15px; color: var(--text); text-align: left;
+    cursor: pointer; font-family: inherit;
+    transition: all 0.15s;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .choice-btn:hover { border-color: var(--navy-light); background: var(--blue-soft); }
+  .choice-btn.selected { border-color: var(--navy); background: var(--blue-soft); }
+  .choice-letter {
+    width: 28px; height: 28px;
+    background: var(--blue-soft); color: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 13px; flex-shrink: 0;
+  }
+  .choice-btn.selected .choice-letter { background: var(--navy); color: #fff; }
+
+  /* SPR input */
+  .spr-input {
+    width: 100%; padding: 14px 18px;
+    font-size: 15px; font-family: inherit;
+    border: 1.5px solid var(--border); border-radius: 10px;
+    color: var(--text);
+  }
+  .spr-input:focus { outline: none; border-color: var(--navy-light); }
+  .spr-hint { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+  /* NAVIGATION BAR (bottom) */
+  .nav-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #fff; border-top: 1px solid var(--border);
+    padding: 12px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 50;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+  }
+  .nav-btn {
+    background: var(--navy); color: #fff; border: none;
+    font-family: inherit; font-size: 14px; font-weight: 500;
+    padding: 11px 24px; border-radius: 8px; cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .nav-btn.prev { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+  .nav-btn.submit { background: var(--gold); color: var(--navy); font-weight: 700; }
+  .nav-status { font-size: 13px; color: var(--text-muted); }
+
+  /* ROUTING SCREEN */
+  .routing-wrap {
+    min-height: calc(100vh - 60px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .routing-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 48px; max-width: 600px; width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(26,58,92,0.08);
+  }
+  .routing-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; color: var(--navy);
+    font-weight: 600; margin-bottom: 12px;
+  }
+  .m1-score-display {
+    background: var(--blue-soft); border-radius: 10px;
+    padding: 20px; margin: 20px 0;
+    font-size: 14px; color: var(--text-muted);
+  }
+  .m1-score-display .big {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; color: var(--navy);
+    font-weight: 600; display: block; margin-bottom: 4px;
+  }
+  .module2-tag {
+    display: inline-block; padding: 6px 16px;
+    border-radius: 99px; font-weight: 600; font-size: 13px;
+    margin: 10px 0;
+  }
+  .module2-tag.easy { background: var(--success-soft); color: var(--success); }
+  .module2-tag.hard { background: var(--warn-soft); color: var(--warn); }
+
+  /* SCORE/EMAIL SCREEN */
+  .score-wrap {
+    max-width: 720px; margin: 0 auto;
+    padding: 60px 32px;
+  }
+  .score-hero {
+    text-align: center; padding: 40px 32px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 16px; color: #fff; margin-bottom: 32px;
+  }
+  .score-hero .label {
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,215,0,0.9); margin-bottom: 12px;
+  }
+  .score-hero .range {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px; font-weight: 600;
+    line-height: 1; margin-bottom: 12px;
+  }
+  .score-hero .range em { color: var(--gold); font-style: normal; font-size: 36px; padding: 0 12px; }
+  .score-hero p {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px; max-width: 460px; margin: 0 auto;
+  }
+
+  .email-gate {
+    background: #fff; border: 2px solid var(--gold);
+    border-radius: 16px; padding: 36px;
+    box-shadow: 0 4px 24px rgba(255,215,0,0.15);
+  }
+  .email-gate h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; color: var(--navy);
+    font-weight: 600; margin-bottom: 8px;
+  }
+  .email-gate > p {
+    color: var(--text-muted); font-size: 15px;
+    line-height: 1.7; margin-bottom: 24px;
+  }
+  .email-gate ul {
+    list-style: none; padding: 0; margin-bottom: 24px;
+  }
+  .email-gate li {
+    font-size: 14px; color: var(--text);
+    padding: 6px 0 6px 28px; position: relative;
+  }
+  .email-gate li::before {
+    content: '✓'; position: absolute; left: 0;
+    color: var(--success); font-weight: 700;
+  }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block; font-size: 13px; font-weight: 500;
+    color: var(--text-muted); margin-bottom: 6px;
+  }
+  .form-input {
+    width: 100%; padding: 12px 16px;
+    font-size: 15px; font-family: inherit;
+    border: 1.5px solid var(--border); border-radius: 10px;
+  }
+  .form-input:focus { outline: none; border-color: var(--navy-light); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .submit-btn {
+    background: var(--gold); color: var(--navy);
+    border: none; font-family: inherit;
+    font-size: 15px; font-weight: 700;
+    padding: 14px 32px; border-radius: 10px;
+    cursor: pointer; width: 100%;
+    margin-top: 6px;
+  }
+  .privacy-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; text-align: center; }
+
+  /* REPORT SCREEN */
+  .report-wrap { max-width: 880px; margin: 0 auto; padding: 40px 32px; }
+  .report-header {
+    text-align: center; padding-bottom: 32px;
+    border-bottom: 1px solid var(--border); margin-bottom: 32px;
+  }
+  .report-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; color: var(--navy);
+    font-weight: 600; margin-bottom: 6px;
+  }
+  .report-header .meta { font-size: 14px; color: var(--text-muted); }
+
+  .report-section { margin-bottom: 36px; }
+  .report-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; color: var(--navy);
+    font-weight: 600; margin-bottom: 16px;
+    padding-bottom: 6px; border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+
+  .summary-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    margin-bottom: 8px;
+  }
+  .summary-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px; text-align: center;
+  }
+  .summary-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 600; color: var(--navy);
+  }
+  .summary-card .lbl {
+    font-size: 11px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+
+  .domain-grid {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .domain-row {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .domain-info { flex: 1; }
+  .domain-info .name { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .domain-info .stats { font-size: 13px; color: var(--text-muted); }
+  .domain-bar-wrap {
+    width: 200px; height: 8px;
+    background: var(--blue-soft); border-radius: 99px;
+    overflow: hidden; flex-shrink: 0;
+  }
+  .domain-bar { height: 100%; border-radius: 99px; transition: width 0.4s; }
+  .level-tag {
+    padding: 4px 12px; border-radius: 99px;
+    font-size: 11px; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .level-tag.Strong { background: var(--success-soft); color: var(--success); }
+  .level-tag.On-Track { background: var(--blue-soft); color: var(--navy-light); }
+  .level-tag.Needs-Work { background: var(--gold-soft); color: #6B5A00; }
+  .level-tag.Critical-Gap { background: var(--warn-soft); color: var(--warn); }
+
+  .recommendation {
+    background: #fff; border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px; padding: 18px 22px; margin-bottom: 12px;
+  }
+  .recommendation .rank {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600; color: var(--gold);
+    margin-right: 8px;
+  }
+  .recommendation .title {
+    font-weight: 600; color: var(--navy); margin-bottom: 4px;
+  }
+  .recommendation .desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  .final-cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 16px; padding: 40px;
+    text-align: center; color: #fff; margin-top: 36px;
+  }
+  .final-cta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 600; margin-bottom: 10px;
+  }
+  .final-cta p { color: rgba(255,255,255,0.75); margin-bottom: 24px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-btn {
+    display: inline-block; background: var(--gold);
+    color: var(--navy); font-weight: 700; font-size: 15px;
+    padding: 13px 32px; border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .disclaimer {
+    background: var(--gold-soft); border: 1px solid #F5D700;
+    border-radius: 10px; padding: 14px 18px;
+    margin-top: 32px; font-size: 13px;
+    color: #6B5A00; line-height: 1.6;
+  }
+
+  @media (max-width: 720px) {
+    .test-header { padding: 12px 16px; flex-wrap: wrap; gap: 8px; }
+    .question-wrap { padding: 24px 16px 100px; }
+    .question-card { padding: 24px 18px; }
+    .nav-bar { padding: 12px 16px; }
+    .welcome-card, .routing-card, .email-gate { padding: 28px 22px; }
+    .welcome-card h1 { font-size: 24px; }
+    .score-hero .range { font-size: 44px; }
+    .score-hero .range em { font-size: 26px; padding: 0 8px; }
+    .summary-grid { grid-template-columns: 1fr 1fr; }
+    .domain-row { flex-direction: column; align-items: stretch; }
+    .domain-bar-wrap { width: 100%; }
+    .form-row { grid-template-columns: 1fr; }
+    .report-wrap { padding: 24px 16px; }
+  }
+
+  /* MOBILE BLOCK */
+  .mobile-block {
+    display: none;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    background: var(--cream);
+  }
+  .mobile-block-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 28px;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(26,58,92,0.08);
+  }
+  .mobile-block-icon {
+    width: 64px; height: 64px;
+    background: var(--gold-soft);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mobile-block-icon svg { width: 32px; height: 32px; stroke: #6B5A00; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .mobile-block-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; color: var(--navy);
+    font-weight: 600; margin-bottom: 12px;
+  }
+  .mobile-block-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; }
+  .mobile-block-back {
+    display: inline-block; background: var(--navy);
+    color: #fff; padding: 12px 24px; border-radius: 8px;
+    font-weight: 500; text-decoration: none; font-size: 14px;
+    margin-top: 8px;
+  }
+  @media (max-width: 767px) {
+    body.mobile-blocked > * { display: none !important; }
+    body.mobile-blocked .mobile-block { display: flex !important; }
+  }
+
+
+  /* PASSAGE (Reading & Writing) */
+  .passage-box {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--navy-light);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text);
+    max-height: 340px;
+    overflow-y: auto;
+  }
+  .passage-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--navy-light); margin-bottom: 8px;
+  }
+
+
+  .debug-banner {
+    background: #B82929; color: #fff;
+    padding: 8px 24px; text-align: center;
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.05em;
+    position: sticky; top: 0; z-index: 200;
+  }
+  .debug-banner span {
+    background: #FFD700; color: #B82929;
+    padding: 2px 8px; border-radius: 4px;
+    margin-right: 8px; font-weight: 700;
+  }
+  .debug-answer {
+    margin-top: 14px; padding: 12px 16px;
+    background: #FFF3B0; border: 1px dashed #B82929;
+    border-radius: 8px;
+    font-size: 13px; color: #6B5A00;
+  }
+  .debug-answer strong { color: #B82929; }
+
+</style>
+</head>
+<body>
+
+<div class="debug-banner"><span>DEBUG MODE</span> Answers visible — for testing only. Do NOT share this URL with students.</div>
+
+<!-- MOBILE BLOCK SCREEN (shown only on small screens) -->
+<div class="mobile-block">
+  <div class="mobile-block-card">
+    <div class="mobile-block-icon">
+      <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    </div>
+    <h2>Best on a larger screen</h2>
+    <p>The SAT Math Mock Test is 70 minutes long with full-length questions and tight timing. For the best experience, please take it on a desktop, laptop, or tablet.</p>
+    <p style="font-size: 13px;">Want to try other free resources right now? Visit our video lessons or question bank.</p>
+    <a class="mobile-block-back" href="index.html">← Back to ASTA Academy</a>
+  </div>
+</div>
+
+<!-- TEST HEADER (shown during test) -->
+<div class="test-header" id="test-header" style="display:none;">
+  <div class="test-title">SAT Reading &amp; Writing · <span id="header-module">Module 1</span></div>
+  <div class="timer" id="timer">35:00</div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCREEN 1: WELCOME -->
+<!-- ============================================ -->
+<div class="screen active" id="screen-welcome">
+  <div class="welcome-wrap">
+    <div class="welcome-card">
+      <h1>Ready to begin?</h1>
+      <p>You're about to take ASTA Academy's SAT Reading &amp; Writing Mock Test 1. Make sure you're in a quiet space with scratch paper before starting.</p>
+
+      <div class="module-info">
+        <div class="module-info-row"><span>Module 1 (now)</span><strong>27 questions · 32 min</strong></div>
+        <div class="module-info-row"><span>Module 2 (after)</span><strong>27 questions · 32 min</strong></div>
+        <div class="module-info-row"><span>Total time</span><strong>64 minutes</strong></div>
+      </div>
+
+      <p style="font-size: 14px; line-height: 1.6;">⏱ Once you click Start, the timer begins. The test will auto-submit when time runs out.<br>
+      💡 Don't refresh the page — your progress is saved but timer resets.</p>
+
+      <button class="start-btn" onclick="startModule(1)">Start Module 1 →</button>
+      <a href="mock-test.html" class="secondary-btn" style="text-decoration:none;text-align:center;display:block;">← Back to overview</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCREEN 2: QUESTION DISPLAY -->
+<!-- ============================================ -->
+<div class="screen" id="screen-question">
+  <div class="question-wrap">
+    <div class="progress-meta">
+      <span>Question <strong id="current-q-num">1</strong> of <strong id="total-q-num">22</strong></span>
+      <span id="domain-label">Algebra</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width: 0%;"></div></div>
+
+    <div class="question-card">
+      <div class="q-meta" style="display:none;">
+        <span id="q-id">Q1</span>
+        <span class="difficulty" id="q-difficulty">Easy</span>
+      </div>
+      <div class="passage-box" id="passage-box" style="display:none;">
+        <div class="passage-label" id="passage-label">Passage</div>
+        <div id="passage-text"></div>
+      </div>
+      <div class="q-text" id="q-text"></div>
+      <div id="answer-area"></div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="nav-btn prev" id="prev-btn" onclick="prevQuestion()">← Previous</button>
+    <span class="nav-status" id="nav-status">Click an answer to continue</span>
+    <button class="nav-btn" id="next-btn" onclick="nextQuestion()">Next →</button>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCREEN 3: ROUTING (between modules) -->
+<!-- ============================================ -->
+<div class="screen" id="screen-routing">
+  <div class="routing-wrap">
+    <div class="routing-card">
+      <h2>Module 1 Complete</h2>
+      <p style="color: var(--text-muted);">Nicely done. Take a 30-second breather.</p>
+
+      <div class="m1-score-display">
+        <span class="big" id="m1-correct-display">0</span>
+        Module 1 questions correct (out of 27)
+        <div style="margin-top: 12px; font-size: 13px;">
+          Weighted score: <strong id="m1-weighted-display">0</strong> / 31
+        </div>
+      </div>
+
+      <div id="routing-message">
+        <div class="module2-tag" id="module2-tag">Module 2</div>
+        <p id="routing-explanation" style="margin: 12px 0; color: var(--text-muted); font-size: 14px;"></p>
+      </div>
+
+      <button class="start-btn" onclick="startModule(2)">Continue to Module 2 →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCREEN 4: SCORE + EMAIL GATE -->
+<!-- ============================================ -->
+<div class="screen" id="screen-score">
+  <div class="score-wrap">
+    <div class="score-hero">
+      <div class="label">Estimated SAT Math Score Range</div>
+      <div class="range">
+        <span id="score-low">625</span><em>—</em><span id="score-high">655</span>
+      </div>
+      <p>Based on ASTA Academy's weighted-difficulty model. This is a starting estimate, not an official score.</p>
+    </div>
+
+    <div class="email-gate">
+      <h2>📋 Get your full diagnostic report</h2>
+      <p>You'll receive a personalized diagnostic report including:</p>
+      <ul>
+        <li>Performance breakdown by topic (Algebra, Geometry, etc.)</li>
+        <li>Top 3 specific topics most likely to boost your score</li>
+        <li>Personalized notes from Dr. Jain on what stood out</li>
+      </ul>
+
+      <form id="report-form" action="https://formspree.io/f/xeevbkwv" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Student name</label>
+            <input class="form-input" type="text" name="student_name" required>
+          </div>
+          <div class="form-group">
+            <label>Parent name</label>
+            <input class="form-input" type="text" name="parent_name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Parent email</label>
+          <input class="form-input" type="email" name="parent_email" required placeholder="parent@example.com">
+        </div>
+        <div class="form-group">
+          <label>Phone (optional)</label>
+          <input class="form-input" type="tel" name="phone" placeholder="(123) 456-7890">
+        </div>
+
+        <!-- Hidden fields auto-filled by JS -->
+        <input type="hidden" name="test_id" value="RWMT1">
+        <input type="hidden" name="score_range" id="hidden-score-range">
+        <input type="hidden" name="m1_correct" id="hidden-m1-correct">
+        <input type="hidden" name="m1_weighted" id="hidden-m1-weighted">
+        <input type="hidden" name="m2_variant" id="hidden-m2-variant">
+        <input type="hidden" name="m2_correct" id="hidden-m2-correct">
+        <input type="hidden" name="m2_weighted" id="hidden-m2-weighted">
+        <input type="hidden" name="total_correct" id="hidden-total-correct">
+        <input type="hidden" name="domain_breakdown" id="hidden-domain-breakdown">
+        <input type="hidden" name="missed_skills" id="hidden-missed-skills">
+        <input type="hidden" name="time_used_minutes" id="hidden-time-used">
+        <input type="hidden" name="detailed_answers" id="hidden-detailed-answers">
+
+        <button type="submit" class="submit-btn">View My Diagnostic Report →</button>
+        <p class="privacy-note">We'll only use your email to send your report and follow up. No spam, ever.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCREEN 5: DIAGNOSTIC REPORT -->
+<!-- ============================================ -->
+<div class="screen" id="screen-report">
+  <div class="report-wrap">
+    <div class="report-header">
+      <h1>Diagnostic Report</h1>
+      <div class="meta" id="report-meta">Mock Test 1 · Date</div>
+    </div>
+
+    <div class="report-section">
+      <h2>Overall Performance</h2>
+      <div class="summary-grid">
+        <div class="summary-card"><div class="num" id="rpt-score-range">625-655</div><div class="lbl">SAT Score Range</div></div>
+        <div class="summary-card"><div class="num" id="rpt-total-correct">30</div><div class="lbl">Total Correct (of 54)</div></div>
+        <div class="summary-card"><div class="num" id="rpt-percent">68%</div><div class="lbl">% Correct</div></div>
+        <div class="summary-card"><div class="num" id="rpt-time">64</div><div class="lbl">Min Used (of 64)</div></div>
+      </div>
+    </div>
+
+    <div class="report-section">
+      <h2>Domain Breakdown</h2>
+      <div class="domain-grid" id="domain-grid"></div>
+    </div>
+
+    <div class="report-section">
+      <h2>Top 3 Recommendations</h2>
+      <div id="recommendations-list"></div>
+    </div>
+
+    <div class="final-cta">
+      <h3>Want Dr. Jain to walk through this with your student?</h3>
+      <p>Book a free 30-minute consultation. We'll review the missed questions live and build a focused study plan together.</p>
+      <a href="https://calendly.com/ashu3069usa" target="_blank" class="cta-btn">Book Free Consultation →</a>
+    </div>
+
+    <div style="text-align: center; margin-top: 24px;">
+      <a href="index.html" style="color: var(--navy-light); text-decoration: none; font-size: 14px; font-weight: 500;">← Back to ASTA Academy home</a>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Honest disclaimer:</strong> Score estimates are based on ASTA Academy's weighted-correct-answer model — not the College Board's IRT calibration. For your most accurate prediction, take an official Bluebook practice test from the College Board.
+    </div>
+  </div>
+</div>
+
+<script>
+
+  // Block mobile users from taking the test
+  function checkMobileBlock() {
+    if (window.innerWidth < 768) {
+      document.body.classList.add('mobile-blocked');
+    } else {
+      document.body.classList.remove('mobile-blocked');
+    }
+  }
+  checkMobileBlock();
+  window.addEventListener('resize', checkMobileBlock);
+
+  // ============ STATE ============
+  let testData = null;
+  let scoringSpec = null;
+  let currentModule = null;
+  let currentModuleQuestions = [];
+  let currentQuestionIdx = 0;
+  let answers = {}; // { questionId: chosenAnswer }
+  let m1Result = null;
+  let m2Variant = null;
+  let m2Result = null;
+  let timerInterval = null;
+  let timeRemaining = 0;
+  let testStartTime = null;
+  let m1TimeUsed = 0;
+  let m2TimeUsed = 0;
+
+  const WEIGHTS = { Easy: 1.0, Medium: 1.5, Hard: 2.0 };
+  const ROUTING_THRESHOLD = 22.0;
+
+  // ============ INIT ============
+  async function init() {
+    let errorDetails = [];
+    try {
+      const r1 = await fetch('rw-mock-test-1.json');
+      if (!r1.ok) {
+        errorDetails.push('mock-test-1.json: HTTP ' + r1.status);
+      } else {
+        try {
+          testData = await r1.json();
+        } catch (e) {
+          errorDetails.push('mock-test-1.json parse error: ' + e.message);
+        }
+      }
+    } catch (e) {
+      errorDetails.push('mock-test-1.json fetch error: ' + e.message);
+    }
+
+    try {
+      const r2 = await fetch('rw-scoring-spec.json');
+      if (!r2.ok) {
+        errorDetails.push('scoring-spec.json: HTTP ' + r2.status);
+      } else {
+        try {
+          scoringSpec = await r2.json();
+        } catch (e) {
+          errorDetails.push('scoring-spec.json parse error: ' + e.message);
+        }
+      }
+    } catch (e) {
+      errorDetails.push('scoring-spec.json fetch error: ' + e.message);
+    }
+
+    // Validate structure
+    if (testData && !testData.module_1) errorDetails.push('mock-test-1.json missing "module_1" key');
+    if (testData && !testData.easy_module_2) errorDetails.push('mock-test-1.json missing "easy_module_2" key');
+    if (testData && !testData.hard_module_2) errorDetails.push('mock-test-1.json missing "hard_module_2" key');
+    if (scoringSpec && !scoringSpec.final_scoring) errorDetails.push('scoring-spec.json missing "final_scoring" key');
+    if (scoringSpec && scoringSpec.final_scoring && !scoringSpec.final_scoring.easy_module_2_score_table) errorDetails.push('scoring-spec.json missing "easy_module_2_score_table"');
+
+    if (errorDetails.length > 0) {
+      alert('Test load failed:\n\n' + errorDetails.join('\n'));
+      console.error('Test load errors:', errorDetails);
+    } else {
+      console.log('✓ Test data loaded successfully');
+    }
+  }
+  init();
+
+  // ============ SCREEN MGMT ============
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.getElementById('test-header').style.display =
+      (id === 'screen-question') ? 'flex' : 'none';
+  }
+
+  // ============ MODULE START ============
+  function startModule(num) {
+    if (num === 1) {
+      currentModule = 1;
+      currentModuleQuestions = testData.module_1.questions;
+      document.getElementById('header-module').textContent = 'Module 1';
+    } else {
+      currentModule = 2;
+      const variantData = m2Variant === 'hard'
+        ? testData.hard_module_2
+        : testData.easy_module_2;
+      currentModuleQuestions = variantData.questions;
+      document.getElementById('header-module').textContent = 'Module 2 (' + (m2Variant === 'hard' ? 'Hard' : 'Easy') + ')';
+    }
+    currentQuestionIdx = 0;
+    testStartTime = Date.now();
+    startTimer(32 * 60);
+    document.getElementById('total-q-num').textContent = currentModuleQuestions.length;
+    showScreen('screen-question');
+    renderQuestion();
+  }
+
+  // ============ TIMER ============
+  function startTimer(seconds) {
+    timeRemaining = seconds;
+    updateTimerDisplay();
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      timeRemaining--;
+      updateTimerDisplay();
+      if (timeRemaining <= 0) {
+        clearInterval(timerInterval);
+        submitModule();
+      }
+    }, 1000);
+  }
+
+  function updateTimerDisplay() {
+    const m = Math.floor(timeRemaining / 60);
+    const s = timeRemaining % 60;
+    const display = `${m}:${s.toString().padStart(2, '0')}`;
+    const timer = document.getElementById('timer');
+    timer.textContent = display;
+    timer.classList.toggle('warning', timeRemaining < 300);
+  }
+
+  // ============ QUESTION DISPLAY ============
+  function renderQuestion() {
+    const q = currentModuleQuestions[currentQuestionIdx];
+    document.getElementById('current-q-num').textContent = currentQuestionIdx + 1;
+    document.getElementById('domain-label').textContent = q.domain;
+    document.getElementById('q-id').textContent = q.id;
+    document.getElementById('q-difficulty').textContent = q.difficulty;
+    document.getElementById('q-difficulty').className = 'difficulty ' + q.difficulty;
+    document.getElementById('q-text').textContent = q.question;
+    document.getElementById('progress-fill').style.width =
+      ((currentQuestionIdx + 1) / currentModuleQuestions.length * 100) + '%';
+
+    // DEBUG: show q-meta
+    const qMeta = document.querySelector('.q-meta');
+    if (qMeta) qMeta.style.display = '';
+
+    // Show passage if present (Reading & Writing)
+    const passageBox = document.getElementById('passage-box');
+    if (q.passage) {
+      passageBox.style.display = 'block';
+      document.getElementById('passage-text').textContent = q.passage;
+      document.getElementById('passage-label').textContent = q.passage_type ? (q.passage_type + ' passage') : 'Passage';
+    } else {
+      passageBox.style.display = 'none';
+    }
+
+    const answerArea = document.getElementById('answer-area');
+    answerArea.innerHTML = '';
+
+    if (q.type === 'MC' || q.choices) {
+      const choicesDiv = document.createElement('div');
+      choicesDiv.className = 'choices';
+      ['A', 'B', 'C', 'D'].forEach(letter => {
+        if (q.choices && q.choices[letter] !== undefined) {
+          const btn = document.createElement('button');
+          btn.className = 'choice-btn' + (answers[q.id] === letter ? ' selected' : '');
+          btn.dataset.letter = letter;
+          btn.innerHTML = `<span class="choice-letter">${letter}</span><span>${q.choices[letter]}</span>`;
+          btn.onclick = () => selectChoice(letter);
+          choicesDiv.appendChild(btn);
+        }
+      });
+      answerArea.appendChild(choicesDiv);
+    } else {
+      // SPR
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'spr-input';
+      input.placeholder = 'Type your answer';
+      input.value = answers[q.id] || '';
+      input.oninput = (e) => { answers[q.id] = e.target.value.trim(); updateNavStatus(); };
+      answerArea.appendChild(input);
+      const hint = document.createElement('p');
+      hint.className = 'spr-hint';
+      hint.textContent = 'Enter a number. No units, no commas.';
+      answerArea.appendChild(hint);
+    }
+
+    // DEBUG: Show correct answer
+    const debugDiv = document.createElement('div');
+    debugDiv.className = 'debug-answer';
+    let answerDisplay = q.answer;
+    if (q.choices && q.choices[q.answer]) {
+      answerDisplay = q.answer + ' (' + q.choices[q.answer] + ')';
+    }
+    debugDiv.innerHTML = '<strong>🐞 DEBUG — Correct answer:</strong> ' + answerDisplay +
+      '<br><strong>Difficulty:</strong> ' + q.difficulty +
+      ' · <strong>Domain:</strong> ' + q.domain +
+      ' · <strong>ID:</strong> ' + q.id +
+      (q.subskill ? ' · <strong>Subskill:</strong> ' + q.subskill : '') +
+      (q.explanation ? '<br><strong>Explanation:</strong> ' + q.explanation : '');
+    answerArea.appendChild(debugDiv);
+
+    document.getElementById('prev-btn').disabled = currentQuestionIdx === 0;
+    const nextBtn = document.getElementById('next-btn');
+    if (currentQuestionIdx === currentModuleQuestions.length - 1) {
+      nextBtn.textContent = 'Submit Module ' + currentModule + ' →';
+      nextBtn.classList.add('submit');
+    } else {
+      nextBtn.textContent = 'Next →';
+      nextBtn.classList.remove('submit');
+    }
+    updateNavStatus();
+  }
+
+  function selectChoice(letter) {
+    const q = currentModuleQuestions[currentQuestionIdx];
+    answers[q.id] = letter;
+    document.querySelectorAll('.choice-btn').forEach(b => {
+      b.classList.toggle('selected', b.dataset.letter === letter);
+    });
+    updateNavStatus();
+  }
+
+  function updateNavStatus() {
+    const q = currentModuleQuestions[currentQuestionIdx];
+    const answered = answers[q.id] !== undefined && answers[q.id] !== '';
+    document.getElementById('nav-status').textContent =
+      answered ? '✓ Answered' : 'Skip or answer to continue';
+  }
+
+  function prevQuestion() {
+    if (currentQuestionIdx > 0) {
+      currentQuestionIdx--;
+      renderQuestion();
+    }
+  }
+
+  function nextQuestion() {
+    if (currentQuestionIdx < currentModuleQuestions.length - 1) {
+      currentQuestionIdx++;
+      renderQuestion();
+    } else {
+      submitModule();
+    }
+  }
+
+  // ============ MODULE SUBMISSION ============
+  function submitModule() {
+    if (timerInterval) clearInterval(timerInterval);
+    const elapsedSec = Math.floor((Date.now() - testStartTime) / 1000);
+    const elapsedMin = Math.round(elapsedSec / 60);
+
+    const result = scoreModule(currentModuleQuestions);
+
+    if (currentModule === 1) {
+      m1TimeUsed = elapsedMin;
+      m1Result = result;
+      m2Variant = result.weighted >= ROUTING_THRESHOLD ? 'hard' : 'easy';
+      showRoutingScreen();
+    } else {
+      m2TimeUsed = elapsedMin;
+      m2Result = result;
+      showScoreScreen();
+    }
+  }
+
+  // Smart answer matching - handles SPR equivalents like 550 = 550.0 = 550.00, 1/2 = 0.5, etc.
+  function isAnswerCorrect(userAns, correctAns, question) {
+    if (!userAns) return false;
+
+    // For multiple choice, simple letter comparison (case-insensitive)
+    if (question.choices) {
+      return userAns.toLowerCase() === correctAns.toLowerCase();
+    }
+
+    // For SPR: try numeric equivalence first
+    const userNum = parseAnswerToNumber(userAns);
+    const correctNum = parseAnswerToNumber(correctAns);
+
+    if (userNum !== null && correctNum !== null) {
+      // Both are numbers - compare with tolerance for floating point
+      return Math.abs(userNum - correctNum) < 0.0001;
+    }
+
+    // Fallback: case-insensitive string match
+    return userAns.toLowerCase() === correctAns.toLowerCase();
+  }
+
+  // Parse "550", "550.0", "1/2", "0.5", "-3.5" into a number. Returns null if not parseable.
+  function parseAnswerToNumber(str) {
+    if (str === null || str === undefined) return null;
+    const cleaned = str.toString().trim().replace(/\s+/g, '');
+    if (cleaned === '') return null;
+
+    // Handle fractions like "1/2" or "-3/4"
+    const fractionMatch = cleaned.match(/^(-?\d+(?:\.\d+)?)\/(-?\d+(?:\.\d+)?)$/);
+    if (fractionMatch) {
+      const num = parseFloat(fractionMatch[1]);
+      const den = parseFloat(fractionMatch[2]);
+      if (den !== 0 && !isNaN(num) && !isNaN(den)) {
+        return num / den;
+      }
+      return null;
+    }
+
+    // Handle plain numbers (including decimals, negatives, leading + sign)
+    const numMatch = cleaned.match(/^[+-]?\d+(?:\.\d+)?$/);
+    if (numMatch) {
+      const n = parseFloat(cleaned);
+      return isNaN(n) ? null : n;
+    }
+
+    return null;
+  }
+
+  function scoreModule(questions) {
+    let correct = 0;
+    let weighted = 0;
+    const domainStats = {};
+    const missedQuestions = [];
+
+    questions.forEach(q => {
+      const userAnsRaw = (answers[q.id] || '').toString().trim();
+      const correctAnsRaw = q.answer.toString().trim();
+      const isCorrect = isAnswerCorrect(userAnsRaw, correctAnsRaw, q);
+
+      if (!domainStats[q.domain]) domainStats[q.domain] = { correct: 0, total: 0, missedSkills: {} };
+      domainStats[q.domain].total++;
+
+      if (isCorrect) {
+        correct++;
+        weighted += WEIGHTS[q.difficulty] || 0;
+        domainStats[q.domain].correct++;
+      } else {
+        missedQuestions.push(q);
+        const skill = q.subskill || q.skill || q.subtopic || 'General';
+        if (!domainStats[q.domain].missedSkills[skill]) {
+          domainStats[q.domain].missedSkills[skill] = 0;
+        }
+        domainStats[q.domain].missedSkills[skill]++;
+      }
+    });
+
+    return { correct, weighted, total: questions.length, domainStats, missedQuestions };
+  }
+
+  // ============ ROUTING SCREEN ============
+  function showRoutingScreen() {
+    document.getElementById('m1-correct-display').textContent = m1Result.correct;
+    document.getElementById('m1-weighted-display').textContent = m1Result.weighted.toFixed(1);
+
+    const tag = document.getElementById('module2-tag');
+    const explanation = document.getElementById('routing-explanation');
+    if (m2Variant === 'hard') {
+      tag.textContent = 'Routed to Hard Module 2';
+      tag.className = 'module2-tag hard';
+      explanation.textContent = 'Strong Module 1 performance — you\'ve unlocked the harder Module 2 with higher score potential.';
+    } else {
+      tag.textContent = 'Routed to Easy Module 2';
+      tag.className = 'module2-tag easy';
+      explanation.textContent = 'Module 2 will adapt to your current level — focus on accuracy.';
+    }
+    showScreen('screen-routing');
+  }
+
+  // ============ FINAL SCORING ============
+  function calculateFinalScore() {
+    const table = m2Variant === 'hard'
+      ? scoringSpec.final_scoring.hard_module_2_score_table.rows
+      : scoringSpec.final_scoring.easy_module_2_score_table.rows;
+
+    const m1 = m1Result.weighted;
+    const m2 = m2Result.weighted;
+
+    const row = table.find(r =>
+      m1 >= r.m1_score_min && m1 <= r.m1_score_max &&
+      m2 >= r.m2_score_min && m2 <= r.m2_score_max
+    );
+
+    const estimated = row ? row.estimated_score : (m2Variant === 'hard' ? 500 : 220);
+    return { estimated, low: estimated - 15, high: estimated + 15 };
+  }
+
+  function showScoreScreen() {
+    const score = calculateFinalScore();
+    document.getElementById('score-low').textContent = score.low;
+    document.getElementById('score-high').textContent = score.high;
+
+    // Aggregate domains
+    const allDomains = {};
+    [...Object.entries(m1Result.domainStats), ...Object.entries(m2Result.domainStats)].forEach(([d, s]) => {
+      if (!allDomains[d]) allDomains[d] = { correct: 0, total: 0, missedSkills: {} };
+      allDomains[d].correct += s.correct;
+      allDomains[d].total += s.total;
+      Object.entries(s.missedSkills).forEach(([skill, count]) => {
+        allDomains[d].missedSkills[skill] = (allDomains[d].missedSkills[skill] || 0) + count;
+      });
+    });
+    window._allDomains = allDomains;
+    window._finalScore = score;
+
+    // Fill hidden form fields for Formspree
+    document.getElementById('hidden-score-range').value = score.low + '-' + score.high;
+    document.getElementById('hidden-m1-correct').value = m1Result.correct + '/27';
+    document.getElementById('hidden-m1-weighted').value = m1Result.weighted.toFixed(1);
+    document.getElementById('hidden-m2-variant').value = m2Variant === 'hard' ? 'Hard' : 'Easy';
+    document.getElementById('hidden-m2-correct').value = m2Result.correct + '/27';
+    document.getElementById('hidden-m2-weighted').value = m2Result.weighted.toFixed(1);
+    document.getElementById('hidden-total-correct').value = (m1Result.correct + m2Result.correct) + '/54';
+    document.getElementById('hidden-time-used').value = (m1TimeUsed + m2TimeUsed) + ' min';
+
+    let domainSummary = '';
+    Object.entries(allDomains).forEach(([d, s]) => {
+      const pct = Math.round((s.correct / s.total) * 100);
+      domainSummary += `${d}: ${s.correct}/${s.total} (${pct}%) | `;
+    });
+    document.getElementById('hidden-domain-breakdown').value = domainSummary;
+
+    let missedSummary = '';
+    const allMissed = [];
+    Object.entries(allDomains).forEach(([d, s]) => {
+      Object.entries(s.missedSkills).forEach(([skill, count]) => {
+        allMissed.push({ domain: d, skill, count });
+      });
+    });
+    allMissed.sort((a, b) => b.count - a.count).slice(0, 5).forEach((m, i) => {
+      missedSummary += `${i+1}. ${m.skill} (${m.domain}) - missed ${m.count} | `;
+    });
+    document.getElementById('hidden-missed-skills').value = missedSummary;
+
+    // ====== Build detailed answer log for email ======
+    let detailed = '';
+
+    function buildModuleLog(label, questions) {
+      let log = `\n═══════════════════════════════════════\n${label}\n═══════════════════════════════════════\n`;
+      questions.forEach((q, i) => {
+        const userAns = (answers[q.id] || '').toString().trim();
+        const correctAns = q.answer.toString().trim();
+        const isCorrect = isAnswerCorrect(userAns, correctAns, q);
+        const status = userAns === '' ? '— (skipped)' : (isCorrect ? '✓ CORRECT' : '✗ INCORRECT');
+
+        log += `\nQ${i+1} [${q.id}] ${q.difficulty} · ${q.domain}`;
+        if (q.subskill) log += ` · ${q.subskill}`;
+        if (q.skill) log += ` · ${q.skill}`;
+        log += `\n"${q.question}"\n`;
+
+        if (q.choices) {
+          // Show their choice text
+          const userChoiceText = q.choices[userAns] || '(no answer)';
+          const correctChoiceText = q.choices[correctAns] || correctAns;
+          log += `Their answer: ${userAns ? userAns + ' (' + userChoiceText + ')' : '(skipped)'}  ${status}\n`;
+          if (!isCorrect) log += `Correct answer: ${correctAns} (${correctChoiceText})\n`;
+        } else {
+          // SPR
+          log += `Their answer: ${userAns || '(skipped)'}  ${status}\n`;
+          if (!isCorrect) log += `Correct answer: ${correctAns}\n`;
+        }
+      });
+      return log;
+    }
+
+    detailed += buildModuleLog('MODULE 1 — DETAILED ANSWERS', testData.module_1.questions);
+    const m2QData = m2Variant === 'hard' ? testData.hard_module_2.questions : testData.easy_module_2.questions;
+    detailed += buildModuleLog(`MODULE 2 (${m2Variant.toUpperCase()}) — DETAILED ANSWERS`, m2QData);
+
+    document.getElementById('hidden-detailed-answers').value = detailed;
+    // ====== End detailed answer log ======
+
+    showScreen('screen-score');
+  }
+
+  // ============ FORM SUBMIT ============
+  document.getElementById('report-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(() => {
+      showReport();
+    }).catch(() => {
+      // Show report anyway even if formspree fails
+      showReport();
+    });
+  });
+
+  // ============ DIAGNOSTIC REPORT ============
+  function showReport() {
+    const score = window._finalScore;
+    const domains = window._allDomains;
+    const totalCorrect = m1Result.correct + m2Result.correct;
+    const totalQ = 54;
+    const totalTime = m1TimeUsed + m2TimeUsed;
+
+    document.getElementById('report-meta').textContent =
+      'Reading & Writing Mock Test 1 · ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('rpt-score-range').textContent = score.low + '-' + score.high;
+    document.getElementById('rpt-total-correct').textContent = totalCorrect;
+    document.getElementById('rpt-percent').textContent = Math.round(totalCorrect / totalQ * 100) + '%';
+    document.getElementById('rpt-time').textContent = totalTime;
+
+    // Domain breakdown
+    const grid = document.getElementById('domain-grid');
+    grid.innerHTML = '';
+    Object.entries(domains).forEach(([domain, stats]) => {
+      const pct = Math.round((stats.correct / stats.total) * 100);
+      let level, color;
+      if (pct >= 85) { level = 'Strong'; color = '#0F6E56'; }
+      else if (pct >= 65) { level = 'On-Track'; color = '#2563a8'; }
+      else if (pct >= 40) { level = 'Needs-Work'; color = '#D4A017'; }
+      else { level = 'Critical-Gap'; color = '#993C1D'; }
+
+      grid.innerHTML += `
+        <div class="domain-row">
+          <div class="domain-info">
+            <div class="name">${domain}</div>
+            <div class="stats">${stats.correct} / ${stats.total} correct · ${pct}%</div>
+          </div>
+          <div class="domain-bar-wrap"><div class="domain-bar" style="width: ${pct}%; background: ${color};"></div></div>
+          <div class="level-tag ${level}">${level}</div>
+        </div>`;
+    });
+
+    // Top 3 recommendations - rank weakest skills
+    const allMissed = [];
+    Object.entries(domains).forEach(([d, s]) => {
+      Object.entries(s.missedSkills).forEach(([skill, count]) => {
+        allMissed.push({ domain: d, skill, count });
+      });
+    });
+    allMissed.sort((a, b) => b.count - a.count);
+    const top3 = allMissed.slice(0, 3);
+
+    const recList = document.getElementById('recommendations-list');
+    recList.innerHTML = '';
+    if (top3.length === 0) {
+      recList.innerHTML = '<div class="recommendation"><div class="title">Strong performance across all areas!</div><div class="desc">Maintain with periodic review and practice harder questions to push toward your target.</div></div>';
+    } else {
+      top3.forEach((m, i) => {
+        const impact = m.count >= 3 ? '+25-40 points' : (m.count >= 2 ? '+15-25 points' : '+5-15 points');
+        recList.innerHTML += `
+          <div class="recommendation">
+            <div class="title"><span class="rank">${i+1}.</span> ${m.skill} <span style="color: var(--text-muted); font-weight: 400;">(${m.domain})</span></div>
+            <div class="desc">Missed ${m.count} question${m.count > 1 ? 's' : ''} in this skill. Estimated impact with focused practice: <strong>${impact}</strong></div>
+          </div>`;
+      });
+    }
+
+    showScreen('screen-report');
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systems of Linear Equations — ASTA Academy SAT Math Prep</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a3a5c;
+    --navy-light: #2563a8;
+    --gold: #FFD700;
+    --gold-soft: #FFF3B0;
+    --cream: #FAFAF7;
+    --text: #1C1C1E;
+    --text-muted: #6B6B6E;
+    --border: #E8E8E4;
+    --blue-soft: #EBF3FF;
+    --blue-mid: #B5D4F4;
+    --success: #0F6E56;
+    --success-soft: #E1F5EE;
+    --warn-soft: #FAECE7;
+    --warn: #993C1D;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  nav {
+    background: var(--navy);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.active { color: var(--gold); font-weight: 500; }
+  .nav-book {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 500 !important;
+  }
+
+  .breadcrumb {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 20px 40px 0;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+  .breadcrumb a { color: var(--navy-light); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  .lesson-header {
+    padding: 32px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 36px;
+  }
+  .domain-tag {
+    display: inline-block;
+    background: var(--blue-soft);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 99px;
+    margin-bottom: 14px;
+  }
+  .lesson-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .lesson-header .meta {
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  .lesson-header .meta strong { color: var(--text); font-weight: 500; }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .stat-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .stat-card .lbl { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
+
+  section { margin-bottom: 36px; }
+  section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+  section p {
+    font-size: 15px;
+    color: #3a3a3c;
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+
+  /* THREE CASES TABLE */
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .case-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: #fff;
+    text-align: center;
+  }
+  .case-card .case-icon { font-size: 22px; margin-bottom: 6px; }
+  .case-card .case-title { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
+  .case-card .case-desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+  .case-card.highlight { border-color: var(--navy-light); background: var(--blue-soft); }
+
+  .example {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .example-header {
+    background: var(--navy);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .example-num {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 99px;
+  }
+  .example-header span { color: rgba(255,255,255,0.85); font-size: 13px; }
+  .example-body { padding: 20px; }
+  .problem-box {
+    background: var(--blue-soft);
+    border-left: 3px solid var(--navy-light);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    color: var(--navy);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  /* equation display */
+  .eq-system {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--navy);
+  }
+  .eq-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+
+  .steps { list-style: none; }
+  .steps li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    align-items: flex-start;
+  }
+  .step-num {
+    min-width: 22px;
+    height: 22px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .answer-line {
+    background: var(--success-soft);
+    border: 1px solid #9FE1CB;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: var(--success);
+    font-weight: 500;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .answer-line::before { content: "✓"; font-size: 16px; }
+  code {
+    font-family: 'DM Mono', monospace;
+    background: var(--blue-soft);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 13.5px;
+    color: var(--navy);
+  }
+
+  .pro-tip {
+    background: var(--gold-soft);
+    border: 1px solid #F5D700;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #6B5A00;
+    margin-top: 14px;
+  }
+  .pro-tip strong { color: #4A3D00; display: block; margin-bottom: 4px; }
+
+  .trap-box {
+    background: var(--warn-soft);
+    border: 1px solid #F5C4B3;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--warn);
+  }
+  .trap-box strong { display: block; margin-bottom: 6px; font-size: 14px; }
+
+  .method-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 99px;
+    margin-bottom: 10px;
+  }
+  .method-tag.elim { background: #E1F5EE; color: #0F6E56; }
+  .method-tag.sub { background: var(--blue-soft); color: var(--navy); }
+  .method-tag.special { background: var(--warn-soft); color: var(--warn); }
+
+  .cta-section {
+    background: var(--navy);
+    border-radius: 16px;
+    padding: 36px 40px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .cta-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .cta-section p { color: rgba(255,255,255,0.7); font-size: 14.5px; margin-bottom: 24px; }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.9; }
+  .cta-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 12px; }
+
+  .nav-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .nav-link {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    background: #fff;
+    text-decoration: none;
+    transition: border-color 0.15s;
+    display: block;
+  }
+  .nav-link:hover { border-color: var(--navy-light); }
+  .nav-link .label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .nav-link .title { font-size: 14px; font-weight: 500; color: var(--navy); margin-top: 2px; }
+  .nav-link.next { text-align: right; }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 20px 60px; }
+    nav { padding: 0 20px; }
+    .breadcrumb { padding: 16px 20px 0; }
+    .lesson-header h1 { font-size: 26px; }
+    .stats-row, .cases-grid, .nav-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .cta-section { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">★ ASTA <span>Academy</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#why">Why ASTA</a>
+    <a href="sat-math.html" class="active">SAT Math Prep</a>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-book">Book a session</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> &nbsp;›&nbsp;
+  <a href="sat-math.html">SAT Math Prep</a> &nbsp;›&nbsp;
+  Systems of Linear Equations
+</div>
+
+<div class="container">
+
+  <div class="lesson-header">
+    <div class="domain-tag">Heart of Algebra</div>
+    <h1>Systems of Linear Equations</h1>
+    <p class="meta">Written by <strong>Dr. Ashu Jain</strong> &nbsp;·&nbsp; IIT Graduate &nbsp;·&nbsp; ~10 min read</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="num">~8%</div>
+      <div class="lbl">of SAT math questions</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">3</div>
+      <div class="lbl">worked examples</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">#2</div>
+      <div class="lbl">most tested topic</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>The key idea</h2>
+    <p>A system of equations has two equations and two unknowns. Your job is to find the values of both variables that satisfy both equations at the same time. The SAT tests this in three distinct ways — and knowing all three is what separates a 650 from a 750.</p>
+
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-icon">✕</div>
+        <div class="case-title">One solution</div>
+        <div class="case-desc">Lines intersect at one point. Most common case.</div>
+      </div>
+      <div class="case-card highlight">
+        <div class="case-icon">∥</div>
+        <div class="case-title">No solution</div>
+        <div class="case-desc">Lines are parallel. Same slope, different intercepts.</div>
+      </div>
+      <div class="case-card highlight">
+        <div class="case-icon">∞</div>
+        <div class="case-title">Infinite solutions</div>
+        <div class="case-desc">Same line. Both equations are identical when simplified.</div>
+      </div>
+    </div>
+    <p>The highlighted cases — no solution and infinite solutions — are where the SAT loves to trip students up. Master these and you gain points others give away.</p>
+  </section>
+
+  <section>
+    <h2>Worked examples</h2>
+
+    <div class="example">
+      <div class="example-header">
+        <span class="example-num">Example 1</span>
+        <span>Elimination method</span>
+      </div>
+      <div class="example-body">
+        <div class="problem-box">Solve the system: 2x + 3y = 12 &nbsp;and&nbsp; 4x − 3y = 6</div>
+        <span class="method-tag elim">Elimination</span>
+        <div class="eq-label">Notice: the y-coefficients are opposites (+3 and −3)</div>
+        <ul class="steps">
+          <li><span class="step-num">1</span><span>Add the equations together: &nbsp;<code>(2x + 4x) + (3y − 3y) = 12 + 6</code></span></li>
+          <li><span class="step-num">2</span><span>Simplify: &nbsp;<code>6x = 18</code> &nbsp;→&nbsp; <code>x = 3</code></span></li>
+          <li><span class="step-num">3</span><span>Substitute x = 3 into the first equation: &nbsp;<code>2(3) + 3y = 12</code> &nbsp;→&nbsp; <code>3y = 6</code> &nbsp;→&nbsp; <code>y = 2</code></span></li>
+        </ul>
+        <div class="answer-line">Answer: x = 3, y = 2</div>
+        <div class="pro-tip">
+          <strong>Dr. Jain's tip</strong>
+          Use elimination when the coefficients of one variable are already opposites (or easy multiples). It's usually faster than substitution on the SAT.
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-header">
+        <span class="example-num">Example 2</span>
+        <span>Substitution method</span>
+      </div>
+      <div class="example-body">
+        <div class="problem-box">Solve the system: y = 2x − 1 &nbsp;and&nbsp; 3x + y = 14</div>
+        <span class="method-tag sub">Substitution</span>
+        <div class="eq-label">Use substitution when one variable is already isolated</div>
+        <ul class="steps">
+          <li><span class="step-num">1</span><span>The first equation already gives us y. Substitute into the second: &nbsp;<code>3x + (2x − 1) = 14</code></span></li>
+          <li><span class="step-num">2</span><span>Simplify: &nbsp;<code>5x − 1 = 14</code> &nbsp;→&nbsp; <code>5x = 15</code> &nbsp;→&nbsp; <code>x = 3</code></span></li>
+          <li><span class="step-num">3</span><span>Find y: &nbsp;<code>y = 2(3) − 1 = 5</code></span></li>
+        </ul>
+        <div class="answer-line">Answer: x = 3, y = 5</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-header">
+        <span class="example-num">Example 3</span>
+        <span>The no-solution trap</span>
+      </div>
+      <div class="example-body">
+        <div class="problem-box">How many solutions does this system have? &nbsp; 2x + 4y = 8 &nbsp;and&nbsp; x + 2y = 6</div>
+        <span class="method-tag special">Special case</span>
+        <ul class="steps">
+          <li><span class="step-num">1</span><span>Divide the first equation by 2: &nbsp;<code>x + 2y = 4</code></span></li>
+          <li><span class="step-num">2</span><span>Compare with the second equation: &nbsp;<code>x + 2y = 6</code></span></li>
+          <li><span class="step-num">3</span><span>Same left side, different right side — this is a contradiction. The lines are parallel.</span></li>
+        </ul>
+        <div class="answer-line">Answer: No solution</div>
+        <div class="pro-tip">
+          <strong>Dr. Jain's tip</strong>
+          For no-solution questions, the SAT often gives you a system with a missing constant and asks for its value. Always simplify both equations to the same form first, then compare — if left sides match but right sides differ, it's no solution; if both sides match, it's infinite solutions.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Common trap to avoid</h2>
+    <div class="trap-box">
+      <strong>⚠ &nbsp;No-solution vs. infinite solutions</strong>
+      These two cases look similar but mean opposite things. When you reduce both equations to the same form: if the right-hand sides are <em>different</em> → no solution. If the right-hand sides are <em>identical</em> → infinite solutions. The SAT uses this distinction to eliminate students who memorize steps without understanding the geometry.
+    </div>
+  </section>
+
+  <div class="nav-row">
+    <a href="topic1-linear-equations.html" class="nav-link">
+      <div class="label">← Previous topic</div>
+      <div class="title">Linear Equations</div>
+    </a>
+    <a href="topic3-quadratics.html" class="nav-link next">
+      <div class="label">Next topic →</div>
+      <div class="title">Quadratic Equations</div>
+    </a>
+  </div>
+
+  <div class="cta-section">
+    <h3>Want to go deeper?</h3>
+    <p>Dr. Jain works through harder problems live — tailored to exactly where you're stuck.</p>
+    <a class="cta-btn" href="https://calendly.com/ashu3069usa" target="_blank">Book a free 15-min session</a>
+    <p class="cta-sub">No commitment. Just focused help.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

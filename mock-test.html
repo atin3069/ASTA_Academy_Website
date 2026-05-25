@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free SAT Math Mock Test — ASTA Academy</title>
+<title>Free SAT Mock Tests — ASTA Academy</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -212,6 +212,7 @@
     .steps-grid { grid-template-columns: 1fr; }
     .details-grid { grid-template-columns: 1fr 1fr; }
     .cta-card { padding: 28px 20px; }
+    .test-grid { grid-template-columns: 1fr; }
   }
 
   /* HAMBURGER MENU (mobile) */
@@ -278,6 +279,75 @@
     .hamburger { display: flex !important; }
   }
 
+
+  /* TEST SELECTION CARDS */
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .test-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .test-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(26,58,92,0.12);
+  }
+  .test-card-banner {
+    padding: 28px;
+    color: #fff;
+  }
+  .test-card-banner.math {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  }
+  .test-card-banner.rw {
+    background: linear-gradient(135deg, #1D6B52 0%, #2C9B76 100%);
+  }
+  .test-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 99px;
+    margin-bottom: 12px;
+  }
+  .test-card-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; font-weight: 600;
+    line-height: 1.2;
+  }
+  .test-card-body {
+    padding: 28px;
+    display: flex; flex-direction: column; flex: 1;
+  }
+  .test-meta {
+    display: flex; flex-direction: column; gap: 10px;
+    padding-bottom: 18px; margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .test-meta-item {
+    display: flex; justify-content: space-between;
+    font-size: 14px;
+  }
+  .test-meta-item span { color: var(--text-muted); }
+  .test-meta-item strong { color: var(--navy); font-weight: 600; }
+  .test-start-btn {
+    display: block;
+    background: var(--gold); color: var(--navy);
+    text-align: center;
+    font-weight: 700; font-size: 15px;
+    padding: 14px; border-radius: 10px;
+    margin-top: auto;
+    transition: transform 0.15s;
+  }
+  .test-start-btn:hover { transform: translateY(-1px); }
+
 </style>
 </head>
 <body>
@@ -321,16 +391,16 @@
 
 <div class="hero">
   <div class="hero-tag">Free Diagnostic Test</div>
-  <h1>Find out exactly where your student stands on <em>SAT Math</em></h1>
-  <p>A full-length, adaptive Digital SAT Math mock test — completely free. Get a personalized diagnostic report showing strengths, weaknesses, and the topics most likely to boost the score.</p>
+  <h1>Find out exactly where your student stands on the <em>SAT</em></h1>
+  <p>Full-length, adaptive Digital SAT mock tests — completely free. Choose Math or Reading &amp; Writing, then get a personalized diagnostic report showing strengths, weaknesses, and the topics most likely to boost the score.</p>
   <div class="hero-features">
     <div class="feature-pill">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      70 minutes
+      Timed &amp; adaptive
     </div>
     <div class="feature-pill">
       <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      44 adaptive questions
+      Math &amp; Reading/Writing
     </div>
     <div class="feature-pill">
       <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -357,7 +427,7 @@
     <div class="step-card">
       <div class="step-num">2</div>
       <h3>Get your score</h3>
-      <p>Estimated SAT Math score range based on weighted-difficulty analysis. Honest numbers, not inflated promises.</p>
+      <p>Estimated SAT score range based on weighted-difficulty analysis. Honest numbers, not inflated promises.</p>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
@@ -366,37 +436,56 @@
     </div>
   </div>
 
-  <div class="details-card">
-    <div class="section-label">Test details</div>
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); font-weight: 600;">SAT Math Mock Test 1</h3>
-    <div class="details-grid">
-      <div class="detail-item">
-        <h4>Format</h4>
-        <p>Adaptive 2-module</p>
+  <div class="section-label" style="text-align:center; margin-bottom: 8px;">Choose a test</div>
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 30px; color: var(--navy); font-weight: 600; text-align: center; margin-bottom: 32px;">Available mock tests</h2>
+
+  <div class="test-grid">
+
+    <div class="test-card">
+      <div class="test-card-banner math">
+        <span class="test-badge">Math</span>
+        <h3>SAT Math Mock Test 1</h3>
       </div>
-      <div class="detail-item">
-        <h4>Total time</h4>
-        <p>70 minutes</p>
-      </div>
-      <div class="detail-item">
-        <h4>Score range</h4>
-        <p>200–800</p>
+      <div class="test-card-body">
+        <div class="test-meta">
+          <div class="test-meta-item"><span>Format</span><strong>Adaptive 2-module</strong></div>
+          <div class="test-meta-item"><span>Time</span><strong>Timed &amp; adaptive</strong></div>
+          <div class="test-meta-item"><span>Score</span><strong>200–800</strong></div>
+        </div>
+        <div class="domain-tags">
+          <div class="domain-tag">Algebra</div>
+          <div class="domain-tag">Advanced Math</div>
+          <div class="domain-tag">Problem-Solving &amp; Data</div>
+          <div class="domain-tag">Geometry &amp; Trig</div>
+        </div>
+        <a class="test-start-btn" href="mock-test-runner.html">Start Math Test →</a>
       </div>
     </div>
-    <div class="domain-tags">
-      <div class="domain-tag">Algebra</div>
-      <div class="domain-tag">Advanced Math</div>
-      <div class="domain-tag">Problem-Solving &amp; Data Analysis</div>
-      <div class="domain-tag">Geometry &amp; Trigonometry</div>
+
+    <div class="test-card">
+      <div class="test-card-banner rw">
+        <span class="test-badge">Reading &amp; Writing</span>
+        <h3>SAT Reading &amp; Writing Mock Test 1</h3>
+      </div>
+      <div class="test-card-body">
+        <div class="test-meta">
+          <div class="test-meta-item"><span>Format</span><strong>Adaptive 2-module</strong></div>
+          <div class="test-meta-item"><span>Time</span><strong>64 minutes</strong></div>
+          <div class="test-meta-item"><span>Score</span><strong>200–800</strong></div>
+        </div>
+        <div class="domain-tags">
+          <div class="domain-tag">Information &amp; Ideas</div>
+          <div class="domain-tag">Craft &amp; Structure</div>
+          <div class="domain-tag">Expression of Ideas</div>
+          <div class="domain-tag">English Conventions</div>
+        </div>
+        <a class="test-start-btn" href="rw-mock-test-runner.html">Start Reading &amp; Writing Test →</a>
+      </div>
     </div>
+
   </div>
 
-  <div class="cta-card">
-    <h3>Ready to start?</h3>
-    <p>Set aside 70 minutes — find a quiet spot, grab scratch paper, and begin.</p>
-    <a class="start-btn" href="mock-test-runner.html">Start Mock Test 1 →</a>
-    <p class="cta-sub">No login. No payment. Just you and the test.</p>
-  </div>
+  <p class="cta-sub" style="text-align:center; margin-top: 24px; color: var(--text-muted); font-size: 13px;">No login. No payment. Just you and the test.</p>
 
   <div class="disclaimer">
     <strong>Honest disclaimer</strong>

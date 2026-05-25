@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ASTA Academy</title>
+<meta name="description" content="ASTA Academy privacy policy — how we collect, use, and protect your information.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e3a6f;
+    --navy-light: #2563a8;
+    --gold: #e8a838;
+    --cream: #f8f6f0;
+    --text: #1C1C1E;
+    --text-muted: #6B6B6E;
+    --border: #E8E8E4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+  a { color: var(--navy-light); }
+
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 3px 20px rgba(12,68,124,0.35);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-name { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+  .nav-logo-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 3px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta { background: var(--gold) !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; }
+
+  .hamburger {
+    display: none; background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2); color: #fff; cursor: pointer;
+    padding: 9px 11px; border-radius: 8px;
+  }
+  .hamburger svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; }
+  .mobile-menu {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
+    z-index: 999; padding: 90px 32px 40px; overflow-y: auto;
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu a { display: block; color: #fff; font-size: 20px; font-weight: 500; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.15); text-decoration: none; }
+  .mobile-menu a.book { background: var(--gold); color: #412402; border-radius: 10px; padding: 16px 20px; margin-top: 24px; font-weight: 700; text-align: center; }
+  .mobile-menu-close { position: absolute; top: 22px; right: 22px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; cursor: pointer; padding: 9px 11px; border-radius: 8px; }
+  .mobile-menu-close svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; }
+
+  .page-header {
+    background: var(--navy); padding: 56px 40px 48px; text-align: center;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif; font-size: 38px;
+    color: #fff; font-weight: 600; margin-bottom: 8px;
+  }
+  .page-header p { color: rgba(255,255,255,0.65); font-size: 14px; }
+
+  .content { max-width: 760px; margin: 0 auto; padding: 50px 40px 70px; }
+  .content h2 {
+    font-family: 'Playfair Display', serif; font-size: 22px;
+    color: var(--navy); font-weight: 600;
+    margin: 36px 0 12px;
+  }
+  .content h2:first-child { margin-top: 0; }
+  .content p { margin-bottom: 14px; font-size: 15px; color: var(--text); }
+  .content ul { margin: 0 0 14px 22px; }
+  .content li { margin-bottom: 8px; font-size: 15px; }
+  .content strong { color: var(--navy); }
+  .intro-note {
+    background: #fff; border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px; padding: 18px 22px; margin-bottom: 32px;
+    font-size: 14px; color: var(--text-muted);
+  }
+
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.7);
+    padding: 40px 40px 28px; text-align: center; font-size: 13px;
+  }
+  footer a { color: rgba(255,255,255,0.85); }
+  .footer-links { margin-bottom: 14px; }
+  .footer-links a { margin: 0 12px; text-decoration: none; }
+  .footer-copyright { color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 12px; }
+
+  @media (max-width: 720px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links, .nav-cta { display: none !important; }
+    .hamburger { display: flex !important; }
+    .page-header { padding: 40px 20px; }
+    .page-header h1 { font-size: 28px; }
+    .content { padding: 36px 20px 50px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="12" width="40" height="28" rx="3" fill="#185FA5"/>
+      <rect x="22" y="12" width="20" height="28" fill="#0C447C"/>
+      <line x1="22" y1="12" x2="22" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+      <polygon points="22,1 24.8,8.5 33,8.5 26.5,13.5 29,21 22,16.5 15,21 17.5,13.5 11,8.5 19.2,8.5" fill="#EF9F27"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">ASTA Academy</span>
+      <span class="nav-logo-sub">Math &amp; Science Tutoring</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="sat-math.html">SAT Math Prep</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a href="mock-test.html">Mock Test</a>
+  </div>
+  <a class="nav-cta" href="https://calendly.com/ashu3069usa" target="_blank">Free Consultation</a>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="sat-math.html">SAT Math Prep</a>
+  <a href="question-bank.html">Question Bank</a>
+  <a href="mock-test.html">Mock Test</a>
+  <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Free Consultation</a>
+</div>
+
+<div class="page-header">
+  <h1>Privacy Policy</h1>
+  <p>Last updated: May 2026</p>
+</div>
+
+<div class="content">
+
+  <div class="intro-note">
+    ASTA Academy ("we," "us," or "our") respects your privacy. This policy explains what information we collect when you use our website and services, how we use it, and your choices. By using our website, you agree to the practices described here.
+  </div>
+
+  <h2>Information we collect</h2>
+  <p>We collect information you choose to provide, primarily when you complete a mock test or contact us. This may include:</p>
+  <ul>
+    <li><strong>Contact information</strong> — parent or guardian name, student name, email address, and phone number (if provided).</li>
+    <li><strong>Mock test responses</strong> — your answers, scores, and performance data from any practice test or mock test you take on our site.</li>
+    <li><strong>Booking information</strong> — if you schedule a consultation, the details you provide through our scheduling tool.</li>
+  </ul>
+  <p>We do not require you to create an account, and we do not knowingly collect more information than needed to provide our services.</p>
+
+  <h2>How we use your information</h2>
+  <p>We use the information we collect to:</p>
+  <ul>
+    <li>Generate and send your personalized diagnostic report after a mock test.</li>
+    <li>Respond to your inquiries and follow up about tutoring services.</li>
+    <li>Improve our courses, practice questions, and mock tests.</li>
+  </ul>
+  <p>We do not sell your personal information to third parties.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Our services are designed for students, including minors. We intentionally collect contact information from a <strong>parent or guardian</strong> rather than directly from children. We ask that a parent or guardian provide and consent to the use of any contact details submitted through our forms. If you believe a child has provided us personal information without parental consent, please contact us and we will promptly delete it.</p>
+
+  <h2>Third-party services</h2>
+  <p>We use trusted third-party services to operate our website and deliver our services. These providers process limited information on our behalf:</p>
+  <ul>
+    <li><strong>Formspree</strong> — processes mock test form submissions and forwards them to us by email.</li>
+    <li><strong>Calendly</strong> — handles consultation scheduling.</li>
+    <li><strong>Google (Gmail)</strong> — we receive and store lead emails and may use Gmail to correspond with you.</li>
+    <li><strong>YouTube (Google)</strong> — our video lessons are embedded from YouTube, which may set cookies as described in Google's privacy policy.</li>
+    <li><strong>Netlify and GitHub Pages</strong> — host our website and may log standard technical data such as IP addresses for security and performance.</li>
+  </ul>
+  <p>Each of these providers has its own privacy policy governing how it handles data.</p>
+
+  <h2>Data retention</h2>
+  <p>We keep the information you provide until you ask us to delete it, or after approximately two years of inactivity, whichever comes first. You may request deletion of your information at any time (see "Your choices" below).</p>
+
+  <h2>Your choices</h2>
+  <p>You may:</p>
+  <ul>
+    <li>Request a copy of the personal information we hold about you.</li>
+    <li>Request correction or deletion of your information.</li>
+    <li>Ask us to stop contacting you at any time.</li>
+  </ul>
+  <p>To make any of these requests, email us at <a href="mailto:ashu3069usa@gmail.com">ashu3069usa@gmail.com</a>.</p>
+
+  <h2>Cookies and tracking</h2>
+  <p>Our website does not use advertising or analytics tracking cookies. Some embedded content (such as YouTube videos) may set their own cookies when you interact with them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review it periodically.</p>
+
+  <h2>Contact us</h2>
+  <p>If you have questions about this privacy policy or how we handle your information, contact us at:</p>
+  <p>
+    <strong>ASTA Academy</strong><br>
+    Email: <a href="mailto:ashu3069usa@gmail.com">ashu3069usa@gmail.com</a><br>
+    Phone / WhatsApp: <a href="https://wa.me/18326231801">+1 (832) 623-1801</a>
+  </p>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="sat-math.html">SAT Math Prep</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a href="mock-test.html">Mock Test</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div class="footer-copyright">© 2025–2026 ASTA Academy. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

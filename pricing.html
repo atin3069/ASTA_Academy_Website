@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTA Academy — SAT Math Tutoring Pricing</title>
+<meta name="description" content="SAT Math tutoring packages with Dr. Ashu Jain, retired IIT Kanpur professor. Every student starts with a free 1-hour consultation and diagnostic. Plans from $30/hour.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e3a6f;
+    --navy-light: #2563a8;
+    --gold: #e8a838;
+    --green: #1f7a5c;
+    --cream: #f8f6f0;
+    --text: #1C1C1E;
+    --text-muted: #6B6B6E;
+    --border: #E8E8E4;
+    --blue-soft: #eaf1fb;
+    --blue-border: #c7dbf4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+  a { text-decoration: none; color: inherit; }
+
+  /* NAV */
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 3px 20px rgba(12,68,124,0.35);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-name { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+  .nav-logo-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 3px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 26px; }
+  .nav-links a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: #fff; }
+  .nav-links a.active { color: var(--gold); }
+  .nav-cta { background: var(--gold) !important; color: #412402 !important; padding: 10px 22px !important; border-radius: 8px !important; font-weight: 700 !important; }
+  .nav-cta:hover { background: #BA7517 !important; color: #fff !important; }
+
+  .hamburger {
+    display: none; background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2); color: #fff; cursor: pointer;
+    padding: 9px 11px; border-radius: 8px;
+  }
+  .hamburger svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; }
+  .mobile-menu {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, #0C447C 0%, #185FA5 55%, #1D9E75 100%);
+    z-index: 999; padding: 90px 32px 40px; overflow-y: auto;
+  }
+  .mobile-menu.open { display: block; }
+  .mobile-menu a { display: block; color: #fff; font-size: 20px; font-weight: 500; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.15); }
+  .mobile-menu a.book { background: var(--gold); color: #412402; border-radius: 10px; padding: 16px 20px; margin-top: 24px; font-weight: 700; text-align: center; }
+  .mobile-menu-close { position: absolute; top: 22px; right: 22px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; cursor: pointer; padding: 9px 11px; border-radius: 8px; }
+  .mobile-menu-close svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 2.2; }
+
+  /* HERO */
+  .hero { background: var(--navy); padding: 56px 40px 48px; text-align: center; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif; font-size: 42px;
+    color: #fff; font-weight: 600; line-height: 1.15; margin-bottom: 12px;
+  }
+  .hero p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 560px; margin: 0 auto; }
+
+  .container { max-width: 1000px; margin: 0 auto; padding: 50px 40px 70px; }
+
+  /* CONSULT BANNER */
+  .consult-banner {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--blue-soft); border: 1px solid var(--blue-border);
+    border-radius: 14px; padding: 22px 26px; margin-bottom: 40px;
+  }
+  .consult-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: var(--navy-light); color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 700;
+  }
+  .consult-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .consult-text { font-size: 14.5px; color: #3A5A8A; line-height: 1.6; }
+
+  /* PACKAGE CARDS */
+  .pkg-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 22px; align-items: stretch;
+  }
+  .pkg-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 30px 26px;
+    display: flex; flex-direction: column;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .pkg-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(30,58,111,0.1); }
+  .pkg-card.featured {
+    border: 2px solid var(--navy-light);
+    box-shadow: 0 6px 28px rgba(37,99,168,0.14);
+  }
+  .pkg-badge {
+    position: absolute; top: -12px; left: 22px;
+    background: var(--navy-light); color: #fff;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 99px;
+  }
+  .pkg-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; color: var(--navy); font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .pkg-dur { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
+  .pkg-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; color: var(--navy); font-weight: 600;
+    line-height: 1;
+  }
+  .pkg-rate { font-size: 13px; color: var(--text-muted); margin-top: 4px; margin-bottom: 18px; }
+  .pkg-topics {
+    border-top: 1px solid var(--border);
+    padding-top: 16px; margin-bottom: 14px;
+    font-size: 14px; color: var(--green); font-weight: 600;
+  }
+  .pkg-topics-num { font-size: 16px; }
+  .pkg-desc { font-size: 13.5px; color: var(--text); line-height: 1.55; flex-grow: 1; }
+
+  /* PER SESSION STRIP */
+  .per-session-strip {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--cream); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 28px; margin-top: 22px;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .strip-label { font-size: 15px; color: var(--text); }
+  .strip-label strong { color: var(--navy); }
+  .strip-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; color: var(--navy); font-weight: 600;
+  }
+  .strip-per { font-size: 14px; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
+
+  /* INCLUDES + HOW IT WORKS */
+  .two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    margin-top: 56px;
+  }
+  .col-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; color: var(--navy); font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .includes-list { list-style: none; padding: 0; }
+  .includes-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 10px 0; font-size: 15px; color: var(--text);
+    border-bottom: 1px solid var(--border);
+  }
+  .includes-list li:last-child { border-bottom: none; }
+  .includes-check {
+    flex-shrink: 0; width: 22px; height: 22px;
+    background: #E1F5EE; color: var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+  }
+  .steps-list { list-style: none; padding: 0; counter-reset: step; }
+  .steps-list li {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 10px 0; font-size: 15px; color: var(--text);
+  }
+  .step-num {
+    flex-shrink: 0; width: 28px; height: 28px;
+    background: var(--navy); color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 600;
+  }
+
+  /* FOOTNOTE */
+  .syllabus-note {
+    font-size: 11px; color: var(--text-muted);
+    text-align: center; max-width: 620px; margin: 48px auto 0;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta-section { text-align: center; margin-top: 50px; }
+  .cta-btn {
+    display: inline-block; background: var(--gold); color: #412402;
+    font-weight: 700; font-size: 16px; padding: 15px 38px;
+    border-radius: 10px; transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 14px rgba(232,168,56,0.3);
+  }
+  .cta-btn:hover { background: #BA7517; color: #fff; transform: translateY(-1px); }
+  .cta-contact { font-size: 13px; color: var(--text-muted); margin-top: 16px; }
+  .cta-contact a { color: var(--navy-light); }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--navy); color: rgba(255,255,255,0.7);
+    padding: 36px 40px 28px; text-align: center; font-size: 13px;
+    margin-top: 60px;
+  }
+  .site-footer a { color: rgba(255,255,255,0.85); }
+  .site-footer a:hover { color: var(--gold); }
+  .site-footer-links { margin-bottom: 12px; }
+  .site-footer-links a { margin: 0 10px; }
+  .site-footer-copyright { color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 10px; }
+
+  @media (max-width: 860px) {
+    .pkg-grid { grid-template-columns: 1fr; gap: 28px; }
+    .pkg-card.featured { order: -1; }
+    .two-col { grid-template-columns: 1fr; gap: 36px; }
+  }
+  @media (max-width: 720px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links, .nav-cta { display: none !important; }
+    .hamburger { display: flex !important; }
+    .hero { padding: 40px 20px; }
+    .hero h1 { font-size: 30px; }
+    .container { padding: 36px 20px 50px; }
+    .consult-banner { flex-direction: column; padding: 20px; }
+    .per-session-strip { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="12" width="40" height="28" rx="3" fill="#185FA5"/>
+      <rect x="22" y="12" width="20" height="28" fill="#0C447C"/>
+      <line x1="22" y1="12" x2="22" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+      <polygon points="22,1 24.8,8.5 33,8.5 26.5,13.5 29,21 22,16.5 15,21 17.5,13.5 11,8.5 19.2,8.5" fill="#EF9F27"/>
+    </svg>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">ASTA Academy</span>
+      <span class="nav-logo-sub">Math &amp; Science Tutoring</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="sat-math.html">SAT Math Prep</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a href="mock-test.html">Mock Test</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <a href="https://calendly.com/ashu3069usa" target="_blank" class="nav-cta">Free Consultation</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
+    <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="sat-math.html">SAT Math Prep</a>
+  <a href="question-bank.html">Question Bank</a>
+  <a href="mock-test.html">Mock Test</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="https://calendly.com/ashu3069usa" target="_blank" class="book">Free Consultation</a>
+</div>
+
+<div class="hero">
+  <h1>SAT Math Tutoring Plans</h1>
+  <p>One-on-one with Dr. Ashu Jain. Transparent pricing, personalized to your student's diagnostic.</p>
+</div>
+
+<div class="container">
+
+  <!-- FREE CONSULTATION BANNER -->
+  <div class="consult-banner">
+    <span class="consult-icon" aria-hidden="true">&#10003;</span>
+    <div>
+      <p class="consult-title">Every student starts with a free 1-hour consultation</p>
+      <p class="consult-text">
+        We assess where your student stands across all 20 SAT math topics, then build a plan around the areas that will move their score the most. Which topics each plan covers is decided together, after the diagnostic.
+      </p>
+    </div>
+  </div>
+
+  <!-- PACKAGE CARDS -->
+  <div class="pkg-grid">
+
+    <div class="pkg-card">
+      <h3 class="pkg-name">Lite</h3>
+      <p class="pkg-dur">4 weeks · 9 hours</p>
+      <p class="pkg-price">$405</p>
+      <p class="pkg-rate">$45 / hour</p>
+      <p class="pkg-topics"><span class="pkg-topics-num">6–8</span> topics covered</p>
+      <p class="pkg-desc">A focused tune-up targeting the highest-impact gaps. Best for a near-term test date.</p>
+    </div>
+
+    <div class="pkg-card">
+      <h3 class="pkg-name">Selective</h3>
+      <p class="pkg-dur">8 weeks · 18 hours</p>
+      <p class="pkg-price">$630</p>
+      <p class="pkg-rate">$35 / hour</p>
+      <p class="pkg-topics"><span class="pkg-topics-num">12–15</span> topics covered</p>
+      <p class="pkg-desc">Most of the test, weighted to your student's needs. Best for most students.</p>
+    </div>
+
+    <div class="pkg-card featured">
+      <span class="pkg-badge">Best value</span>
+      <h3 class="pkg-name">Comprehensive</h3>
+      <p class="pkg-dur">12 weeks · 30 hours</p>
+      <p class="pkg-price">$900</p>
+      <p class="pkg-rate">$30 / hour — lowest rate</p>
+      <p class="pkg-topics"><span class="pkg-topics-num">All 20</span> topics + practice</p>
+      <p class="pkg-desc">Full syllabus with timed practice and review. Best for a top-score goal.</p>
+    </div>
+
+  </div>
+
+  <!-- PAY PER SESSION STRIP -->
+  <div class="per-session-strip">
+    <span class="strip-label"><strong>Pay per session</strong> — flexible, no commitment</span>
+    <span class="strip-price">$55<span class="strip-per"> / hour</span></span>
+  </div>
+
+  <!-- INCLUDES + HOW IT WORKS -->
+  <div class="two-col">
+    <div>
+      <h3 class="col-title">Every plan includes</h3>
+      <ul class="includes-list">
+        <li><span class="includes-check">&#10003;</span> Diagnostic test report</li>
+        <li><span class="includes-check">&#10003;</span> 1-on-1 sessions with Dr. Jain</li>
+        <li><span class="includes-check">&#10003;</span> Weekly assignments</li>
+        <li><span class="includes-check">&#10003;</span> Live in-session quizzes</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="col-title">How it works</h3>
+      <ul class="steps-list">
+        <li><span class="step-num">1</span> Free consultation &amp; diagnostic assessment</li>
+        <li><span class="step-num">2</span> We build a personalized topic plan together</li>
+        <li><span class="step-num">3</span> Weekly 1-on-1 sessions with practice between</li>
+        <li><span class="step-num">4</span> Progress tracking through to test day</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SYLLABUS FOOTNOTE -->
+  <p class="syllabus-note">
+    The SAT math syllabus covers 20 topics across Algebra, Advanced Math, Problem Solving &amp; Data Analysis, and Geometry &amp; Trigonometry. Topic counts are typical ranges — the exact plan depends on your student's diagnostic results.
+  </p>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <a class="cta-btn" href="https://calendly.com/ashu3069usa" target="_blank">Book a Free Consultation</a>
+    <p class="cta-contact">Questions? Call or text <a href="https://wa.me/18326231801">(832) 623-1801</a> · <a href="mailto:ashu3069usa@gmail.com">ashu3069usa@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-links">
+    <a href="index.html">Home</a>
+    <a href="sat-math.html">SAT Math Prep</a>
+    <a href="question-bank.html">Question Bank</a>
+    <a href="mock-test.html">Mock Test</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div class="site-footer-copyright">© 2025–2026 ASTA Academy. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

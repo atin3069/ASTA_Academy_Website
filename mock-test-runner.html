@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mock Test in Progress — ASTA Academy</title>
+<title>Diagnostic Test in Progress — ASTA Academy</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -473,7 +473,7 @@
       <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
     </div>
     <h2>Best on a larger screen</h2>
-    <p>The SAT Math Mock Test is 70 minutes long with full-length questions and tight timing. For the best experience, please take it on a desktop, laptop, or tablet.</p>
+    <p>The SAT Diagnostic Test is 70 minutes long with full-length questions and tight timing. For the best experience, please take it on a desktop, laptop, or tablet.</p>
     <p style="font-size: 13px;">Want to try other free resources right now? Visit our video lessons or question bank.</p>
     <a class="mobile-block-back" href="index.html">← Back to ASTA Academy</a>
   </div>
@@ -481,7 +481,7 @@
 
 <!-- TEST HEADER (shown during test) -->
 <div class="test-header" id="test-header" style="display:none;">
-  <div class="test-title">SAT Math Mock Test 1 · <span id="header-module">Module 1</span></div>
+  <div class="test-title">SAT Math Diagnostic Test 1 · <span id="header-module">Module 1</span></div>
   <div class="timer" id="timer">35:00</div>
 </div>
 
@@ -492,7 +492,7 @@
   <div class="welcome-wrap">
     <div class="welcome-card">
       <h1>Ready to begin?</h1>
-      <p>You're about to take ASTA Academy's SAT Math Mock Test 1. Make sure you're in a quiet space with scratch paper before starting.</p>
+      <p>You're about to take ASTA Academy's SAT Math Diagnostic Test 1. Make sure you're in a quiet space with scratch paper before starting.</p>
 
       <div class="module-info">
         <div class="module-info-row"><span>Module 1 (now)</span><strong>22 questions · 35 min</strong></div>
@@ -634,7 +634,7 @@
   <div class="report-wrap">
     <div class="report-header">
       <h1>Diagnostic Report</h1>
-      <div class="meta" id="report-meta">Mock Test 1 · Date</div>
+      <div class="meta" id="report-meta">Diagnostic Test 1 · Date</div>
     </div>
 
     <div class="report-section">
@@ -1147,7 +1147,7 @@
     const totalTime = m1TimeUsed + m2TimeUsed;
 
     document.getElementById('report-meta').textContent =
-      'Mock Test 1 · ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      'Diagnostic Test 1 · ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     document.getElementById('rpt-score-range').textContent = score.low + '-' + score.high;
     document.getElementById('rpt-total-correct').textContent = totalCorrect;
     document.getElementById('rpt-percent').textContent = Math.round(totalCorrect / totalQ * 100) + '%';

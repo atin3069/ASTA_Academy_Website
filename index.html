@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASTA Academy — SAT Math Tutoring with a Retired IIT Kanpur Professor</title>
-<meta name="description" content="SAT Math tutoring with Dr. Ashu Jain, retired IIT Kanpur professor. 30+ years of university teaching, now 1-on-1 with your student. Online nationwide, in-person in Michigan.">
-<meta property="og:title" content="ASTA Academy — SAT Math with a Retired IIT Kanpur Professor">
-<meta property="og:description" content="1-on-1 SAT Math tutoring with Dr. Ashu Jain. Real understanding over rote memorization.">
+<title>ASTA Academy — Math Tutoring & Test Prep with a Retired IIT Kanpur Professor</title>
+<meta name="description" content="1-on-1 math tutoring and SAT, ACT, and AP test prep with Dr. Ashu Jain, retired IIT Kanpur professor. 30+ years of university teaching. Online nationwide, in-person in Michigan.">
+<meta property="og:title" content="ASTA Academy — Math Tutoring with a Retired IIT Kanpur Professor">
+<meta property="og:description" content="1-on-1 SAT, ACT, AP, and school math tutoring with Dr. Ashu Jain. Real understanding over rote memorization.">
 <meta property="og:url" content="https://astaeducation.netlify.app">
 <meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -363,6 +363,205 @@
     .hero-ctas { flex-direction: column; align-items: stretch; }
     .btn-primary, .btn-secondary { text-align: center; }
   }
+
+  /* WHAT WE OFFER */
+  .offer-section {
+    padding: 80px 40px;
+    background: #fff;
+  }
+  .offer-inner { max-width: 1100px; margin: 0 auto; }
+  .offer-kicker {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); text-align: center;
+    margin-bottom: 8px;
+  }
+  .offer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; color: var(--navy);
+    font-weight: 600; text-align: center;
+    margin-bottom: 48px;
+  }
+  .offer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .offer-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .offer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(30,58,111,0.08);
+  }
+  .offer-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; color: var(--navy);
+    font-weight: 600; margin-bottom: 10px;
+  }
+  .offer-desc {
+    font-size: 15px; color: var(--text);
+    line-height: 1.6; margin-bottom: 18px;
+  }
+  .offer-list {
+    list-style: none; padding: 0;
+    margin: 0 0 20px;
+  }
+  .offer-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 7px 0;
+    font-size: 14.5px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .offer-list li::before {
+    content: '\2713';
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .offer-note {
+    font-size: 13.5px; color: var(--text-muted);
+    line-height: 1.6; margin-bottom: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-style: italic;
+  }
+  .offer-cta {
+    color: var(--navy); font-weight: 600;
+    font-size: 14.5px;
+    border-bottom: 1.5px solid transparent;
+    padding-bottom: 2px; margin-top: auto;
+    align-self: flex-start;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .offer-cta:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* FREE RESOURCES STRIP */
+  .free-resources-section {
+    padding: 30px 40px;
+    background: var(--cream);
+  }
+  .free-resources-strip {
+    max-width: 1100px; margin: 0 auto;
+    background: #fff;
+    border: 1px solid var(--blue-border, #c7dbf4);
+    border-radius: 14px;
+    padding: 24px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .free-resources-text { flex: 1; }
+  .free-resources-text h4 {
+    font-size: 18px; color: var(--navy);
+    font-weight: 600; margin-bottom: 4px;
+  }
+  .free-resources-text p {
+    font-size: 14px; color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .free-resources-cta {
+    color: var(--navy); background: var(--gold);
+    padding: 12px 22px; border-radius: 10px;
+    font-weight: 700; font-size: 14px;
+    white-space: nowrap; flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .free-resources-cta:hover { background: #BA7517; color: #fff; }
+
+  /* HOW IT WORKS - 4 STEPS */
+  .how-section {
+    padding: 70px 40px;
+    background: #fff;
+  }
+  .how-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .how-inner .section-label {
+    text-align: center;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--navy-light); margin-bottom: 8px;
+  }
+  .how-inner .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; color: var(--navy);
+    font-weight: 600; text-align: center;
+    margin-bottom: 44px;
+  }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .step-card {
+    text-align: center;
+    padding: 0 8px;
+  }
+  .step-circle {
+    width: 52px; height: 52px;
+    background: var(--navy); color: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 600;
+    margin: 0 auto 18px;
+  }
+  .step-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; color: var(--navy);
+    font-weight: 600; margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .step-card p {
+    font-size: 14px; color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* FINAL CTA */
+  .final-cta-section {
+    background: var(--navy);
+    padding: 70px 40px;
+    text-align: center;
+  }
+  .final-cta-inner { max-width: 640px; margin: 0 auto; }
+  .final-cta-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; color: #fff;
+    font-weight: 600; margin-bottom: 16px;
+  }
+  .final-cta-inner p {
+    font-size: 16px; color: rgba(255,255,255,0.75);
+    line-height: 1.7; margin-bottom: 28px;
+  }
+  .final-cta-btn {
+    display: inline-block;
+    background: var(--gold); color: #412402;
+    font-weight: 700; font-size: 16px;
+    padding: 15px 36px; border-radius: 10px;
+    transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 14px rgba(232,168,56,0.3);
+  }
+  .final-cta-btn:hover { background: #BA7517; color: #fff; transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .offer-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .free-resources-strip { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 720px) {
+    .offer-section, .how-section, .final-cta-section { padding: 50px 20px; }
+    .free-resources-section { padding: 20px; }
+    .free-resources-strip { padding: 22px 20px; }
+    .offer-title, .how-inner .section-title, .final-cta-inner h2 { font-size: 26px; }
+    .offer-card { padding: 26px 22px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
 </style>
 </head>
 <body>
@@ -409,12 +608,12 @@
 <div class="hero">
   <div class="hero-inner">
     <div>
-      <div class="kicker-pill">1-on-1 SAT Math · Online &amp; In-Person</div>
-      <h1>SAT Math taught by a <span class="text-blue">retired IIT Kanpur professor.</span></h1>
-      <p class="hero-subhead">30+ years teaching mathematics at the university level. Now 1-on-1 with your student.<br>Online nationwide, in-person in Michigan.</p>
+      <div class="kicker-pill">1-on-1 Tutoring · Michigan &amp; Online</div>
+      <h1>Math taught by a <span class="text-blue">retired IIT Kanpur professor.</span></h1>
+      <p class="hero-subhead">Dr. Ashu Jain — 30+ years teaching math at the university level. Now 1-on-1 with your student.<br>Online nationwide, in-person in Michigan.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="https://calendly.com/ashu3069usa" target="_blank">Book a Free Consultation</a>
-        <a class="btn-secondary" href="sat-math.html">Browse Free SAT Lessons</a>
+        <a class="btn-secondary" href="sat-math.html">Browse Free SAT Math Lessons</a>
       </div>
     </div>
     <div class="hero-photo-wrap">
@@ -423,27 +622,38 @@
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
-<div class="how-section">
-  <div class="how-inner">
-    <div class="section-label">How it works</div>
-    <h2 class="section-title">How ASTA Academy Works</h2>
-    <p class="section-subtitle">Three ways to get started — pick what fits your student today.</p>
+<!-- WHAT WE OFFER -->
+<div class="offer-section">
+  <div class="offer-inner">
+    <div class="offer-kicker">Two Paths · One Tutor</div>
+    <h2 class="offer-title">What we offer</h2>
 
-    <div class="tier-grid">
+    <div class="offer-grid">
 
-      <div class="tier-card">
-        <span class="tier-pill">Free</span>
-        <h3>Self-Study Materials</h3>
-        <p>Browse SAT math lessons, full-length diagnostic tests, and a growing question bank organized by topic. No login. No signup. Just open and use.</p>
-        <a class="tier-cta" href="sat-math.html">Explore free resources →</a>
+      <div class="offer-card">
+        <h3>Test Prep</h3>
+        <p class="offer-desc">Comprehensive prep for the tests that matter most for college admissions.</p>
+        <ul class="offer-list">
+          <li>SAT Math &amp; Reading/Writing</li>
+          <li>ACT Math</li>
+          <li>AP Calculus (AB &amp; BC)</li>
+          <li>AP Statistics &amp; AP Pre-Calculus</li>
+        </ul>
+        <p class="offer-note">Free 1-hour consultation + diagnostic. Personalized study plan based on what your student actually needs.</p>
+        <a class="offer-cta" href="pricing.html">See test prep packages →</a>
       </div>
 
-      <div class="tier-card">
-        <span class="tier-pill">1-on-1</span>
-        <h3>Personalized Tutoring</h3>
-        <p>Weekly sessions tailored to your student's goals, complete with study materials and progress tracking. Online nationwide, in-person in Michigan.</p>
-        <a class="tier-cta" href="pricing.html">View plans &amp; pricing →</a>
+      <div class="offer-card">
+        <h3>School Math</h3>
+        <p class="offer-desc">Ongoing 1-on-1 help with the math your student is learning right now.</p>
+        <ul class="offer-list">
+          <li>Middle school math</li>
+          <li>Algebra I &amp; II, Geometry, Pre-Calculus</li>
+          <li>High school &amp; AP Calculus</li>
+          <li>College math (Calculus 1/2, Linear Algebra, Differential Equations)</li>
+        </ul>
+        <p class="offer-note">Weekly sessions, in person or online. Build real understanding, not memorized procedures.</p>
+        <a class="offer-cta" href="https://calendly.com/ashu3069usa" target="_blank">Book a free consultation →</a>
       </div>
 
     </div>
@@ -468,6 +678,57 @@
         <a class="youtube-link" href="https://www.youtube.com/@ASTAacademy26" target="_blank">→ Watch Dr. Jain teach: free video lessons on YouTube</a>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- FREE RESOURCES STRIP -->
+<div class="free-resources-section">
+  <div class="free-resources-strip">
+    <div class="free-resources-text">
+      <h4>Try our free SAT math resources</h4>
+      <p>Full mock tests, a topic-organized question bank, and video lessons. No login. No signup. Just open and use.</p>
+    </div>
+    <a class="free-resources-cta" href="sat-math.html">Explore free resources →</a>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="how-section">
+  <div class="how-inner">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">From first call to test day</h2>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-circle">1</div>
+        <h3>Free consultation &amp; diagnostic</h3>
+        <p>We assess where your student stands and what they need.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-circle">2</div>
+        <h3>Personalized plan</h3>
+        <p>We build a plan around your student's goals — test prep, school year, or both.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-circle">3</div>
+        <h3>Weekly 1-on-1 sessions</h3>
+        <p>Online or in person. With practice and assignments between sessions.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-circle">4</div>
+        <h3>Progress tracking</h3>
+        <p>Clear visibility into your student's improvement, all the way through.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-cta-section">
+  <div class="final-cta-inner">
+    <h2>Ready to start?</h2>
+    <p>Book a free 1-hour consultation. We'll assess your student's level and recommend the right path — whether that's test prep, school year support, or both.</p>
+    <a class="final-cta-btn" href="https://calendly.com/ashu3069usa" target="_blank">Book Your Free Consultation</a>
   </div>
 </div>
 

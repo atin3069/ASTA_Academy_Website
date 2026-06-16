@@ -562,6 +562,125 @@
     .steps-grid { grid-template-columns: 1fr; gap: 32px; }
   }
 
+
+  /* TESTIMONIALS */
+  .testimonials-section {
+    padding: 70px 40px;
+    background: var(--cream);
+  }
+  .testimonials-inner { max-width: 1100px; margin: 0 auto; }
+  .testimonials-section .section-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--navy-light); margin-bottom: 8px;
+    text-align: center;
+  }
+  .testimonials-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; color: var(--navy);
+    font-weight: 600; text-align: center;
+    margin-bottom: 44px;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 26px 22px;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30,58,111,0.08);
+  }
+  .testimonial-stars {
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .testimonial-quote {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 22px;
+    flex-grow: 1;
+    font-style: italic;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .testimonial-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .testimonial-meta { flex: 1; min-width: 0; }
+  .testimonial-name {
+    font-size: 14px; font-weight: 600;
+    color: var(--navy);
+  }
+  .testimonial-source {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 1px;
+  }
+
+  /* Google badge */
+  .testimonials-badge-wrap { text-align: center; }
+  .testimonials-badge {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 12px 24px;
+    font-size: 14px;
+    color: var(--text);
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+  .testimonials-badge:hover {
+    border-color: var(--gold);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(232,168,56,0.2);
+  }
+  .google-g { display: flex; align-items: center; }
+  .badge-stars {
+    color: var(--gold);
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+  .badge-text {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .testimonials-grid { grid-template-columns: 1fr; max-width: 540px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
+  }
+  @media (max-width: 720px) {
+    .testimonials-section { padding: 50px 20px; }
+    .testimonials-title { font-size: 26px; }
+    .testimonial-card { padding: 22px 22px 18px; }
+    .testimonials-badge {
+      padding: 10px 18px;
+      font-size: 13px;
+      gap: 8px;
+    }
+    .badge-text { font-size: 13px; }
+  }
+
 </style>
 </head>
 <body>
@@ -678,6 +797,65 @@
         <a class="youtube-link" href="https://www.youtube.com/@ASTAacademy26" target="_blank">→ Watch Dr. Jain teach: free video lessons on YouTube</a>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-label">What families are saying</div>
+    <h2 class="testimonials-title">Real words from real students &amp; parents</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"His style of teaching is very unique and different from others as he works on the concept and tries to clarify the basics first, which helps students understand the topic far more easily and quickly. I thank him for his services and wish him good luck."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background: #1e3a6f;">V</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Vishal Singh</div>
+            <div class="testimonial-source">Two years of classes · Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"Ashu Sir's teaching style is clear, engaging, and easy to understand. He always explains concepts thoroughly and ensures that every doubt is resolved. He's been kind, polite, supportive, and encouraging — creating a positive learning environment."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background: #7d3f7d;">S</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Sonal Shrivastava</div>
+            <div class="testimonial-source">Parent of Shreyan (Grade 7 → 9) · Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-quote">"He was a great tutor! Not only did he help me better understand math concepts, he also took the time to get to know me as a person. I would definitely recommend Ashu to anyone who is looking for a tutor!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" style="background: #d63870;">J</div>
+          <div class="testimonial-meta">
+            <div class="testimonial-name">Jaden Skopp</div>
+            <div class="testimonial-source">Student · Google Review</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="testimonials-badge-wrap">
+      <a class="testimonials-badge" href="https://www.google.com/maps/place/?q=place_id:ChIJH6SEnUOiUyURH2g07YBafv8" target="_blank" rel="noopener">
+        <span class="google-g">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M21.35 11.1H12v3.2h5.35c-.5 2.5-2.6 4-5.35 4-3.3 0-6-2.7-6-6s2.7-6 6-6c1.5 0 2.85.55 3.9 1.45l2.35-2.35C16.55 3.9 14.4 3 12 3 7 3 3 7 3 12s4 9 9 9c4.7 0 8.5-3.4 8.5-9 0-.6-.05-1.2-.15-1.9z" fill="#4285F4"/></svg>
+        </span>
+        <span class="badge-stars">★★★★★</span>
+        <span class="badge-text">5.0 on Google &nbsp;·&nbsp; Read all reviews →</span>
+      </a>
+    </div>
+
   </div>
 </div>
 
